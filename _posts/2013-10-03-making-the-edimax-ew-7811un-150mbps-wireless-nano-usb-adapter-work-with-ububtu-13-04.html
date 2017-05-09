@@ -1,0 +1,23 @@
+---
+layout: post
+title: Making The Edimax EW-7811UN 150Mbps Wireless Nano USB Adapter Work With Ububtu 13.04
+author: Jono
+published: true
+date: 2013-10-03T20:49:13+0000
+categories: 
+  - code
+
+---
+
+<p>I'm posting this here not because I solved the problem myself but because it was a mighty faff to find the right way to get this thing working without downloading the files via apt-get. It does work (in the end) - here are the steps:</p>
+<ul>
+<li>Since you don't have an internet connection you'll need to download these <del datetime="2013-11-17T21:19:52+00:00">two</del> three files: <a href="https://code.google.com/p/realtek-8188cus-wireless-drivers-3444749-ubuntu-1304/downloads/detail?name=rtl8192cu-tjp-dkms_1.6_all.deb&amp;can=2&amp;q=">realtek-8188cus-wireless-drivers-3444749-ubuntu-1304</a>, <a href="https://realtek-8188cus-wireless-drivers-3444749-ubuntu-1304.googlecode.com/files/rtl8192cu-tjp-dkms_0ubuntu1.1_all.deb">realtek-8188cus-wireless-drivers-3444749-ubuntu-1304</a> and <a href="http://packages.ubuntu.com/lucid/all/dkms/download">DKMS</a> (on which the driver relies)</li>
+<li>Navigate to your downloads folder in terminal and install the DKMS dep: <code> dpkg -i _________.deb</code></li>
+<li>Install the drivers</li>
+<li>Blacklist the old drivers <code>sudo gedit /etc/modprobe.d/blacklist.conf</code> by adding the following lines:<br />
+<code># Blacklist native RealTek 8188CUs drivers<br />
+blacklist rtl8192cu<br />
+blacklist rtl8192c_common<br />
+blacklist rtlwifi</code></li>
+<li>Remove the wifi card and reboot</li>
+</ul>

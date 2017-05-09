@@ -1,0 +1,32 @@
+---
+layout: post
+title: 'Day 8 - Time Lapse Photography'
+author: Jono
+published: true
+date: 2012-02-08T23:07:26+0000
+categories: 
+  - photography
+
+---
+
+<p>Last night and tonight I've been learning about time lapse photography on my laptop. Here's what I did, adapted from the tutorial <a href="http://askubuntu.com/questions/50339/how-to-make-a-time-lapse-video-with-webcam">here</a>.</p>
+<ul>
+<li>Make a folder:</li>
+<li><code>mkdir ~/Desktop/cap</code></li>
+<li><code>cd ~/Desktop/cap</code></li>
+<li>Install streamer:</li>
+<li><code>sudo apt-get install streamer</code></li>
+<li>Capture images:</li>
+<li><code>streamer -o 0000.jpeg -s 300x200 -j 100 -t 500 -r .01</code></li>
+<li>-t is the number of frames we want to capture</li>
+<li>-r is frames per second (so -r .01 is a photo every 100 seconds and -r 1 is a photo every second)</li>
+<li>Install ffmpeg</li>
+<li><code>sudo apt-get install ffmpeg</code></li>
+<li><code>ffmpeg -i %04d.jpeg -r 30 -s hd480 -vcodec libx264 -vpre hq time-lapse.mp4</code></li>
+<li>This is compressed</li>
+<li><code>ffmpeg -r 12 -i %04d.jpg -vcodec copy time-lapse.mp4</code></li>
+<li>This is uncompressed</li>
+</ul>
+<p>And here's the end result:</p>
+<p><iframe src="http://player.vimeo.com/video/36444542?portrait=0" frameborder="0" width="400" height="300"></iframe></p>
+<p><a href="http://vimeo.com/36444542">Sprouting Lentils Time-Lapse</a> from <a href="http://vimeo.com/user1223334">Jonathan Ellis</a> on <a href="http://vimeo.com">Vimeo</a>.</p>

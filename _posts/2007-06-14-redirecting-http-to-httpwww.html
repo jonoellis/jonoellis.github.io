@@ -1,0 +1,16 @@
+---
+layout: post
+title: Redirecting http:// to http://www.
+author: Jono
+published: true
+date: 2007-06-14T12:18:27+0000
+categories: 
+  - code
+  - internet
+
+---
+
+<p>Seems that this causes problems for people so I thought I could pop it up here as a useful resource. Use the following code and replace "domain.com" with your domain e.g. ellis.scot. Place all of the code in your .htaccess file and http://ellis.scot will redirect to http://www.ellis.scot.</p>
+<p>RewriteEngine on<br />
+RewriteCond %{HTTP_HOST} ^domain.com<br />
+RewriteRule ^(.*)$ http://www.domain.com/$1 [R=permanent,L]</p>

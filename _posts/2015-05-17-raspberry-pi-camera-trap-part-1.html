@@ -1,0 +1,51 @@
+---
+layout: post
+title: Raspberry Pi Camera Trap (Part 1)
+author: Jono
+published: true
+date: 2015-05-17T21:08:49+0000
+categories: 
+  - raspberry-pi
+
+---
+
+<p>Meet my latest purchase - a <a href="https://www.raspberrypi.org">Raspberry Pi</a>! A recent trip to the <a href="http://makerfaireedinburgh.com/">Edinburgh mini Maker Faire</a> inspired me and I've decided to build a night-time trap camera to use at my parents' and in-laws' gardens to see if we can get any night-time nature photos.</p>
+<p>The shopping list:</p>
+<ul>
+<li>Raspberry Pi 2 Model B (£26.60) from <a href="http://uk.rs-online.com">RS</a></li>
+<li>Raspberry Pi B+ Case, Clear (£9.16) from <a href="http://uk.rs-online.com">RS</a></li>
+<li>8GB SD Card with Raspberry Pi NOOBS 1.4 (£8.25) from <a href="http://uk.rs-online.com">RS</a></li>
+<li>PIR motion sensor (£12.88 inc postage) from <a href="http://www.proto-pic.co.uk">Proto Pic</a></li>
+<li>Wire Jumpers Male to Female 10 pcs (£1.99) from <a href="http://uk.rs-online.com">RS</a></li>
+<li><a class="a-link-normal" href="https://www.amazon.co.uk/gp/product/B00G9AZ79O/ref=oh_aui_detailpage_o00_s00?ie=UTF8&amp;psc=1">Raspberry Pi NoIR Camera Module</a> (£18.70) from Amazon</li>
+<li><a class="a-link-normal" href="https://www.amazon.co.uk/gp/product/B00M0G94TA/ref=oh_aui_detailpage_o01_s00?ie=UTF8&amp;psc=1">Dpower 48 LED Illuminator Infrared Night Vision Light Lamp</a> (£6.58) from Amazon</li>
+<li><a class="a-link-normal" href="https://www.amazon.co.uk/gp/product/B004K8ZMJ2/ref=oh_aui_detailpage_o02_s00?ie=UTF8&amp;psc=1">12V DC 500mA UK Power Supply</a> (£4.99) from Amazon</li>
+<li>And I already had:
+<ul>
+<li>USB wifi card</li>
+<li>Micro USB power cable</li>
+</ul>
+</li>
+</ul>
+<p>Steps to cover what I've been up to so far:</p>
+<ol>
+<li><a href="https://www.raspberrypi.org/help/quick-start-guide/">Set up and turn on the Pi</a>. I was stunned as to how fragile the little thing looked! I was also puzzled as I hadn't realised I'd need a micoSD... and then pleasantly surprised to see the SD I'd bought was microSD inside an SD converter - phew! (Maybe Past Jono was paying more attention!) I dropped it into the case, added SD, added power, added HDMI to TV, added wifi dongle, keyboard and mouse and it worked like a dream.</li>
+<li>Typed <code>startx</code> to load the GUI. Went into wifi settings to add my wifi network. Restarted</li>
+<li>Typed <code>hostname -I</code> (note this is capital i) to find out the Pi's IP address</li>
+<li>Connect with <a href="http://www.chiark.greenend.org.uk/~sgtatham/putty/">Putty</a> - loading IP address above and logging in as "pi" with the password "raspberry". If you aren't using Putty <code>ssh pi@XX.XX.XX.XX</code> (where XX.XX.XX.XX is the IP address of your Raspberry Pi). Alternative is to use <a href="https://github.com/adafruit/Adafruit-Pi-Finder/releases/tag/v2.0.1-beta">the Adafruit Pi Finder</a> to find the IP address.</li>
+<li>Update the OS <code>sudo apt-get update</code><code>sudo apt-get upgrade -y</code></li>
+<li><a href="http://www.techradar.com/news/computing-components/peripherals/how-to-install-the-raspberry-pi-camera-module-1172034">Attach the camera</a> - "The dedicated camera bus is the ribbon connector closest to the Ethernet port. It's a zero insertion force (ZIF) design; pull up the two side clips to release the retaining bracket. You need to place the ribbon with the conducting edge-connection pointing away from the Ethernet port and towards the power-connector end of the Pi. Hold the ribbon square in place and push the clips down to fix the ribbon in position."</li>
+<li><code>sudo raspi-config</code> and select 'Advanced &gt; Memory_split' and set to 128. 'Enable/Disable Camera support' and select Enable. Select Finish and choose to Reboot.</li>
+<li><a href="https://github.com/raspberrypi/userland/blob/master/host_applications/linux/apps/raspicam/RaspiCamDocs.odt">Take a test photo</a>
+<ul>
+<li><code>raspistill -o image.jpg</code></li>
+<li><code>sudo apt-get install gpac</code> then press <code>y</code></li>
+<li><code>sudo apt-get install omxplayer</code> then press <code>y</code></li>
+<li><code>raspivid -t 20000 -o video.h264</code></li>
+<li><code>MP4Box -add video.h264 video.mp4</code> (this now means you can watch as MP4 or use <code>omxplayer filename.h264</code> to watch as h264)</li>
+</ul>
+</li>
+<li>Plug in <a href="http://www.raspberrypi-spy.co.uk/2013/11/quick-and-dirty-experiments-with-infrared-illumination/">separate infrared illuminator</a> and take another test photo</li>
+<li>Bed time! <code>sudo shutdown -h now</code></li>
+</ol>
+<p>My next step will be to set up the sensor and start to code up the automated image capture.</p>
