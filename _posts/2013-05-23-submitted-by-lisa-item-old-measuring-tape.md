@@ -1,6 +1,6 @@
 ---
 layout: post
-title: One Item Museum Project&#58; Old Measuring Tape
+title: One Item Museum Project &#58; Old Measuring Tape
 date: '2013-05-23T19:46:53+01:00'
 author: Jono
 published: true

@@ -1,6 +1,6 @@
 ---
 layout: post
-title: One Item Museum Project&#58; Apple Corer
+title: One Item Museum Project &#58; Apple Corer
 date: '2013-01-20T20:53:55+00:00'
 author: Jono
 published: true

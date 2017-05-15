@@ -1,6 +1,6 @@
 ---
 layout: post
-title: One Item Museum Project&#58; African Statues
+title: One Item Museum Project &#58; African Statues
 date: '2013-03-14T22:52:39+00:00'
 author: Jono
 published: true

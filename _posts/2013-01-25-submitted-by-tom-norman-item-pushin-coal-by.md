@@ -1,6 +1,6 @@
 ---
 layout: post
-title: One Item Museum Project&#58; Pushin Coal by Peter Davidson
+title: One Item Museum Project &#58; Pushin Coal by Peter Davidson
 date: '2013-01-25T13:59:49+00:00'
 author: Jono
 published: true

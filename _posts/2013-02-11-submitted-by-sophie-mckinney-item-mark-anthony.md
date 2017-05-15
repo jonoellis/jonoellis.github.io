@@ -1,6 +1,6 @@
 ---
 layout: post
-title: One Item Museum Project&#58; Mark Anthony speaking to the Romans
+title: One Item Museum Project &#58; Mark Anthony speaking to the Romans
 date: '2013-02-11T14:42:39+00:00'
 author: Jono
 published: true

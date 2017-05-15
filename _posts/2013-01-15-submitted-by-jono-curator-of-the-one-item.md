@@ -1,6 +1,6 @@
 ---
 layout: post
-title: One Item Museum Project&#58; Ceramic Gargoyle
+title: One Item Museum Project &#58; Ceramic Gargoyle
 date: '2013-01-15T12:57:00+00:00'
 author: Jono
 published: true

@@ -1,6 +1,6 @@
 ---
 layout: post
-title: One Item Museum Project&#58; Trumpton & Camberwick Green Characters
+title: One Item Museum Project &#58; Trumpton & Camberwick Green Characters
 date: '2013-08-18T07:17:00+01:00'
 author: Jono
 published: true
