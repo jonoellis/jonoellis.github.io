@@ -1,6 +1,6 @@
 ---
 layout: post
-title: One Item Museum Project &#58; Galician Brooch
+title: "One Item Museum Project: Galician Brooch"
 date: '2013-04-15T11:07:44+01:00'
 author: Jono
 published: true

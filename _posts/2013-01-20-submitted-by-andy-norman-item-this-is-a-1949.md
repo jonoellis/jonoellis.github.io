@@ -1,6 +1,6 @@
 ---
 layout: post
-title: One Item Museum Project &#58; 1949 Velocette MAC
+title: "One Item Museum Project: 1949 Velocette MAC"
 date: '2013-01-20T19:16:00+00:00'
 author: Jono
 published: true

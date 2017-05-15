@@ -1,6 +1,6 @@
 ---
 layout: post
-title: One Item Museum Project &#58; World War Two Trunk
+title: "One Item Museum Project : World War Two Trunk"
 date: '2013-02-09T19:50:00+00:00'
 author: Jono
 published: true

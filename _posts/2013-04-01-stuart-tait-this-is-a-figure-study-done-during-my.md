@@ -1,6 +1,6 @@
 ---
 layout: post
-title: One Item Museum Project &#58; Figure Study
+title: "One Item Museum Project: Figure Study"
 date: '2013-04-01T20:41:00+01:00'
 author: Jono
 published: true

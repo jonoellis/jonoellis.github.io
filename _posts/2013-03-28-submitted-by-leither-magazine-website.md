@@ -1,6 +1,6 @@
 ---
 layout: post
-title: One Item Museum Project &#58; Seinfeld Boxset
+title: "One Item Museum Project: Seinfeld Boxset"
 date: '2013-03-28T13:52:18+00:00'
 author: Jono
 published: true

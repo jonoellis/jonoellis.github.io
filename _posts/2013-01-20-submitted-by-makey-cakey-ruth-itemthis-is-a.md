@@ -1,6 +1,6 @@
 ---
 layout: post
-title: One Item Museum Project &#58; W & O Marcus Fashion Sketch
+title: "One Item Museum Project: W & O Marcus Fashion Sketch"
 date: '2013-01-20T14:40:48+00:00'
 author: Jono
 published: true
