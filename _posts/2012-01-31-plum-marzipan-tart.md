@@ -9,7 +9,7 @@ categories:
   - four-ingredient-recipes
 ---
 <p>This post has been saved from my old blog hellyeahfouringredientrecipes.tumblr.com</p>
-<p><img src="http://ellis.scot/2012/01/plum-marzipan-tart.jpg"/></p>
+<p><img src="http://ellis.scot/uploads/2012/01/plum-marzipan-tart.jpg"/></p>
 <ul><li>Shortcrust pastry (rolled out into a baking tin)</li>
 <li>Marzipan (rolled out and placed on top of the pastry)</li>
 <li>Plums (sliced and placed on top of the Marzipan)</li>
