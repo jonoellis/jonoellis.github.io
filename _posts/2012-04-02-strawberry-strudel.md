@@ -9,7 +9,7 @@ categories:
   - four-ingredient-recipes
 ---
   <p>This post has been saved from my old blog hellyeahfouringredientrecipes.tumblr.com</p>
-<p><img src="http://ellis.scot/uploads/2012/04/02/strawberry-strudel.jpg"/></p>
+<p><img src="http://ellis.scot/uploads/2012/04/strawberry-strudel.jpg"/></p>
 <ul><li>Unroll one pack of thawed Jus-Rol pastry onto a non-stick tray</li>
 <li>Pour on half a jar strawberry compote in a line down the middle</li>
 <li>Half ten or so strawberries and place on top of the strawberry compote</li>
