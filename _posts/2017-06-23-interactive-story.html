@@ -1,0 +1,62 @@
+---
+layout: post
+title: Interactive story experiment - The Bear & The Girl
+author: Jono
+published: true
+date: 2017-06-22T20:00:00+0000
+categories:
+  - writing
+  - code
+---
+<style>
+a {
+  cursor: pointer;
+  cursor: hand;
+  //text-decoration: underline;
+//  padding: 5px;
+}
+#story{
+  font-size: 40px;
+}
+</style>
+
+<script>
+    var bearCount = 1;
+    var bearArray = ['The bear','The grumpy bear','The terribly grumpy bear, Geoffrey to his friends,','The angry bear, who was excited to be wearing his new denim shorts,'];
+    function bear() {document.getElementById('bear').innerHTML = bearArray[bearCount++ % bearArray.length];}
+
+    var wasCount = 1;
+    var wasArray = ['was','still wasn’t used to being','didn’t really like being','was about to dye himself a new colour - he didn’t really like being'];
+    function was() {document.getElementById('was').innerHTML = wasArray[wasCount++ % wasArray.length];}
+
+    var brownCount = 1;
+    var brownArray = ['brown','mostly brown','mostly brown (with a short mohican)','mostly brown (with a short mohican and a tiny patch of blonde on his left cheek)'];
+    function brown() {document.getElementById('brown').innerHTML = brownArray[brownCount++ % brownArray.length];}
+
+    var girlCount = 1;
+    var girlArray = ['The girl','The girl, whose name was Martha,','The girl, whose name was Martha (but was also had a secret identiy as Super-M)','The girl, who was wearing a fantastic helecopter cap,'];
+    function girl() {document.getElementById('girl').innerHTML = girlArray[girlCount++ % girlArray.length];}
+
+    var ownedCount = 1;
+    var ownedArray = ['owned a','had been given a','loved to spend her time on her','could do some really extreme moves on her'];
+    function owned() {document.getElementById('owned').innerHTML = ownedArray[ownedCount++ % ownedArray.length];}
+
+    var trapezeCount = 1;
+    var trapezeArray = ['trapeze','magical flying trapeze','100 meter tall trapeze','super-hero-approved trapeze'];
+    function trapeze() {document.getElementById('trapeze').innerHTML = trapezeArray[trapezeCount++ % trapezeArray.length];}
+
+    var girl2Count = 1;
+    var girl2Array = ['The girl','The girl (who we now know to be called Martha)','Martha','Martha, A.K.A. Super-M,','Super-M'];
+    function girl2() {document.getElementById('girl2').innerHTML = girl2Array[girl2Count++ % girl2Array.length];}
+
+    var wentwithCount = 1;
+    var wentwithArray = ['went with','ran away to join the circus with','did some hip-hop top-rocking then went along with'];
+    function wentwith() {document.getElementById('wentwith').innerHTML = wentwithArray[wentwithCount++ % wentwithArray.length];}
+
+    var bear2Count = 1;
+    var bear2Array = ['the bear.','Geoffrey','Geoffrey (whom she\'d met in her local trampoline and smoothie cafe).','Glittery Geoff.','Glittery Geoff the Gilded Gymnast to travel the world, doing cool shows wherever they went. The End.','Glittery Geoff the Gilded Gymnast to travel the world, doing cool shows wherever they went. The End.<br><br> Or is it...?','Glittery Geoff the Gilded Gymnast to travel the world, doing cool shows wherever they went. The End.<br><br> Or is it...?<br><br><br><br>Of course not - every story is just a little snapshot of an infinite number of stories going off in every direction. But Super-M and Gold Geoff have a friendship that can weather any storm. Look out for their next adventure soon!'];
+    function bear2() {document.getElementById('bear2').innerHTML = bear2Array[bear2Count++ % bear2Array.length];}
+</script>
+<p>I wanted to experiment with readers being able to adapt and interact with stories as they read. Give it a go below - all you need to do is click on a word/phrase to replace it. </p>
+<p>&nbsp;</p>
+<p id="story"><a id="bear" onclick="bear()" style="background-color: #f0f8ff">The bear</a> <a id="was" style="background-color: #e6e6fa" onclick="was()">was</a> <a id="brown" style="background-color: #ffe4e1" onclick="brown()">brown</a>. <a id="girl" onclick="girl()" style="background-color: #e6e6fa">The girl</a> <a id="owned" onclick="owned()" style="background-color: #fff0f5">owned a</a> <a id="trapeze" onclick="trapeze()" style="background-color: #fffacd">trapeze</a>. <a id="girl2" onclick="girl2()" style="background-color: #cdc9c9">The girl</a> <a id="wentwith" onclick="wentwith()" style="background-color: #f0fff0">went with</a> <a id="bear2" onclick="bear2()" style="background-color: #ffdab9">the bear.</a></p>
