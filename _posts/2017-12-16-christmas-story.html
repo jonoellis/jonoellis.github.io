@@ -1,0 +1,94 @@
+---
+layout: post
+title: Christmas story
+author: Jono
+published: true
+date: 2017-12-16T14:30:00+0000
+categories:
+  - random
+---
+<div class="post-content" itemprop="articleBody">
+    <style>
+a {
+  cursor: pointer;
+  cursor: hand;
+  //text-decoration: underline;
+//  padding: 5px;
+}
+#story{
+  font-size: 40px;
+}
+</style>
+
+<p>This is a Christmas follow-up to <a href="http://ellis.scot/2017/06/interactive-story/">my first interactive story experiment</a> where I wanted to experiment with readers being able to adapt and interact with stories as they read. Give it a go below - all you need to do is click on a word/phrase to replace it. </p>
+<p>&nbsp;</p>
+<p id="story"><a id="santa" style="background-color: #ff0a0e">Santa</a> <a id="is_lost" style="background-color: #e6e6fa">is lost.</a> <a id="the_reindeer" style="background-color: #ffe4e1">The reindeer</a> <a id="are_lost" style="background-color: #e6e6fa">are lost</a>. <a id="the_presents" style="background-color: #FFA8FF">The presents</a> <a id="are_lost2" style="background-color: #fffacd">are lost</a>. <a id="the_elves" style="background-color: #cdc9c9">The elves</a> <a id="are_asleep" style="background-color: #f0fff0">are asleep.</a> <a id="martha" style="background-color: #ffdab9">Martha</a> <a id="is_asleep" style="background-color: #FFC8C8">is asleep.</a> <a id="christmas" style="background-color: #FFA8D3">Christmas</a> <a id="is_in_crisis" style="background-color: #CAFFD8">is in crisis!</a></p>
+
+  </div>
+
+  <script>
+    var words = {
+        'santa': {
+            count: 1,
+            wordArray: ['Santa','Mr Claus','The Jolly Red Man','Pere Noel','St. Nicholas','Father Christmas','The Grand Elf']
+        },
+        'is_lost': {
+            count: 1,
+            wordArray: ['is lost.','is lost (in Edinburgh!).','is lost in Craighall Crescent.','is lost because of a small sleigh crash.','is lost because of a small sleigh crash caused by Mr. Boo the cat being on a roof and forcing the reindeer to do a last minute pull up from their landing!','is lost and can&#39;t find his reindeer horn and his sleigh is broken and empty.']
+        },
+        'the_reindeer': {
+            count: 1,
+            wordArray: ['The reindeer','Dasher, Dancer, Prancer, Vixen, Comet, Cupid, Donner, and Blitzen','Dasher, Dancer, Prancer, Vixen, Comet, Cupid, Donner, and Blitzen... and Rudolph','Dasher, Dancer, Prancer, Vixen, Comet, Cupid, Donner, and Blitzen... and Rudolph (we mustn&#39;t forget Rudolph!)',' Dasher, Dancer, Prancer, Bambi?, John, You With The White Ear, You, And You, and Have A Bonbon']
+        },
+        'are_lost': {
+            count: 1,
+            wordArray: ['are lost','have run away','have run away to get some good grass from Victoria park','will probably come back if someone blows the reindeer horn really loudly']
+        },
+        'the_presents': {
+            count: 1,
+            wordArray: ['The presents','The parcels - books and teddies and microscopes and recorders and dolls and hats and planes and scooters and so many other wonderful things -','The presents - and at least a few lumps of coal for naughty children -']
+        },
+        'are_lost2': {
+            count: 1,
+            wordArray: ['are lost','are probably somewhere nearby','fell out in the crash','could easily be found by a keen-eyed detective','can&#39;t be very far away really']
+        },
+        'the_elves': {
+            count: 1,
+            wordArray: ['The elves','Snozzletrump, Pepper, Starlump, Evergreen, Twinklerbread, Frost Noel, MistelJoe, Sugarplum and the gang','The elves (not to be confused with The Seven Dwarves - they really don&#39;t like that!)']
+        },
+        'are_asleep': {
+            count: 1,
+            wordArray: ['are asleep.','are asleep (at the North Pole!).','are worn out from all the hard work.','are basically not going to help on this one!']
+        },
+        'martha': {
+            count: 1,
+            wordArray: ['Martha','Super-M','Mimi']
+        },
+        'is_asleep': {
+            count: 1,
+            wordArray: ['is asleep.','is asleep in her bed right up until she&#39;s suddenly woken up by a loud crash. ','is woken up by a loud crash that sounds a lot like a sleigh and a team of reindeer falling off a rooftop!','slips outside in her PJs and slippers with her torch.','finds a confused Santa and quickly works out what&#39;s happened.','rushes for her French Horn then blows it really loudly for as long as she can... until she sees the reindeer trotting down the street.','quickly warms some Oatly hot chocolate in the microwave for Santa - &ldquo;That will help you Santa!&rdquo;','wraps the cracked sleigh in wrapping paper and sticky tape - &ldquo;There. Good as new!&rdquo;','uses Santa&#39;s magical ribbon to attach the reindeer. ','spots a trail of presents scattered in all of the gardens and directs Santa to each one.','waves Santa off - &ldquo;Goodnight Santa! Good luck with the rest of your journey - watch out for cats!&rdquo;']
+        },
+        'christmas': {
+            count: 1,
+            wordArray: ['Christmas','Xmas','Noël','Yule','Yuletide','Christmastide']
+        },
+        'is_in_crisis': {
+            count: 1,
+            wordArray: ['is in crisis!','is saved!','is saved! Martha heads off to bed with a big grin.','is saved! Merry Christmas to all... and to all a good night!','is saved! Merry Christmas to all... and to all a good night!<br><br><br><br>Jono wakes up, yawning, and says &ldquo;Can I smell hot chocolate?!&rdquo;']
+        }
+    }
+
+    var links = document.getElementsByTagName('a');
+    for(var i = 0, len = links.length; i < len; i++) {
+        links[i].onclick = function () {
+            var currentWord = words[this.id];
+            var currentArray = currentWord.wordArray;
+            this.innerHTML = currentArray[currentWord.count++ % currentArray.length]
+        }
+    }
+
+</script>
+
+
+<div>Massive thanks to <a href="https://twitter.com/edinbeth">Beth</a> for the massive code refactor! Very much appreciated.
+</div>
