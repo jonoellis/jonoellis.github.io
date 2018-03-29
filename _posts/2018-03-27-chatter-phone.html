@@ -1,0 +1,64 @@
+---
+layout: post
+title: Digital Chatter Phone
+author: Jono
+published: true
+date: 2018-03-27T18:30:00+0000
+categories:
+- random
+- code
+---
+<p><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/1d/Chatter_Phone_Toy.jpg/779px-Chatter_Phone_Toy.jpg" width="660px" /><br />[]<a href="https://commons.wikimedia.org/wiki/File:Chatter_Phone_Toy.jpg">image source</a>]</p>
+  <p><a href="https://en.wikipedia.org/wiki/Chatter_Telephone">Fisher Price Chatter Phones</a> are lovely. I have fond memories of so many different kids playing with them over the years. I like <a href="http://ellis.scot/2015/06/shits-goin-down-app/">doodling apps</a> and occasional <a href="http://ellis.scot/2016/09/search-outside-your-world/">product designs</a> and it felt that the Chatter Phone would be a fun thing to introduce a digital element to. There wasn&rsquo;t much sketching for this one - just thinking through the components that could make this a delightful experience. The key things to me are around introducing kids to the joys of hearing the voices of family members who are not at home through keeping the beautifully simple interface, whilst all the time thinking of the (data) security of the child. There are <a href="http://www.bbc.co.uk/news/technology-35532644">countless</a> <a href="https://www.theguardian.com/technology/2015/nov/26/hackers-can-hijack-wi-fi-hello-barbie-to-spy-on-your-children">examples</a> of <a href="https://www.theguardian.com/technology/2016/feb/02/fisher-price-mattel-smart-toy-bear-data-hack-technology"> kids toys</a> that spy on the child - this shouldn't be that. For the simple version the interface would be as simple as child picks up phone, dials and speaks to send a message to one family member. As an example, this could be a grandparent who isn't at home with the child at that time. </p>
+  <p>Exploring the basic interactions:</p>
+  <h2>Call out </h2>
+  <p><strong>Easy</strong></p>
+  <ul>
+  <li>Lift </li>
+  <li>Speak </li>
+  <li>Replace </li>
+</ul>
+  <p>When the Chatter Phone turns on it would need to automatically open the app and start &ldquo;listening&rdquo; for the sensors. When the handset is lifted a sensor notices, waits then engages record. The child speaks. The handset is replaced, the sensor ends the recording and sends. </p>
+  <p><strong>Hard</strong></p>
+  <ul>
+  <li>Lift </li>
+  <li>Dial </li>
+  <li>Speak </li>
+  <li>Replace </li>
+  </ul>
+  <p>As above but with the addition of waiting for information from the dial sensor and an initial setup interface for an adult to add other trusted adults. </p>
+  <h2>Incoming call </h2>
+  <p><strong>Easy</strong></p>
+  <ul>
+  <li>Ring </li>
+  <li>Lift </li>
+  <li>Listen </li>
+  <li>Replace </li>
+  </ul>
+  <p>Notification prompts the phone to ring. When the handset is lifted a sensor notices, waits then plays the message. </p>
+  <p><strong>Hard</strong></p>
+  <ul>
+  <li>Ring </li>
+  <li>Lift </li>
+  <li>Listen </li>
+  <li>Reply </li>
+  <li>Replace </li>
+</ul>
+  <p>As above but with the blending of the recording/outgoing call state. </p>
+  <p>The other side of this would be what happens for the grandparent on their phone (their mobile, not a Chatter Phone although that would be a lovely thing too!). The phone's interface would send out audio messages to an app, similar to (or built using) WhatsApp. </p>
+  <p>The tech shopping list:</p>
+  <ul>
+  <li>A Chatter Phone </li>
+  <li>A speaker and mic to go from an Android phone hidden in the body of the Chatter Phone to the speaker and mouthpiece of the phone </li>
+  <li>An Android phone </li>
+  <li>A sensor to detect if the handset has been lifted </li>
+  <li>A dial sensor </li>
+  <li>Power input to charge Android phone </li>
+  </ul>
+  <p>Without prior experience of making calls for themselves, there is the need for the phone to have an interface that aides onboarding. Young kids can't read but someone speaking to the child to explain what to do should do could be sufficient. </p>
+  <p>When the phone is lifted the message could be &ldquo;You can send a message to granny. What would you like to tell her?&rdquo;. The recording would start immediately. </p>
+  <p>To dial, the phone would say &ldquo;Dial one for granny, two for uncle Paul, three for mum,...&rdquo; whilst waiting for the dial sensor to note that dialing has happened. After that it would say &ldquo;you are sending a message to uncle Paul - what would you like to say to him?&rdquo; </p>
+  <p>Possible refinements would be to add a red indicator light to the phone which would flash during recording. </p>
+  <p>Technology seems to be a bit of a frustration on this one - this is so close to being something that could be developed using WhatsApp but WhatsApp doesn't have an API that's available for use. There's also a lot of crossover with Alexa. To that end, the limited subset of actions could actually mean that putting a Raspberry Pi inside the phone and uploading to a server might solve the problem equally well. </p>
+  <p>One of the great things about the interface is that it is different for the child and the adult - ephemeral for the child, full recording history for the adult to save and play back in future. </p>
+  <p>What do you think - worthy of some hardware hacking to build a prototype?</p>
