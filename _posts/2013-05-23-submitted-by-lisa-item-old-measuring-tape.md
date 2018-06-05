@@ -8,7 +8,7 @@ categories:
   - one-item-museum
 tumblr_url: http://oneitemmuseum.tumblr.com/post/51162673041/submitted-by-lisa-item-old-measuring-tape
 ---
-<img src="http://ellis.scot/uploads/2013/05/measure.jpg" />
+<img src="https://ellis.scot/uploads/2013/05/measure.jpg" />
 
 Submitted by: Lisa
 

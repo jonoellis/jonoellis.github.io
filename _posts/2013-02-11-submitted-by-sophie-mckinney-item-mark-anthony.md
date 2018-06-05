@@ -8,7 +8,7 @@ categories:
   - one-item-museum
 tumblr_url: http://oneitemmuseum.tumblr.com/post/42842678008/submitted-by-sophie-mckinney-item-mark-anthony
 ---
-<img src="http://ellis.scot/uploads/2013/02/painting.jpg" />
+<img src="https://ellis.scot/uploads/2013/02/painting.jpg" />
 
 Submitted by: Sophie Mckinney
 

@@ -8,7 +8,7 @@ categories:
   - one-item-museum
 tumblr_url: http://oneitemmuseum.tumblr.com/post/41030891443/submitted-by-andy-norman-item-this-is-a-1949
 ---
-<img src="http://ellis.scot/uploads/2013/01/motorbike.jpg" />
+<img src="https://ellis.scot/uploads/2013/01/motorbike.jpg" />
 
 Submitted by: Andy Norman
 

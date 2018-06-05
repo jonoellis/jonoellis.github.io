@@ -9,7 +9,7 @@ categories:
   - four-ingredient-recipes
 ---
 <p>This post has been saved from my old blog hellyeahfouringredientrecipes.tumblr.com</p>
-<p><img src="http://ellis.scot/uploads/2012/01/swede-soup.jpg"/></p>
+<p><img src="https://ellis.scot/uploads/2012/01/swede-soup.jpg"/></p>
 <ul><li>Dice a swede into rough, 3cm-ish sized bits</li>
 <li>Peel and quarter an onion</li>
 <li>Peel a garlic clove</li>

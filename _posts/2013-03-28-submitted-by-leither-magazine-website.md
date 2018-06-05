@@ -8,7 +8,7 @@ categories:
   - one-item-museum
 tumblr_url: http://oneitemmuseum.tumblr.com/post/46504791607/submitted-by-leither-magazine-website
 ---
-<img src="http://ellis.scot/uploads/2013/03/seinfeld.jpg" />
+<img src="https://ellis.scot/uploads/2013/03/seinfeld.jpg" />
 
 Submitted by: Leither Magazine 
 

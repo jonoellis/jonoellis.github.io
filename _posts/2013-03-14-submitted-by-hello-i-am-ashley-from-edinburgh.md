@@ -8,7 +8,7 @@ categories:
   - one-item-museum
 tumblr_url: http://oneitemmuseum.tumblr.com/post/45374753334/submitted-by-hello-i-am-ashley-from-edinburgh
 ---
-<img src="http://ellis.scot/uploads/2013/03/statues.jpg" />
+<img src="https://ellis.scot/uploads/2013/03/statues.jpg" />
 
 Submitted by: Hello! I am Ashley from Edinburgh but currently living in Dubai.
 

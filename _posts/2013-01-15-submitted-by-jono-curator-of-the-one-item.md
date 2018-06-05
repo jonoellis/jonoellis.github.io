@@ -8,7 +8,7 @@ categories:
   - one-item-museum
 tumblr_url: http://oneitemmuseum.tumblr.com/post/40597562300/submitted-by-jono-curator-of-the-one-item
 ---
-<img src="http://ellis.scot/uploads/2013/01/gargoyle.jpg" />
+<img src="https://ellis.scot/uploads/2013/01/gargoyle.jpg" />
 
 Submitted by: Jono - curator of the One Item Museum project
 

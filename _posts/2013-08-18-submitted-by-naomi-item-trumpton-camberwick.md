@@ -8,7 +8,7 @@ categories:
   - one-item-museum
 tumblr_url: http://oneitemmuseum.tumblr.com/post/58577089507/submitted-by-naomi-item-trumpton-camberwick
 ---
-<img src="http://ellis.scot/uploads/2013/08/trumpton.jpg" />
+<img src="https://ellis.scot/uploads/2013/08/trumpton.jpg" />
 
 Submitted by: Naomi
 

@@ -9,7 +9,7 @@ categories:
   - four-ingredient-recipes
 ---
   <p>This post has been saved from my old blog hellyeahfouringredientrecipes.tumblr.com</p>
-<p><img src="http://ellis.scot/uploads/2012/03/kale-bacon-bubble-squeak.jpg"/></p>
+<p><img src="https://ellis.scot/uploads/2012/03/kale-bacon-bubble-squeak.jpg"/></p>
 <ul><li>Fry an diced onion and a few rashers of bacon in oil</li>
 <li>Add a grated potato and some shredded kale</li>
 <li>Add seasoning</li>

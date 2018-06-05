@@ -9,7 +9,7 @@ categories:
   - four-ingredient-recipes
 ---
   <p>This post has been saved from my old blog hellyeahfouringredientrecipes.tumblr.com</p>
-<p><img src="http://ellis.scot/uploads/2012/07/birthday-cake.jpg"/></p>
+<p><img src="https://ellis.scot/uploads/2012/07/birthday-cake.jpg"/></p>
 <ul><li>Preheat oven at 170 degrees </li>
 <li>Line a mini cupcake tray with 9 cases (or fewer bigger cases!)</li>
 <li>Whisk 1 egg and &frac12; cup of chocolate spread/Nutella together</li>

@@ -17,7 +17,7 @@ title: Jono Ellis
 email: jono@ellis.scot
 description: Jono Ellis' personal blog
 baseurl: "" # the subpath of your site, e.g. /blog
-url: "http://ellis.scot" # the base hostname & protocol for your site, e.g. http://example.com
+url: "https://ellis.scot" # the base hostname & protocol for your site, e.g. http://example.com
 permalink: /:year/:month/:title/
 twitter_username: jonoellis
 github_username:  jonoellis

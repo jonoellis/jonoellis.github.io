@@ -8,7 +8,7 @@ categories:
   - one-item-museum
 tumblr_url: http://oneitemmuseum.tumblr.com/post/41438378174/submitted-by-tom-norman-item-pushin-coal-by
 ---
-<img src="http://ellis.scot/uploads/2013/01/coal.jpg" />
+<img src="https://ellis.scot/uploads/2013/01/coal.jpg" />
 
 Submitted by: Tom Norman
 

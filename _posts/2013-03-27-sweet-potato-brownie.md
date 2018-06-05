@@ -9,7 +9,7 @@ categories:
   - four-ingredient-recipes
 ---
   <p>This post has been saved from my old blog hellyeahfouringredientrecipes.tumblr.com</p>
-<p><img alt="image" src="http://ellis.scot/uploads/2013/03/sweet-potato-brownie.jpg"/></p>
+<p><img alt="image" src="https://ellis.scot/uploads/2013/03/sweet-potato-brownie.jpg"/></p>
 
 <p>I&rsquo;m participating in my very first Daring Bakers&rsquo; Challenge this month as my wife Makey Cakey Ruth is this month&rsquo;s host. The challenge is to hide a vegetable in a cake&hellip; and that doesn&rsquo;t mean just putting a salsify at the bottom of the sponge cake and hoping nobody notices! I thought I&rsquo;d stick with the four ingredient thing that I&rsquo;ve been doing on this blog and give a four ingredient brownie a go. <span>A four ingredient dairy-free, gluten-free, fat-free brownie with a veggie hidden in it? Yup, I nailed it. I&rsquo;m lazy so I did all the mixing and cooking in an enamel mug without bothering to grease it or anything - it meant I had to eat it out of the mug with a spoon, but that was hardly a hardship! It&rsquo;s great only having one dish to wash at the end. </span></p>
 <p>For 1 person:</p>

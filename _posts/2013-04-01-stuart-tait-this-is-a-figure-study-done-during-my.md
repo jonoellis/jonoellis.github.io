@@ -8,7 +8,7 @@ categories:
   - one-item-museum
 tumblr_url: http://oneitemmuseum.tumblr.com/post/46869830748/stuart-tait-this-is-a-figure-study-done-during-my
 ---
-<img src="http://ellis.scot/uploads/2013/04/art.jpg" />
+<img src="https://ellis.scot/uploads/2013/04/art.jpg" />
 
 Submitted by: Stuart Tait
 

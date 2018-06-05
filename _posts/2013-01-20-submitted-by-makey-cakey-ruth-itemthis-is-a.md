@@ -8,7 +8,7 @@ categories:
   - one-item-museum
 tumblr_url: http://oneitemmuseum.tumblr.com/post/41010965839/submitted-by-makey-cakey-ruth-itemthis-is-a
 ---
-<img src="http://ellis.scot/uploads/2013/01/drawing.jpg" />
+<img src="https://ellis.scot/uploads/2013/01/drawing.jpg" />
 
 Submitted by: Makey Cakey Ruth
 

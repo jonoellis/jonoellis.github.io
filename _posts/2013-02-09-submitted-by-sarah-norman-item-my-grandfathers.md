@@ -8,7 +8,7 @@ categories:
   - one-item-museum
 tumblr_url: http://oneitemmuseum.tumblr.com/post/42686878982/submitted-by-sarah-norman-item-my-grandfathers
 ---
-<img src="http://ellis.scot/uploads/2013/02/trunk.jpg" />
+<img src="https://ellis.scot/uploads/2013/02/trunk.jpg" />
 
 Submitted by: Sarah Norman
 

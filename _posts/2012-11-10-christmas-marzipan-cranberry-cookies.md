@@ -9,7 +9,7 @@ categories:
   - four-ingredient-recipes
 ---
   <p>This post has been saved from my old blog hellyeahfouringredientrecipes.tumblr.com</p>
-<p><img src="http://ellis.scot/uploads/2012/11/christmas-marzipan-cranberry-cookies.jpg"/></p>
+<p><img src="https://ellis.scot/uploads/2012/11/christmas-marzipan-cranberry-cookies.jpg"/></p>
 <ul><li>Blend one large block of marzipan with one egg and a tablespoon of icing sugar</li>
 <li>Mix through some cranberries</li>
 <li>Cook at 180 Celsius for 20 mins</li>

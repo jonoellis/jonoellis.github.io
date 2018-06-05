@@ -8,7 +8,7 @@ categories:
   - one-item-museum
 tumblr_url: http://oneitemmuseum.tumblr.com/post/41039213735/submitted-by-frances-item-ancient-instrument-of
 ---
-<img src="http://ellis.scot/uploads/2013/01/corer.jpg" />
+<img src="https://ellis.scot/uploads/2013/01/corer.jpg" />
 
 Submitted by: Frances
 

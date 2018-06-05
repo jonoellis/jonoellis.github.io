@@ -10,7 +10,7 @@ categories:
 
 ---
 
-<p>Seems that this causes problems for people so I thought I could pop it up here as a useful resource. Use the following code and replace "domain.com" with your domain e.g. ellis.scot. Place all of the code in your .htaccess file and http://ellis.scot will redirect to http://www.ellis.scot.</p>
+<p>Seems that this causes problems for people so I thought I could pop it up here as a useful resource. Use the following code and replace "domain.com" with your domain e.g. ellis.scot. Place all of the code in your .htaccess file and https://ellis.scot will redirect to http://www.ellis.scot.</p>
 <p>RewriteEngine on<br />
 RewriteCond %{HTTP_HOST} ^domain.com<br />
 RewriteRule ^(.*)$ http://www.domain.com/$1 [R=permanent,L]</p>
