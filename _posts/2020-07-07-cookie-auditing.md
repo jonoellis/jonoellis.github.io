@@ -15,6 +15,8 @@ It's fairly simple to re-run once the initial cloud setup is done. For me, the c
 gcloud compute instances create web-crawler --metadata-from-file startup-script=./gce-install.sh --scopes=bigquery,cloud-platform --machine-type=n1-standard-16 --zone=europe-west2-a
 ```
 
+Once it's set up you can make changes to the config, reupload and then go to the [instances](https://console.cloud.google.com/compute/instances), select the instance and then start (it closes itself down each time).  
+
 For my own reference, the two BigQuery queries are:
 
 **The list of pages on the site, and their cookies**
