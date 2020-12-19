@@ -11,7 +11,7 @@ categories:
 
         <link rel="stylesheet" href="http://unpkg.com/leaflet@1.4.0/dist/leaflet.css" />
         <script src="http://unpkg.com/leaflet@1.4.0/dist/leaflet.js"></script>
-        <script src="./uploads/L.KML.js"></script>
+        <script src="./uploads/maps/L.KML.js"></script>
 
         <div style="width: 100vw; height: 100vh" id="map"></div>
         <script type="text/javascript">
@@ -22,7 +22,7 @@ categories:
             map.addLayer(osm);
 
             // Load kml file
-            fetch('uploads/west-highland-way.kml')
+            fetch('uploads/maps/west-highland-way.kml')
                 .then(res => res.text())
                 .then(kmltext => {
                     // Create new kml overlay
