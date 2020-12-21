@@ -6,6 +6,7 @@ published: true
 date: 2017-07-27T07:00:00+0000
 categories:
   - random
+  - maps
 ---
 <a href="https://www.instagram.com/p/BXBk3EKhgmo/"><img src="https://ellis.scot/uploads/2017/07/circle-the-borders.jpg" /></a>
 <br>
@@ -13,3 +14,31 @@ categories:
 <p><a href = "https://drive.google.com/open?id=1KGHcU4RQP4BmwDkNKSD8-qVg3w4&usp=sharing">Here's the rough route!</a></p>
 
 <p>Let me know on <a href="https://www.instagram.com/p/BXBk3EKhgmo/">Instagram</a> or <a href="https://twitter.com/jonoellis">Twitter</a> if you're up for it!</p>
+
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.4.0/dist/leaflet.css" />
+<script src="https://unpkg.com/leaflet@1.4.0/dist/leaflet.js"></script>
+<script src="https://ellis.scot/uploads/maps/L.KML.js"></script>
+
+<div style="width: 80vw; height: 80vh" id="circle-the-borders"></div>
+<script type="text/javascript">
+    // Make basemap
+    const map = new L.Map('circle-the-borders', { center: new L.LatLng(58.4, 43.0), zoom: 11 });
+    const osm = new L.TileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png');
+
+    map.addLayer(osm);
+
+    // Load kml file
+    fetch('https://ellis.scot/uploads/maps/circle-the-borders.kml')
+        .then(res => res.text())
+        .then(kmltext => {
+            // Create new kml overlay
+            const parser = new DOMParser();
+            const kml = parser.parseFromString(kmltext, 'text/xml');
+            const track = new L.KML(kml);
+            map.addLayer(track);
+
+            // Adjust map to show the kml
+            const bounds = track.getBounds();
+            map.fitBounds(bounds);
+        });
+</script>
