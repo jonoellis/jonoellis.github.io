@@ -1,0 +1,38 @@
+---
+layout: post
+title: "Maps: Harry Potter's Edinburgh"
+author: Jono
+published: true
+date: 2020-12-19T19:00:00+0000
+categories:
+  - maps
+---
+<div>In a slow escape from Google products I'm saving a few of my old My Maps - this was an old one that I thought was fun to hold on to. Harry Potter's fantastical world was imagined by JK Rowling in her native Edinburgh. This map points to some of Edinburgh's magical places which might well have influenced the writer.</div>
+
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.4.0/dist/leaflet.css" />
+<script src="https://unpkg.com/leaflet@1.4.0/dist/leaflet.js"></script>
+<script src="https://ellis.scot/uploads/maps/L.KML.js"></script>
+
+<div style="width: 80vw; height: 80vh" id="harry-potters-edinburgh"></div>
+<script type="text/javascript">
+    // Make basemap
+    const map = new L.Map('harry-potters-edinburgh', { center: new L.LatLng(58.4, 43.0), zoom: 11 });
+    const osm = new L.TileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png');
+
+    map.addLayer(osm);
+
+    // Load kml file
+    fetch('https://ellis.scot/uploads/maps/harry-potters-edinburgh.kml')
+        .then(res => res.text())
+        .then(kmltext => {
+            // Create new kml overlay
+            const parser = new DOMParser();
+            const kml = parser.parseFromString(kmltext, 'text/xml');
+            const track = new L.KML(kml);
+            map.addLayer(track);
+
+            // Adjust map to show the kml
+            const bounds = track.getBounds();
+            map.fitBounds(bounds);
+        });
+</script>
