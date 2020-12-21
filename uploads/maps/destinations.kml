@@ -1,0 +1,1660 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<kml xmlns="http://www.opengis.net/kml/2.2">
+  <Document>
+    <name>Destinations</name>
+    <description/>
+    <Style id="icon-1899-0288D1-normal">
+      <IconStyle>
+        <color>ffd18802</color>
+        <scale>1</scale>
+        <Icon>
+          <href>https://www.gstatic.com/mapspro/images/stock/503-wht-blank_maps.png</href>
+        </Icon>
+        <hotSpot x="32" xunits="pixels" y="64" yunits="insetPixels"/>
+      </IconStyle>
+      <LabelStyle>
+        <scale>0</scale>
+      </LabelStyle>
+    </Style>
+    <Style id="icon-1899-0288D1-highlight">
+      <IconStyle>
+        <color>ffd18802</color>
+        <scale>1</scale>
+        <Icon>
+          <href>https://www.gstatic.com/mapspro/images/stock/503-wht-blank_maps.png</href>
+        </Icon>
+        <hotSpot x="32" xunits="pixels" y="64" yunits="insetPixels"/>
+      </IconStyle>
+      <LabelStyle>
+        <scale>1</scale>
+      </LabelStyle>
+    </Style>
+    <StyleMap id="icon-1899-0288D1">
+      <Pair>
+        <key>normal</key>
+        <styleUrl>#icon-1899-0288D1-normal</styleUrl>
+      </Pair>
+      <Pair>
+        <key>highlight</key>
+        <styleUrl>#icon-1899-0288D1-highlight</styleUrl>
+      </Pair>
+    </StyleMap>
+    <Style id="icon-1899-0288D1-nodesc-normal">
+      <IconStyle>
+        <color>ffd18802</color>
+        <scale>1</scale>
+        <Icon>
+          <href>https://www.gstatic.com/mapspro/images/stock/503-wht-blank_maps.png</href>
+        </Icon>
+        <hotSpot x="32" xunits="pixels" y="64" yunits="insetPixels"/>
+      </IconStyle>
+      <LabelStyle>
+        <scale>0</scale>
+      </LabelStyle>
+      <BalloonStyle>
+        <text><![CDATA[<h3>$[name]</h3>]]></text>
+      </BalloonStyle>
+    </Style>
+    <Style id="icon-1899-0288D1-nodesc-highlight">
+      <IconStyle>
+        <color>ffd18802</color>
+        <scale>1</scale>
+        <Icon>
+          <href>https://www.gstatic.com/mapspro/images/stock/503-wht-blank_maps.png</href>
+        </Icon>
+        <hotSpot x="32" xunits="pixels" y="64" yunits="insetPixels"/>
+      </IconStyle>
+      <LabelStyle>
+        <scale>1</scale>
+      </LabelStyle>
+      <BalloonStyle>
+        <text><![CDATA[<h3>$[name]</h3>]]></text>
+      </BalloonStyle>
+    </Style>
+    <StyleMap id="icon-1899-0288D1-nodesc">
+      <Pair>
+        <key>normal</key>
+        <styleUrl>#icon-1899-0288D1-nodesc-normal</styleUrl>
+      </Pair>
+      <Pair>
+        <key>highlight</key>
+        <styleUrl>#icon-1899-0288D1-nodesc-highlight</styleUrl>
+      </Pair>
+    </StyleMap>
+    <Folder>
+      <name>Destinations</name>
+      <Placemark>
+        <name>Cuba</name>
+        <description>22.0289,-79.9370</description>
+        <styleUrl>#icon-1899-0288D1</styleUrl>
+        <Point>
+          <coordinates>
+            -79.937,22.0289,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Montreal</name>
+        <description>45.502,-73.555</description>
+        <styleUrl>#icon-1899-0288D1</styleUrl>
+        <Point>
+          <coordinates>
+            -73.555,45.502,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Stay in a tipi - Blackfoot Crossing Historical Park</name>
+        <description>50.78284,-112.84569</description>
+        <styleUrl>#icon-1899-0288D1</styleUrl>
+        <Point>
+          <coordinates>
+            -112.84569,50.78284,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Kayaking on Lake Louise in Banff National Park</name>
+        <description>51.42528,-116.1776</description>
+        <styleUrl>#icon-1899-0288D1</styleUrl>
+        <Point>
+          <coordinates>
+            -116.1776,51.42528,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Jasper National Park</name>
+        <description>52.76,-118.17</description>
+        <styleUrl>#icon-1899-0288D1</styleUrl>
+        <Point>
+          <coordinates>
+            -118.17,52.76,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Ottowa</name>
+        <description>45.4218,-75.6969</description>
+        <styleUrl>#icon-1899-0288D1</styleUrl>
+        <Point>
+          <coordinates>
+            -75.6969,45.4218,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>See the Rockies - Rockie Mountaineer Railway</name>
+        <description>51.1782,-115.5710</description>
+        <styleUrl>#icon-1899-0288D1</styleUrl>
+        <Point>
+          <coordinates>
+            -115.571,51.1782,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Shetland</name>
+        <description>60.309,-1.27</description>
+        <styleUrl>#icon-1899-0288D1</styleUrl>
+        <Point>
+          <coordinates>
+            -1.27,60.309,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Kearvaig Beach NC 28 72</name>
+        <description>58.60983,-4.9433</description>
+        <styleUrl>#icon-1899-0288D1</styleUrl>
+        <Point>
+          <coordinates>
+            -4.9433,58.60983,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Lewis/Harris</name>
+        <description>58.198,-6.72</description>
+        <styleUrl>#icon-1899-0288D1</styleUrl>
+        <Point>
+          <coordinates>
+            -6.72,58.198,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Blenheim Palace</name>
+        <description>51.84133,-1.36117</description>
+        <styleUrl>#icon-1899-0288D1</styleUrl>
+        <Point>
+          <coordinates>
+            -1.36117,51.84133,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>The Lizard</name>
+        <description>49.96864,-5.2029</description>
+        <styleUrl>#icon-1899-0288D1</styleUrl>
+        <Point>
+          <coordinates>
+            -5.2029,49.96864,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>St Michaels Mount</name>
+        <description>50.11684,-5.47675</description>
+        <styleUrl>#icon-1899-0288D1</styleUrl>
+        <Point>
+          <coordinates>
+            -5.47675,50.11684,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Eden Project</name>
+        <description>50.36016,-4.74432</description>
+        <styleUrl>#icon-1899-0288D1</styleUrl>
+        <Point>
+          <coordinates>
+            -4.74432,50.36016,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Tregothnan Estate</name>
+        <description>50.2416,-5.0046</description>
+        <styleUrl>#icon-1899-0288D1</styleUrl>
+        <Point>
+          <coordinates>
+            -5.0046,50.2416,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Camel Valley Sparkling Wine</name>
+        <description>50.47673,-4.78212</description>
+        <styleUrl>#icon-1899-0288D1</styleUrl>
+        <Point>
+          <coordinates>
+            -4.78212,50.47673,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Watch the Araura Borealis from inside the Arctic Circle</name>
+        <description>67.85578,20.22525</description>
+        <styleUrl>#icon-1899-0288D1</styleUrl>
+        <Point>
+          <coordinates>
+            20.22525,67.85578,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Egypt</name>
+        <description>29.97898,31.13402</description>
+        <styleUrl>#icon-1899-0288D1</styleUrl>
+        <Point>
+          <coordinates>
+            31.13402,29.97898,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Drive across America from coast to coast</name>
+        <description>37.0001,-109.046</description>
+        <styleUrl>#icon-1899-0288D1</styleUrl>
+        <Point>
+          <coordinates>
+            -109.046,37.0001,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Beirut - Lebanon</name>
+        <description>33.88842,35.49533</description>
+        <styleUrl>#icon-1899-0288D1</styleUrl>
+        <Point>
+          <coordinates>
+            35.49533,33.88842,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Miami</name>
+        <description>25.7911,-80.2294</description>
+        <styleUrl>#icon-1899-0288D1</styleUrl>
+        <Point>
+          <coordinates>
+            -80.2294,25.7911,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Barbados</name>
+        <description>13.184,-59.554</description>
+        <styleUrl>#icon-1899-0288D1</styleUrl>
+        <Point>
+          <coordinates>
+            -59.554,13.184,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Petra - Jordon</name>
+        <description>30.325170,35.442637</description>
+        <styleUrl>#icon-1899-0288D1</styleUrl>
+        <Point>
+          <coordinates>
+            35.442637,30.32517,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Trans-Siberian Railway and Moscow</name>
+        <description>55.75405,37.62034</description>
+        <styleUrl>#icon-1899-0288D1</styleUrl>
+        <Point>
+          <coordinates>
+            37.62034,55.75405,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Mongolia</name>
+        <description>47.919,106.903</description>
+        <styleUrl>#icon-1899-0288D1</styleUrl>
+        <Point>
+          <coordinates>
+            106.903,47.919,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Astana - Kazakhstan</name>
+        <description>51.16662,71.43335</description>
+        <styleUrl>#icon-1899-0288D1</styleUrl>
+        <Point>
+          <coordinates>
+            71.43335,51.16662,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>New York - The High Line and NY street food</name>
+        <description>40.721,-73.996</description>
+        <styleUrl>#icon-1899-0288D1</styleUrl>
+        <Point>
+          <coordinates>
+            -73.996,40.721,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Morocco - Marrakesh - Atlas Mountains (Villiage of Imlil then climb Toubkal</name>
+        <description>31.69,-8.05</description>
+        <styleUrl>#icon-1899-0288D1</styleUrl>
+        <Point>
+          <coordinates>
+            -8.05,31.69,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>New Zealand</name>
+        <description>-41.31,174.37</description>
+        <styleUrl>#icon-1899-0288D1</styleUrl>
+        <Point>
+          <coordinates>
+            174.37,-41.31,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>St Petersberg</name>
+        <description>59.9340,30.334</description>
+        <styleUrl>#icon-1899-0288D1</styleUrl>
+        <Point>
+          <coordinates>
+            30.334,59.934,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Tel Aviv - Israel</name>
+        <description>32.0850,34.7813</description>
+        <styleUrl>#icon-1899-0288D1</styleUrl>
+        <Point>
+          <coordinates>
+            34.7813,32.085,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Japan - Kyoto - Tokyo (Shinjuku District especially Omoide Yokocho/Memory Lane</name>
+        <description>35.03,135.77</description>
+        <styleUrl>#icon-1899-0288D1</styleUrl>
+        <Point>
+          <coordinates>
+            135.77,35.03,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>California</name>
+        <description>37.750,-122.439</description>
+        <styleUrl>#icon-1899-0288D1</styleUrl>
+        <Point>
+          <coordinates>
+            -122.439,37.75,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>France - Avignon (Palais Des Papes Secret Tour</name>
+        <description>43.95086,4.80783</description>
+        <styleUrl>#icon-1899-0288D1</styleUrl>
+        <Point>
+          <coordinates>
+            4.80783,43.95086,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Riga - Latvia (Staro Riga light festival 17 Nov</name>
+        <description>56.9498,24.1064</description>
+        <styleUrl>#icon-1899-0288D1</styleUrl>
+        <Point>
+          <coordinates>
+            24.1064,56.9498,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Copenhagen - Denmark (Vesterbro district</name>
+        <description>55.6755,12.570</description>
+        <styleUrl>#icon-1899-0288D1</styleUrl>
+        <Point>
+          <coordinates>
+            12.57,55.6755,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Tallin - Estonia</name>
+        <description>59.4353,24.754</description>
+        <styleUrl>#icon-1899-0288D1</styleUrl>
+        <Point>
+          <coordinates>
+            24.754,59.4353,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Valencia - Spain</name>
+        <description>39.4700,-0.3748</description>
+        <styleUrl>#icon-1899-0288D1</styleUrl>
+        <Point>
+          <coordinates>
+            -0.3748,39.47,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Salzburg - Austria</name>
+        <description>47.80952,13.0546</description>
+        <styleUrl>#icon-1899-0288D1</styleUrl>
+        <Point>
+          <coordinates>
+            13.0546,47.80952,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Norway</name>
+        <description>63.4152,10.405</description>
+        <styleUrl>#icon-1899-0288D1</styleUrl>
+        <Point>
+          <coordinates>
+            10.405,63.4152,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Svalbard</name>
+        <description>78.70,15.8</description>
+        <styleUrl>#icon-1899-0288D1</styleUrl>
+        <Point>
+          <coordinates>
+            15.8,78.7,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Faroe Isles (inc Vagar - gasadalur</name>
+        <description>62.19,-6.92</description>
+        <styleUrl>#icon-1899-0288D1</styleUrl>
+        <Point>
+          <coordinates>
+            -6.92,62.19,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Vintgar Gorge Slovenia</name>
+        <description>46.39237,14.08465</description>
+        <styleUrl>#icon-1899-0288D1</styleUrl>
+        <Point>
+          <coordinates>
+            14.08465,46.39237,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Hohenzollern Castle Germany</name>
+        <description>48.32367,8.96707</description>
+        <styleUrl>#icon-1899-0288D1</styleUrl>
+        <Point>
+          <coordinates>
+            8.96707,48.32367,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Aogashima Island Japan</name>
+        <description>32.4542,139.7639</description>
+        <styleUrl>#icon-1899-0288D1</styleUrl>
+        <Point>
+          <coordinates>
+            139.7639,32.4542,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Lake Baikal</name>
+        <description>53.62,108.21</description>
+        <styleUrl>#icon-1899-0288D1</styleUrl>
+        <Point>
+          <coordinates>
+            108.21,53.62,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Pompeii - Italy</name>
+        <description>40.75,14.486111</description>
+        <styleUrl>#icon-1899-0288D1</styleUrl>
+        <Point>
+          <coordinates>
+            14.486111,40.75,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Palace of Versailles - France</name>
+        <description>48.80491,2.12036</description>
+        <styleUrl>#icon-1899-0288D1</styleUrl>
+        <Point>
+          <coordinates>
+            2.12036,48.80491,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Rio de Janeiro</name>
+        <description>-22.951914,-43.210444</description>
+        <styleUrl>#icon-1899-0288D1</styleUrl>
+        <Point>
+          <coordinates>
+            -43.210444,-22.951914,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Parthenon - Greece</name>
+        <description>37.97155,23.72680</description>
+        <styleUrl>#icon-1899-0288D1</styleUrl>
+        <Point>
+          <coordinates>
+            23.7268,37.97155,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Colosseum - Rome</name>
+        <description>41.89025,12.49243</description>
+        <styleUrl>#icon-1899-0288D1</styleUrl>
+        <Point>
+          <coordinates>
+            12.49243,41.89025,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Machu Picchu - Peru</name>
+        <description>-13.16354,-72.54569</description>
+        <styleUrl>#icon-1899-0288D1</styleUrl>
+        <Point>
+          <coordinates>
+            -72.54569,-13.16354,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Sistine Chapel - Vatican</name>
+        <description>41.90296,12.45449</description>
+        <styleUrl>#icon-1899-0288D1</styleUrl>
+        <Point>
+          <coordinates>
+            12.45449,41.90296,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Louvre - Paris</name>
+        <description>48.86110,2.33564</description>
+        <styleUrl>#icon-1899-0288D1</styleUrl>
+        <Point>
+          <coordinates>
+            2.33564,48.8611,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Husøya on Mt. Baren. Senja - Norway</name>
+        <description>69.4910,17.635</description>
+        <styleUrl>#icon-1899-0288D1</styleUrl>
+        <Point>
+          <coordinates>
+            17.635,69.491,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Iceland</name>
+        <description>64.16,-21.88</description>
+        <styleUrl>#icon-1899-0288D1</styleUrl>
+        <Point>
+          <coordinates>
+            -21.88,64.16,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Nanda Blue Hole - Sanma Province - Vanuatu</name>
+        <description>-15.31350,167.16988</description>
+        <styleUrl>#icon-1899-0288D1</styleUrl>
+        <Point>
+          <coordinates>
+            167.16988,-15.3135,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name><![CDATA[Brother's Grimm Festival May-July]]></name>
+        <description>50.1260,8.9308</description>
+        <styleUrl>#icon-1899-0288D1</styleUrl>
+        <Point>
+          <coordinates>
+            8.9308,50.126,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Malta</name>
+        <description>35.893,14.412</description>
+        <styleUrl>#icon-1899-0288D1</styleUrl>
+        <Point>
+          <coordinates>
+            14.412,35.893,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Kefalonia</name>
+        <description>38.234,20.572</description>
+        <styleUrl>#icon-1899-0288D1</styleUrl>
+        <Point>
+          <coordinates>
+            20.572,38.234,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>USA - Route 66 from Chicago to LA (2 weeks</name>
+        <description>41.849,-87.634</description>
+        <styleUrl>#icon-1899-0288D1</styleUrl>
+        <Point>
+          <coordinates>
+            -87.634,41.849,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Positano - hire a classic car £88/day - boat hire on Med- walk Sentiero Degli walk (path of the gods</name>
+        <description>40.62820,14.48528</description>
+        <styleUrl>#icon-1899-0288D1</styleUrl>
+        <Point>
+          <coordinates>
+            14.48528,40.6282,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>The Standard Biergarten</name>
+        <description>40.74068,-74.00787</description>
+        <styleUrl>#icon-1899-0288D1</styleUrl>
+        <Point>
+          <coordinates>
+            -74.00787,40.74068,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Amalfi coast - swim in sea - stay in Ravello - Positano - Amalfi and Capri.</name>
+        <description>40.63328,14.60291</description>
+        <styleUrl>#icon-1899-0288D1</styleUrl>
+        <Point>
+          <coordinates>
+            14.60291,40.63328,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>The Attendant Coffee Shop London (in a disused Victorian toilet</name>
+        <description>51.519213,-0.140673</description>
+        <styleUrl>#icon-1899-0288D1</styleUrl>
+        <Point>
+          <coordinates>
+            -0.140673,51.519213,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Yalta and then drive to Sevastopol - Crimea</name>
+        <description>44.49510,34.16645</description>
+        <styleUrl>#icon-1899-0288D1</styleUrl>
+        <Point>
+          <coordinates>
+            34.16645,44.4951,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Palawan - Philippines</name>
+        <description>9.77,118.63</description>
+        <styleUrl>#icon-1899-0288D1</styleUrl>
+        <Point>
+          <coordinates>
+            118.63,9.77,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Berlin - Germany</name>
+        <description>52.517,13.392</description>
+        <styleUrl>#icon-1899-0288D1</styleUrl>
+        <Point>
+          <coordinates>
+            13.392,52.517,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Swiss Alps by train</name>
+        <description>46.647,8.570</description>
+        <styleUrl>#icon-1899-0288D1</styleUrl>
+        <Point>
+          <coordinates>
+            8.57,46.647,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Azure Window - Gozo - Malta - Game Of Thrones</name>
+        <description>36.053535,14.188500</description>
+        <styleUrl>#icon-1899-0288D1</styleUrl>
+        <Point>
+          <coordinates>
+            14.1885,36.053535,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Mdina - Malta - Game Of Thrones</name>
+        <description>35.886242,14.403189</description>
+        <styleUrl>#icon-1899-0288D1</styleUrl>
+        <Point>
+          <coordinates>
+            14.403189,35.886242,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Dubrovnik - Croatia - Game Of Thrones</name>
+        <description>42.649040,18.093972</description>
+        <styleUrl>#icon-1899-0288D1</styleUrl>
+        <Point>
+          <coordinates>
+            18.093972,42.64904,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Essaouira - Morocco - Game Of Thrones</name>
+        <description>31.513596,-9.765859</description>
+        <styleUrl>#icon-1899-0288D1</styleUrl>
+        <Point>
+          <coordinates>
+            -9.765859,31.513596,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Storm Chasing in Tornado Alley</name>
+        <description>38.924573,-98.782840</description>
+        <styleUrl>#icon-1899-0288D1</styleUrl>
+        <Point>
+          <coordinates>
+            -98.78284,38.924573,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Michelberger Hotel (Berlin - Germany</name>
+        <description>52.504540,13.447899</description>
+        <styleUrl>#icon-1899-0288D1</styleUrl>
+        <Point>
+          <coordinates>
+            13.447899,52.50454,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Glen Brittle Fairy Pools</name>
+        <description>57.225,-6.3</description>
+        <styleUrl>#icon-1899-0288D1</styleUrl>
+        <Point>
+          <coordinates>
+            -6.3,57.225,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Athens and Greek Islands</name>
+        <description>37.990770,23.728726</description>
+        <styleUrl>#icon-1899-0288D1</styleUrl>
+        <Point>
+          <coordinates>
+            23.728726,37.99077,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Tormina coast - Sicily</name>
+        <description>37.853048,15.285884</description>
+        <styleUrl>#icon-1899-0288D1</styleUrl>
+        <Point>
+          <coordinates>
+            15.285884,37.853048,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Maramures - Transylvanian countryside</name>
+        <description>47.900044,23.920434</description>
+        <styleUrl>#icon-1899-0288D1</styleUrl>
+        <Point>
+          <coordinates>
+            23.920434,47.900044,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Koh Tarutao - Thailand</name>
+        <description>6.645869,99.669896</description>
+        <styleUrl>#icon-1899-0288D1</styleUrl>
+        <Point>
+          <coordinates>
+            99.669896,6.645869,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Riomaggiore. Italy</name>
+        <description>44.098615, 9.740046</description>
+        <styleUrl>#icon-1899-0288D1</styleUrl>
+        <Point>
+          <coordinates>
+            9.740046,44.098615,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Yangshuo - China</name>
+        <description>24.705407, 110.652751</description>
+        <styleUrl>#icon-1899-0288D1</styleUrl>
+        <Point>
+          <coordinates>
+            110.652751,24.705407,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Castle Tioram</name>
+        <description>56.785,-5.8275</description>
+        <styleUrl>#icon-1899-0288D1</styleUrl>
+        <Point>
+          <coordinates>
+            -5.8275,56.785,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Waterfront of La Rochelle - France</name>
+        <description>46.158125,-1.151574</description>
+        <styleUrl>#icon-1899-0288D1</styleUrl>
+        <Point>
+          <coordinates>
+            -1.151574,46.158125,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Watch a sunset in Mont Saint-Michel - France</name>
+        <description>48.635837,-1.511398</description>
+        <styleUrl>#icon-1899-0288D1</styleUrl>
+        <Point>
+          <coordinates>
+            -1.511398,48.635837,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Saint-Jean-Cap-Ferrat Coastal Stroll</name>
+        <description>43.688600,7.330311</description>
+        <styleUrl>#icon-1899-0288D1</styleUrl>
+        <Point>
+          <coordinates>
+            7.330311,43.6886,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Ocean Shores - Washington</name>
+        <description>46.971667,-124.154722</description>
+        <styleUrl>#icon-1899-0288D1</styleUrl>
+        <Point>
+          <coordinates>
+            -124.154722,46.971667,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Wattamolla Falls - New South Wales</name>
+        <description>-34.131801605,151.117904663</description>
+        <styleUrl>#icon-1899-0288D1</styleUrl>
+        <Point>
+          <coordinates>
+            151.117904663,-34.131801605,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>McWay Falls - Big Sur - Monterey - California</name>
+        <description>36.158611,-121.671667</description>
+        <styleUrl>#icon-1899-0288D1</styleUrl>
+        <Point>
+          <coordinates>
+            -121.671667,36.158611,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Skogafoss - Iceland</name>
+        <description>63.529722,-19.513889</description>
+        <styleUrl>#icon-1899-0288D1</styleUrl>
+        <Point>
+          <coordinates>
+            -19.513889,63.529722,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Skyfall film location</name>
+        <description>56.619481,-4.93108</description>
+        <styleUrl>#icon-1899-0288D1</styleUrl>
+        <Point>
+          <coordinates>
+            -4.93108,56.619481,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Portugal - Palace Regaleira</name>
+        <description>38.796353,-9.396031</description>
+        <styleUrl>#icon-1899-0288D1</styleUrl>
+        <Point>
+          <coordinates>
+            -9.396031,38.796353,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Blagaj - Bosnia</name>
+        <description>43.257222,17.886389</description>
+        <styleUrl>#icon-1899-0288D1</styleUrl>
+        <Point>
+          <coordinates>
+            17.886389,43.257222,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Procida</name>
+        <description>40.758333,14.016667</description>
+        <styleUrl>#icon-1899-0288D1</styleUrl>
+        <Point>
+          <coordinates>
+            14.016667,40.758333,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Popeye Village film set - Malta</name>
+        <description>35.960746,14.340768</description>
+        <styleUrl>#icon-1899-0288D1</styleUrl>
+        <Point>
+          <coordinates>
+            14.340768,35.960746,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Litlanesfoss Falls - Iceland</name>
+        <description>65.077853,-14.871058</description>
+        <styleUrl>#icon-1899-0288D1</styleUrl>
+        <Point>
+          <coordinates>
+            -14.871058,65.077853,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Grotta Palazzese cliff restaurant - Italy</name>
+        <description>40.995906,17.221127</description>
+        <styleUrl>#icon-1899-0288D1</styleUrl>
+        <Point>
+          <coordinates>
+            17.221127,40.995906,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Alcazar of Segovia</name>
+        <description>40.952570,-4.132554</description>
+        <styleUrl>#icon-1899-0288D1</styleUrl>
+        <Point>
+          <coordinates>
+            -4.132554,40.95257,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Santa Maria dell Isola</name>
+        <description>38.679785,15.895597</description>
+        <styleUrl>#icon-1899-0288D1</styleUrl>
+        <Point>
+          <coordinates>
+            15.895597,38.679785,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Lena Pillars National Park - Russia</name>
+        <description>60.948444,125.985028</description>
+        <styleUrl>#icon-1899-0288D1</styleUrl>
+        <Point>
+          <coordinates>
+            125.985028,60.948444,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>The Fort of Sao Joao Baptista - Portugal</name>
+        <description>39.411239,-9.510117</description>
+        <styleUrl>#icon-1899-0288D1</styleUrl>
+        <Point>
+          <coordinates>
+            -9.510117,39.411239,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Tiree</name>
+        <description>56.491853,-6.915472</description>
+        <styleUrl>#icon-1899-0288D1</styleUrl>
+        <Point>
+          <coordinates>
+            -6.915472,56.491853,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Beskydy mountains - Poland</name>
+        <description>49.497359,19.392053</description>
+        <styleUrl>#icon-1899-0288D1</styleUrl>
+        <Point>
+          <coordinates>
+            19.392053,49.497359,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Roomers Hotel Frankfurt</name>
+        <description>50.104880,8.666807</description>
+        <styleUrl>#icon-1899-0288D1</styleUrl>
+        <Point>
+          <coordinates>
+            8.666807,50.10488,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Plitvice - Croatia waterfalls</name>
+        <description>44.865408,15.581819</description>
+        <styleUrl>#icon-1899-0288D1</styleUrl>
+        <Point>
+          <coordinates>
+            15.581819,44.865408,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Cycle Berlin to Copenhagen</name>
+        <description>52.522167,13.388058</description>
+        <styleUrl>#icon-1899-0288D1</styleUrl>
+        <Point>
+          <coordinates>
+            13.388058,52.522167,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Big Sur - drive from Andrew Molera State Park to Pfeiffer Big Sur State park</name>
+        <description>36.282499,-121.828611</description>
+        <styleUrl>#icon-1899-0288D1</styleUrl>
+        <Point>
+          <coordinates>
+            -121.828611,36.282499,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Malibu beach</name>
+        <description>34.033603,-118.744594</description>
+        <styleUrl>#icon-1899-0288D1</styleUrl>
+        <Point>
+          <coordinates>
+            -118.744594,34.033603,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Croatia - Zagreb - Split - Dubrovnik</name>
+        <description>44.953924,15.216430</description>
+        <styleUrl>#icon-1899-0288D1</styleUrl>
+        <Point>
+          <coordinates>
+            15.21643,44.953924,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Freierg - Germany</name>
+        <description>48.004083,7.854785</description>
+        <styleUrl>#icon-1899-0288D1</styleUrl>
+        <Point>
+          <coordinates>
+            7.854785,48.004083,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Torres Del Plaine</name>
+        <description>-50.942296,-73.407217</description>
+        <styleUrl>#icon-1899-0288D1</styleUrl>
+        <Point>
+          <coordinates>
+            -73.407217,-50.942296,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Iguazu National Park and Falls</name>
+        <description>-25.695538,-54.437618</description>
+        <styleUrl>#icon-1899-0288D1</styleUrl>
+        <Point>
+          <coordinates>
+            -54.437618,-25.695538,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Chile</name>
+        <description>-33.687959,-71.496947</description>
+        <styleUrl>#icon-1899-0288D1</styleUrl>
+        <Point>
+          <coordinates>
+            -71.496947,-33.687959,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Bangkok - Thailand</name>
+        <description>13.723933,100.517754</description>
+        <styleUrl>#icon-1899-0288D1</styleUrl>
+        <Point>
+          <coordinates>
+            100.517754,13.723933,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Sicily - Taormina</name>
+        <description>37.854132,15.289617</description>
+        <styleUrl>#icon-1899-0288D1</styleUrl>
+        <Point>
+          <coordinates>
+            15.289617,37.854132,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Somerset</name>
+        <description>51.137637,-3.112156</description>
+        <styleUrl>#icon-1899-0288D1</styleUrl>
+        <Point>
+          <coordinates>
+            -3.112156,51.137637,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Asbyrgi canyon iceland</name>
+        <description>66.014444,-16.503333</description>
+        <styleUrl>#icon-1899-0288D1</styleUrl>
+        <Point>
+          <coordinates>
+            -16.503333,66.014444,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Godafoss Waterfall</name>
+        <description>65.688434,-17.589854</description>
+        <styleUrl>#icon-1899-0288D1</styleUrl>
+        <Point>
+          <coordinates>
+            -17.589854,65.688434,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Sørvagen</name>
+        <description>67.884313,13.030702</description>
+        <styleUrl>#icon-1899-0288D1</styleUrl>
+        <Point>
+          <coordinates>
+            13.030702,67.884313,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Terminal Neige - Refuge du Montenvers</name>
+        <description>45.9333837, 6.9172128</description>
+        <styleUrl>#icon-1899-0288D1</styleUrl>
+        <Point>
+          <coordinates>
+            6.9172128,45.9333837,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Ion City Hotel</name>
+        <styleUrl>#icon-1899-0288D1-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            -21.9278256,64.1453109,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Hemelvaart Bier Cafe</name>
+        <styleUrl>#icon-1899-0288D1-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            -2.12402399999996,55.842888,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Noisebridge</name>
+        <styleUrl>#icon-1899-0288D1-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            -122.419286,37.762416,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Camp Adventure Park https://www.effekt.dk/camp</name>
+        <description>55.25, 11.95</description>
+        <styleUrl>#icon-1899-0288D1</styleUrl>
+        <Point>
+          <coordinates>
+            11.95,55.25,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Samphran Temple</name>
+        <styleUrl>#icon-1899-0288D1-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            100.2159111,13.7361762,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Solheimasandur Plane Wreck</name>
+        <styleUrl>#icon-1899-0288D1-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            -19.3647122,63.4590918,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Anata no Warehouse Kawasaki</name>
+        <styleUrl>#icon-1899-0288D1-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            139.6939548,35.5269358,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name><![CDATA[AquaDom & SEA LIFE Berlin]]></name>
+        <styleUrl>#icon-1899-0288D1-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            13.4036905,52.5201544,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Eltz Castle</name>
+        <styleUrl>#icon-1899-0288D1-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            7.33654730000001,50.2052269,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Furka Pass</name>
+        <styleUrl>#icon-1899-0288D1-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            8.41486370000007,46.5724095,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Place de la Croix-Rousse https://www.atlasobscura.com/places/traboules-secret-passages</name>
+        <description>45.774638, 4.8321359</description>
+        <styleUrl>#icon-1899-0288D1</styleUrl>
+        <Point>
+          <coordinates>
+            4.8321359,45.774638,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Miniature and Theater Museum</name>
+        <styleUrl>#icon-1899-0288D1-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            4.82734740000001,45.761876,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name><![CDATA[6 Place de l'Antiquaille Roman Theatre]]></name>
+        <description>45.760195, 4.8223746</description>
+        <styleUrl>#icon-1899-0288D1</styleUrl>
+        <Point>
+          <coordinates>
+            4.8223746,45.760195,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Viale Virgilio, 107 - 18th C. fake medieval villiage</name>
+        <description>45.049085, 7.6851444</description>
+        <styleUrl>#icon-1899-0288D1</styleUrl>
+        <Point>
+          <coordinates>
+            7.6851444,45.049085,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>NH Lingotto</name>
+        <styleUrl>#icon-1899-0288D1-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            7.66514670000004,45.031763,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Fiat Lingotto Factory - go on roof
+</name>
+        <description>45.0295304, 7.6275658</description>
+        <styleUrl>#icon-1899-0288D1</styleUrl>
+        <Point>
+          <coordinates>
+            7.6275658,45.0295304,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Via Giulia di Barolo, 9 - really skinny building</name>
+        <description>45.0678312, 7.697013</description>
+        <styleUrl>#icon-1899-0288D1</styleUrl>
+        <Point>
+          <coordinates>
+            7.697013,45.0678312,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Santuario Di S. Bernardino Alle Ossa</name>
+        <styleUrl>#icon-1899-0288D1-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            9.19547009999997,45.4626433,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Bosco Verticale</name>
+        <styleUrl>#icon-1899-0288D1-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            9.19049999999993,45.4855,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Piazza degli Affari</name>
+        <styleUrl>#icon-1899-0288D1-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            9.18323850000002,45.464934,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Duomo di Milano Italy</name>
+        <styleUrl>#icon-1899-0288D1-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            9.19192650000002,45.4640976,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Backdoor43 - TINY BAR</name>
+        <description>45.451281, 9.173424</description>
+        <styleUrl>#icon-1899-0288D1</styleUrl>
+        <Point>
+          <coordinates>
+            9.173424,45.451281,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Fondazione Prada</name>
+        <styleUrl>#icon-1899-0288D1-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            9.2052529,45.4443593,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Chez Terra - JAPANESE RESTAURANT</name>
+        <description>45.7701843, 4.8472511</description>
+        <styleUrl>#icon-1899-0288D1</styleUrl>
+        <Point>
+          <coordinates>
+            4.8472511,45.7701843,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Novelty Automation</name>
+        <styleUrl>#icon-1899-0288D1-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            -0.116926000000035,51.519721,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Gallo-Roman Museum of Lyon-Fourvière</name>
+        <styleUrl>#icon-1899-0288D1-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            4.81996370000002,45.7604193,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Confluence Museum</name>
+        <styleUrl>#icon-1899-0288D1-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            4.81821300000001,45.7326492,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Duomo di Milano Italy</name>
+        <styleUrl>#icon-1899-0288D1-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            9.19192650000002,45.4640976,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Galleria Vittorio Emanuele II</name>
+        <styleUrl>#icon-1899-0288D1-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            9.18994010000006,45.4658434,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Piazza del Duomo</name>
+        <styleUrl>#icon-1899-0288D1-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            9.19001409999998,45.4642107,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Via Palazzo Reale</name>
+        <styleUrl>#icon-1899-0288D1-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            9.19227180000007,45.4628351,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Civic Gallery of Modern and Contemporary Art</name>
+        <styleUrl>#icon-1899-0288D1-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            7.66920890000006,45.0649441,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Gallo-Roman Museum of Lyon-Fourvière</name>
+        <styleUrl>#icon-1899-0288D1-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            4.81996370000002,45.7604193,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Flower Burger</name>
+        <styleUrl>#icon-1899-0288D1-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            7.67779759999996,45.0711695,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Neuschwanstein Castle</name>
+        <styleUrl>#icon-1899-0288D1-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            10.7498004,47.557574,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Museum of Failure</name>
+        <styleUrl>#icon-1899-0288D1-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            12.6890579999999,56.04779,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Kinloch Hourn - https://www.walkhighlands.co.uk/fortwilliam/barrisdale-bay.shtml</name>
+        <description>57.108708, -5.38542</description>
+        <styleUrl>#icon-1899-0288D1</styleUrl>
+        <Point>
+          <coordinates>
+            -5.38542,57.108708,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Shinjuku Golden Gai</name>
+        <styleUrl>#icon-1899-0288D1-nodesc</styleUrl>
+        <Point>
+          <coordinates>
+            139.7046129,35.6937775,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Ride the Schwebebahn in Wuppertal</name>
+        <description>51.2562128, 7.1507636</description>
+        <styleUrl>#icon-1899-0288D1</styleUrl>
+        <Point>
+          <coordinates>
+            7.1507636,51.2562128,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>De Heen https://www.camping-raft.com/de-locaties/de-heen-noord-brabant</name>
+        <description>51.6147645, 4.2736578</description>
+        <styleUrl>#icon-1899-0288D1</styleUrl>
+        <Point>
+          <coordinates>
+            4.2736578,51.6147645,0
+          </coordinates>
+        </Point>
+      </Placemark>
+    </Folder>
+  </Document>
+</kml>
