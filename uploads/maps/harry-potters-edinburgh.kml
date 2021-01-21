@@ -217,11 +217,21 @@
       </Placemark>
       <Placemark>
         <name>Potterrow</name>
-        <description><![CDATA[Part of Edinburgh University and frequented by Rowling, the hall across Bristo Square is where annual graduation ceremonies take place, each person being tapped on the head with a "hat" made from John Knox's breeches. ]]></description>
+        <description><![CDATA[Asside from the 'Potter' reference... Part of Edinburgh University and frequented by Rowling, the hall across Bristo Square is where annual graduation ceremonies take place, each person being tapped on the head with a "hat" made from John Knox's breeches. ]]></description>
         <styleUrl>#icon-22</styleUrl>
         <Point>
           <coordinates>
             -3.1870228,55.9457227,0
+          </coordinates>
+        </Point>
+      </Placemark>
+            <Placemark>
+        <name>Dobbies Garden Centre</name>
+        <description><![CDATA[Perhaps an inspiration for the name of a certain house elf?]]></description>
+        <styleUrl>#icon-22</styleUrl>
+        <Point>
+          <coordinates>
+            55.89591086761732,-3.0997891703183886,0
           </coordinates>
         </Point>
       </Placemark>
