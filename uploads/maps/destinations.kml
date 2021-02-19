@@ -152,6 +152,16 @@
             -115.571,51.1782,0
           </coordinates>
         </Point>
+      </Placemark>  
+       <Placemark>
+        <name>Casa Sperimental - La casa-albero di Perugini https://www.themodernhouse.com/journal/casa-sperimentale/</name>
+        <description>41.8587531,12.200076</description>
+        <styleUrl>#icon-1899-0288D1</styleUrl>
+        <Point>
+          <coordinates>
+            41.8587531,12.200076,0
+          </coordinates>
+        </Point>
       </Placemark>
       <Placemark>
         <name>Shetland</name>
