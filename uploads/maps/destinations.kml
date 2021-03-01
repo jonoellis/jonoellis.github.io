@@ -83,6 +83,10 @@
     </StyleMap>
     <Folder>
       <name>Destinations</name>
+      
+      
+      
+      
       <Placemark>
         <name>Cuba</name>
         <description>22.0289,-79.9370</description>
@@ -90,6 +94,26 @@
         <Point>
           <coordinates>
             -79.937,22.0289,0
+          </coordinates>
+        </Point>
+      </Placemark>
+            <Placemark>
+        <name>Undier The Pier Show at Southwold Pier</name>
+        <description>52.330583151560035,1.6862027190414128</description>
+        <styleUrl>#icon-1899-0288D1</styleUrl>
+        <Point>
+          <coordinates>
+            1.6862,52.3305,0
+          </coordinates>
+        </Point>
+      </Placemark>
+            <Placemark>
+        <name>Novelty Automation</name>
+        <description>51.51970361395529,-0.11693861534253619</description>
+        <styleUrl>#icon-1899-0288D1</styleUrl>
+        <Point>
+          <coordinates>
+            51.5197,-0.1169,0
           </coordinates>
         </Point>
       </Placemark>
