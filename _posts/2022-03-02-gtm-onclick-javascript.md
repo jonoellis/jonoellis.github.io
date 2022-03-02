@@ -17,3 +17,4 @@ var result = field.match(myRegexp);
 return result ? result[1] : null; 
 }
 ```
+Hopefully this is useful to you!
