@@ -1,0 +1,110 @@
+---
+layout: post
+title: "HTTP Response Status Codes... JavaScript Clock"
+author: Jono
+published: true
+date: 2023-02-03T10:00:00+0000
+categories:
+  - random
+  - code
+---
+Sometimes I get mad ideas and my coding just isn't up to scratch to bring the idea to fruition. Today I thought "I wonder if it's possible to have a little clock that tells the time, but whenever the time gets to a time that matches an <a href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Status">HTTP status code</a> it would print it out. I was thinking something like 4:04 Time not found! GTP and I had a wee chat and, after a few rounds of revisions, here is the code. Clearly the code isn't mine (although I did a fair bit of response code wrangling in Google Sheets, a fair bit of console debugging and had to actually understand what the code was doing when ChatGTP went mad and started ignoring what I asked it), hopefully at least the original idea was mine!
+
+    <div id="clock"></div>
+    <div id="messages"></div>
+
+<script>
+  let messages = [
+  { hour: 1, minute: 0, message: "100 Continue" },
+    { hour: 1, minute: 1, message: "101 Switching Protocols" },
+    { hour: 1, minute: 2, message: "102 Processing" },
+    { hour: 1, minute: 3, message: "103 Early Hints" },
+    { hour: 2, minute: 0, message: "200 OK" },
+    { hour: 2, minute: 1, message: "201 Created" },
+    { hour: 2, minute: 2, message: "202 Accepted" },
+    { hour: 2, minute: 3, message: "203 Non-Authoritative Information" },
+    { hour: 2, minute: 4, message: "204 No Content" },
+    { hour: 2, minute: 5, message: "205 Reset Content" },
+    { hour: 2, minute: 6, message: "206 Partial Content" },
+    { hour: 2, minute: 7, message: "207 Multi-Status" },
+    { hour: 2, minute: 8, message: "208 Already Reported" },
+    { hour: 2, minute: 26, message: "226 IM Used (HTTP Delta encoding)" },
+    { hour: 3, minute: 0, message: "300 Multiple Choices" },
+    { hour: 3, minute: 1, message: "301 Moved Permanently" },
+    { hour: 3, minute: 2, message: "302 Found" },
+    { hour: 3, minute: 3, message: "303 See Other" },
+    { hour: 3, minute: 4, message: "304 Not Modified" },
+    { hour: 3, minute: 5, message: "305 Use Proxy Deprecated" },
+    { hour: 3, minute: 7, message: "307 Temporary Redirect" },
+    { hour: 3, minute: 8, message: "308 Permanent Redirect" },
+    { hour: 4, minute: 0, message: "400 Bad Request" },
+    { hour: 4, minute: 1, message: "401 Unauthorized" },
+    { hour: 4, minute: 2, message: "402 Payment Required Experimental" },
+    { hour: 4, minute: 3, message: "403 Forbidden" },
+    { hour: 4, minute: 4, message: "404 Not Found" },
+    { hour: 4, minute: 5, message: "405 Method Not Allowed" },
+    { hour: 4, minute: 6, message: "406 Not Acceptable" },
+    { hour: 4, minute: 7, message: "407 Proxy Authentication Required" },
+    { hour: 4, minute: 8, message: "408 Request Timeout" },
+    { hour: 4, minute: 9, message: "409 Conflict" },
+    { hour: 4, minute: 10, message: "410 Gone" },
+    { hour: 4, minute: 11, message: "411 Length Required" },
+    { hour: 4, minute: 12, message: "412 Precondition Failed" },
+    { hour: 4, minute: 13, message: "413 Payload Too Large" },
+    { hour: 4, minute: 14, message: "414 URI Too Long" },
+    { hour: 4, minute: 15, message: "415 Unsupported Media Type" },
+    { hour: 4, minute: 16, message: "416 Range Not Satisfiable" },
+    { hour: 4, minute: 17, message: "417 Expectation Failed" },
+    { hour: 4, minute: 18, message: "418 I'm a teapot" },
+    { hour: 4, minute: 21, message: "421 Misdirected Request" },
+    { hour: 4, minute: 22, message: "422 Unprocessable Entity" },
+    { hour: 4, minute: 23, message: "423 Locked" },
+    { hour: 4, minute: 24, message: "424 Failed Dependency" },
+    { hour: 4, minute: 25, message: "425 Too Early Experimental" },
+    { hour: 4, minute: 26, message: "426 Upgrade Required" },
+    { hour: 4, minute: 28, message: "428 Precondition Required" },
+    { hour: 4, minute: 29, message: "429 Too Many Requests" },
+    { hour: 4, minute: 31, message: "431 Request Header Fields Too Large" },
+    { hour: 4, minute: 51, message: "451 Unavailable For Legal Reasons" },
+    { hour: 5, minute: 0, message: "500 Internal Server Error" },
+    { hour: 5, minute: 1, message: "501 Not Implemented" },
+    { hour: 5, minute: 2, message: "502 Bad Gateway" },
+    { hour: 5, minute: 3, message: "503 Service Unavailable" },
+    { hour: 5, minute: 4, message: "504 Gateway Timeout" },
+    { hour: 5, minute: 5, message: "505 HTTP Version Not Supported" },
+    { hour: 5, minute: 6, message: "506 Variant Also Negotiates" },
+    { hour: 5, minute: 7, message: "507 Insufficient Storage" },
+    { hour: 5, minute: 8, message: "508 Loop Detected" },
+    { hour: 5, minute: 10, message: "510 Not Extended" },
+    { hour: 5, minute: 11, message: "511 Network Authentication Required" },
+    ];
+
+
+        function checkTime() {
+            let date = new Date();
+            let hour = date.getHours();
+            let minute = date.getMinutes();
+            let ampm = hour >= 12 ? 'PM' : 'AM';
+            hour = hour % 12;
+            hour = hour ? hour : 12;
+            hour = hour < 10 ? '0' + hour : hour;
+            minute = minute < 10 ? '0' + minute : minute;
+            let clock = document.getElementById("clock");
+            clock.innerHTML = hour + ":" + minute + " " + ampm;
+
+            
+
+            for (let i = 0; i < messages.length; i++) {
+                if (messages[i].hour === hour && messages[i].minute === minute) {
+                    let messagesContainer = document.getElementById("messages");
+                    messagesContainer.innerHTML = messages[i].message;
+                }
+            }
+
+
+
+
+        }
+
+        setInterval(checkTime, 1000);
+    </script>
