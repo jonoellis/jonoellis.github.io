@@ -8,7 +8,7 @@ categories:
   - random
   - code
 ---
-<p>Edinburgh Council put their bin days out in a crappy PDF. ChatGPT took my input and created a nice little bit of code that displays the next bins to put out.
+<p>Edinburgh Council put their bin days out in a PDF - this is crappy for a number of reasons but mostly because I have to keep finding it and opening it. Sure, I could type it in to my calendar but what else could I do with it? ChatGPT took my input and created a nice little bit of code that displays the next bins to put out.
 </p>
 <br><br>
     <p style="color:blue;font-size:46px;" id="message"></p>
@@ -85,7 +85,7 @@ categories:
                 return "th";
             }
           };
-          message.innerHTML = `${dayOfWeek} ${dayOfMonth}${nthNumber(dayOfMonth)} of ${month}: Put out the ${schedule[i].bin} bin.`;
+          message.innerHTML = `${dayOfWeek} ${dayOfMonth}${nthNumber(dayOfMonth)} of ${month}: Put out the ${schedule[i].bin} bins.`;
           break;
         }
       }
