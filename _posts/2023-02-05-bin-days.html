@@ -1,0 +1,78 @@
+---
+layout: post
+title: "Edinburgh Council Bin Days"
+author: Jono
+published: true
+date: 2023-02-05T10:00:00+0000
+categories:
+  - random
+  - code
+---
+Edinburgh Council put their bin days out in a crappy PDF. ChatGPT took my input and created a nice little bit of code that displays the next bins to put out.
+
+    <p id="message"></p>
+    <script>
+      const schedule = [
+        {date: '07/02/2023', bin: 'Garden, Food, Recycling & Glass'},
+        {date: '14/02/2023', bin: 'Food & Non-recyclable'},
+        {date: '21/02/2023', bin: 'Garden, Food, Recycling & Glass'},
+        {date: '28/02/2023', bin: 'Food & Non-recyclable'},
+        {date: '07/03/2023', bin: 'Garden, Food, Recycling & Glass'},
+        {date: '14/03/2023', bin: 'Food & Non-recyclable'},
+        {date: '21/03/2023', bin: 'Garden, Food, Recycling & Glass'},
+        {date: '28/03/2023', bin: 'Food & Non-recyclable'},
+        {date: '04/04/2023', bin: 'Garden, Food, Recycling & Glass'},
+        {date: '11/04/2023', bin: 'Food & Non-recyclable'},
+        {date: '18/04/2023', bin: 'Garden, Food, Recycling & Glass'},
+        {date: '25/04/2023', bin: 'Food & Non-recyclable'},
+        {date: '02/05/2023', bin: 'Garden, Food, Recycling & Glass'},
+        {date: '09/05/2023', bin: 'Food & Non-recyclable'},
+        {date: '16/05/2023', bin: 'Garden, Food, Recycling & Glass'},
+        {date: '23/05/2023', bin: 'Food & Non-recyclable'},
+        {date: '30/05/2023', bin: 'Garden, Food, Recycling & Glass'},
+        {date: '06/06/2023', bin: 'Food & Non-recyclable'},
+        {date: '13/06/2023', bin: 'Garden, Food, Recycling & Glass'},
+        {date: '20/06/2023', bin: 'Food & Non-recyclable'},
+        {date: '27/06/2023', bin: 'Garden, Food, Recycling & Glass'},
+        {date: '04/07/2023', bin: 'Food & Non-recyclable'},
+        {date: '11/07/2023', bin: 'Garden, Food, Recycling & Glass'},
+        {date: '18/07/2023', bin: 'Food & Non-recyclable'},
+        {date: '25/07/2023', bin: 'Garden, Food, Recycling & Glass'},
+        {date: '01/08/2023', bin: 'Food & Non-recyclable'},
+        {date: '08/08/2023', bin: 'Garden, Food, Recycling & Glass'},
+        {date: '15/08/2023', bin: 'Food & Non-recyclable'},
+        {date: '22/08/2023', bin: 'Garden, Food, Recycling & Glass'},
+        {date: '29/08/2023', bin: 'Food & Non-recyclable'},
+        {date: '05/09/2023', bin: 'Garden, Food, Recycling & Glass'},
+        {date: '12/09/2023', bin: 'Food & Non-recyclable'},
+        {date: '19/09/2023', bin: 'Garden, Food, Recycling & Glass'},
+        {date: '26/09/2023', bin: 'Food & Non-recyclable'},
+        {date: '03/10/2023', bin: 'Garden, Food, Recycling & Glass'},
+        {date: '10/10/2023', bin: 'Food & Non-recyclable'},
+        {date: '17/10/2023', bin: 'Garden, Food, Recycling & Glass'},
+        {date: '24/10/2023', bin: 'Food & Non-recyclable'},
+        {date: '31/10/2023', bin: 'Garden, Food, Recycling & Glass'},
+        {date: '07/11/2023', bin: 'Food & Non-recyclable'},
+        {date: '14/11/2023', bin: 'Food, Recycling & Glass'},
+        {date: '21/11/2023', bin: 'Food & Non-recyclable'},
+        {date: '28/11/2023', bin: 'Food, Recycling & Glass'},
+        {date: '05/12/2023', bin: 'Food & Non-recyclable'},
+        {date: '12/12/2023', bin: 'Food, Recycling & Glass'},
+        {date: '19/12/2023', bin: 'Food & Non-recyclable'},
+        {date: '26/12/2023', bin: 'Food, Recycling & Glass'}
+      ];
+
+      const today = new Date();
+      const message = document.getElementById('message');
+
+      for (let i = 0; i < schedule.length; i++) {
+        const date = new Date(schedule[i].date);
+        if (today <= date) {
+          const dayOfWeek = date.toLocaleString('default', { weekday: 'long' });
+          const dayOfMonth = date.toLocaleString('default', { day: 'numeric' });
+          const month = date.toLocaleString('default', { month: 'long' });
+          message.innerHTML = `${dayOfWeek} ${dayOfMonth}th of ${month}: Put out the ${schedule[i].bin} bin.`;
+          break;
+        }
+      }
+    </script>
