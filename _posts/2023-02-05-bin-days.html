@@ -60,19 +60,53 @@ Edinburgh Council put their bin days out in a crappy PDF. ChatGPT took my input 
         {date: '12/12/2023', bin: 'Food, Recycling & Glass'},
         {date: '19/12/2023', bin: 'Food & Non-recyclable'},
         {date: '26/12/2023', bin: 'Food, Recycling & Glass'}
-      ];
+ ];
 
       const today = new Date();
       const message = document.getElementById('message');
 
       for (let i = 0; i < schedule.length; i++) {
-        const date = new Date(schedule[i].date);
+        const date = new Date(schedule[i].date.split("/").reverse().join("/"));
         if (today <= date) {
           const dayOfWeek = date.toLocaleString('default', { weekday: 'long' });
-          const dayOfMonth = date.toLocaleString('default', { day: 'numeric' });
+          const dayOfMonth = date.getDate();
           const month = date.toLocaleString('default', { month: 'long' });
-          message.innerHTML = `${dayOfWeek} ${dayOfMonth}th of ${month}: Put out the ${schedule[i].bin} bin.`;
+          const nthNumber = (number) => {
+            if (number > 3 && number < 21) return "th";
+            switch (number % 10) {
+              case 1:
+                return "st";
+              case 2:
+                return "nd";
+              case 3:
+                return "rd";
+              default:
+                return "th";
+            }
+          };
+          message.innerHTML = `${dayOfWeek} ${dayOfMonth}${nthNumber(dayOfMonth)} of ${month}: Put out the ${schedule[i].bin} bin.`;
           break;
         }
       }
     </script>
+
+<p>And, if you care, here are the prompts that got us here:
+  
+  
+  <pre>
+  I have a list of dates and which recycling bins to put out on those dates. I need some javascript to show me a message up to (and including) a given date, then switch over to the next date. Here are some dates and the bins that are to be put out. 
+07/02/2023	Recycling & Glass
+14/02/2023	Non-recyclable
+21/02/2023	Recycling & Glass
+28/02/2023	Non-recyclable
+07/03/2023	Recycling & Glass
+14/03/2023	Non-recyclable
+</pre>
+<p> The code was good but...</p>
+<pre>This is fantastic. Can you turn it in to something that will display in HTML please?</pre>
+<p>I was mostly happy with this.</p>
+<pre>I'd like the message to have a little more detail. Can the message interpret the date so that before the message it says: "Tuesday 7th of February: $MESSAGE"?</pre>
+<p>It failed at this... but in a way that was easy to understand</p>
+<pre>Can you rewrite the code above - it has two mistakes. The dates are all in UK date format (dd/mm/yyyy) and also when I put 7th the th should be ordinal number - here is some ordinal number code: </pre>
+
+
