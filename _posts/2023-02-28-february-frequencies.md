@@ -34,8 +34,8 @@ Here's what's filled my ears this month:
 * VUKOVI - HADES\
 	 ALL-CAPS Scottish metal.
    
-* [Kelsy Karter & The Heroines - Crying (Stripped)](https://open.spotify.com/track/3ZkUNNLDiTwTSeE5jFnfzq?si=8d790a8f23d949a9)\ 
-	 You might know the song but this version is fab.
+* [Kelsy Karter & The Heroines - Crying (Stripped)](https://open.spotify.com/track/3ZkUNNLDiTwTSeE5jFnfzq?si=8d790a8f23d949a9)\
+	 You might know the song but not like this.
    
 * Wavetable Edinburgh sets\
-   Especially from [Andrew Ostler](https://andrew-ostler.bandcamp.com/) and [Simon Kirby](https://www.youtube.com/watch?v=ZE4Q2FW3Nfo)
+   Especially from [Andrew Ostler](https://andrew-ostler.bandcamp.com/) and [Simon Kirby](https://www.youtube.com/watch?v=ZE4Q2FW3Nfo).
