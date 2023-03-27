@@ -27,7 +27,7 @@ Here's what's been spinning on the decks this month:
 * [Cyn - I'll Still Have Me](https://www.youtube.com/watch?v=-MZgtCp8mtc)\
    Gorgeous track with a very emotive video.
 
-* Mazie\
+* [Mazie](https://www.youtube.com/watch?v=vZAj6xfyHIw)\
    "the rainbow cassette" into "dumb dumb" is 🔥.
 
 * [The Big Moon - Wide Eyes](https://www.youtube.com/watch?v=C3gnLyqUD9M)\
