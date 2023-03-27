@@ -12,7 +12,7 @@ Here's what's been spinning on the decks this month:
 * [The Twilight Sad - Keep Yourself Warm](https://thetwilightsad.bandcamp.com/track/keep-yourself-warm-live-2)\
 	 The new band for Grant and the cover we didn't know we needed. This song gave me shivers. What a way to keep Scott's memory alive.
 
-* [Dropkick Murphys - All You Tories](https://www.youtube.com/watch?v=SLqb535hBi0&t=173s)\
+* [Dropkick Murphys - All You Tories](https://www.youtube.com/watch?v=SLqb535hBi0)\
 	 I'm probably obliged to give some kind of warning about this or something.   
    
 * Laurie Anderson\
