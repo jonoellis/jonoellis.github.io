@@ -22,14 +22,13 @@ Here's what's been stimulating my ear holes this month:
 	 This song sounds so tight - and also sounds like it could have been on the Empire Records soundtrack. 
 
 * [Emily I'm Sorry - Boygenius](https://www.youtube.com/watch?v=0utmCIxfHgc)\
-	 I realise at this point of my month's listening that I might be a teenage girl - the production on this track is on point.
+	 I realise at this point of my month's listening that I might be a teenager... but the production on this track is on point.
 
 * [Exhausting Lover - Ben Folds](https://www.youtube.com/watch?v=t6JA-4YgoCw)\
 	 It's nice to have Ben back, especially with something that sounds like it's from a musical, has elements of Hamilton and has a very nifty sounding harmonium/organ thing at the start.
 
 * [Blemishes - LIES](https://www.youtube.com/watch?v=-3szgLmEvWw)\
 	 Is it weird that I like this because it has a [Jonnie Common](https://www.youtube.com/watch?v=T0EwFAx39zM) vibe?
-
 
 * [Close Call - Brownbear](https://www.youtube.com/watch?v=xCYmZeXf5kU)\
 	 Love a "do do dooo" chorus!
