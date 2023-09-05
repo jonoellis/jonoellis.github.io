@@ -48,7 +48,20 @@ function strToArray(obj) {
   }
 }</code></pre>
 
-
+<h2>Delete all sheets apart from the one with the Universal Analytics Report Configuration: </h2>
+<code>function DeleteAllSheets() {
+  var ss = SpreadsheetApp.getActiveSpreadsheet();
+  var sheets = ss.getSheets();
+  for (i = 0; i < sheets.length; i++) {
+    switch (sheets[i].getSheetName()) {
+      case "Report Configuration":
+        break;
+      default:
+        ss.deleteSheet(sheets[i]);
+    }
+  }
+}
+</code>
 
 <h2>Concatenate the contents from multiple cells into one cell with line breaks: </h2>
 <code>=ArrayFormula(CONCATENATE(A1:A4 & CHAR(10)))</code>
