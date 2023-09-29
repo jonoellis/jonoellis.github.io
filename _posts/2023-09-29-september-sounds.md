@@ -11,15 +11,14 @@ categories:
 I've listened to a lot of great stuff this month - a lot of older things mixed in with some awesome new stuff. Top of the pile is [LOOK MUM NO COMPUTER's organ arpeggios](https://www.youtube.com/watch?v=oHUl6R8jRJ0) - it's been on repeat. 
 
 
-* [Arpeggios On A Church Organ With An Arturia Keystep Pro
- - LOOK MUM NO COMPUTER](https://www.youtube.com/watch?v=oHUl6R8jRJ0)
+* [Arpeggios On A Church Organ With An Arturia Keystep Pro - LOOK MUM NO COMPUTER](https://www.youtube.com/watch?v=oHUl6R8jRJ0)
 
-	 This is one of those little videos that hides so much genius. Sam wrote the song, sure, but he also founded the musueum that the organ is located in... and painstakingly rebuilt the organ that it's playing on. And this tune absolutely gives me goosebumps. 
+	 This is one of those little videos that hides so much genius. Sam wrote the song, sure, but he also founded the museum that the organ is located in... and painstakingly rebuilt the organ that it's playing on. And this tune absolutely gives me goosebumps. 
 
 
 * [Changed Shapes - Lauren Mayberry](https://www.youtube.com/watch?v=5SRNQKwXTyU)
 
-	 The band that Lauren is performing with sound really slick. The drummer especially has a distincitve style. ["Shame"](https://www.youtube.com/watch?v=-13RcQmzSKo) is a style all of its own, the contrasting sounds and orchestration are on point. ["Sorry. Etc.](https://www.youtube.com/watch?v=qzWT7c7xUzg) is heavy - very Garbage-y synth and guitar. ["Bird"](https://www.youtube.com/watch?v=IBpnfm33U4I) sounds like a grower. ["Under The Knife'](https://www.youtube.com/watch?v=sLETj2q_KIs) has some beautiful backing vocals - you can really see the guitar player's passion. ["Changed Shapes"](https://www.youtube.com/watch?v=5SRNQKwXTyU) is very cool (it has a summer dancefoor vibe). The cover of ["Like A Prayer"](https://www.youtube.com/watch?v=sNVKwbv0TMg) is a lot of fun. It's certainly an album that will get a lot of play!
+	 The band that Lauren is performing with sound really slick. The drummer especially has a distinctive style. ["Shame"](https://www.youtube.com/watch?v=-13RcQmzSKo) is a style all of its own, the contrasting sounds and orchestration are on point. ["Sorry. Etc.](https://www.youtube.com/watch?v=qzWT7c7xUzg) is heavy - very Garbage-y synth and guitar. ["Bird"](https://www.youtube.com/watch?v=IBpnfm33U4I) sounds like a grower. ["Under The Knife'](https://www.youtube.com/watch?v=sLETj2q_KIs) has some beautiful backing vocals - you can really see the guitar player's passion. ["Changed Shapes"](https://www.youtube.com/watch?v=5SRNQKwXTyU) is very cool (it has a summer dancefoor vibe). The cover of ["Like A Prayer"](https://www.youtube.com/watch?v=sNVKwbv0TMg) is a lot of fun. It's certainly an album that will get a lot of play!
 
 
 * [Teenage Dirtbag - Wheatus](https://www.youtube.com/watch?v=ZvIzmTiYoPo&list=WL&index=7)
@@ -69,7 +68,7 @@ I've listened to a lot of great stuff this month - a lot of older things mixed i
 
 * [Community Service - Bottle Rockets](https://www.youtube.com/watch?v=hiDwFq7t_D0)
 
-	 This song has a very 90s skate punk vibe to it, and the harmonies are lush. 
+	 This song has a very 90s skate-punk vibe to it, and the harmonies are lush. 
 
 
 * [Cold Water Swimming - Quiet Houses](https://www.youtube.com/watch?v=ya52IyM5-1s)
