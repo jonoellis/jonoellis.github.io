@@ -1,0 +1,95 @@
+---
+layout: post
+title: "Edinburgh Council Bin Days 2024"
+author: Jono
+published: true
+date: 2024-01-08T10:00:00+0000
+categories:
+  - random
+  - code
+---
+    <p style="color:blue;font-size:46px;" id="message"></p>
+    <script>
+      const schedule = [
+  { "date": "02/01/2024", "bin": "Food & non-recyclable" },
+  { "date": "09/01/2024", "bin": "Food, recycling & glass" },
+  { "date": "16/01/2024", "bin": "Food & non-recyclable" },
+  { "date": "23/01/2024", "bin": "Food, garden, recycling & glass" },
+  { "date": "30/01/2024", "bin": "Food & non-recyclable" },
+  { "date": "06/02/2024", "bin": "Food, garden, recycling & glass" },
+  { "date": "13/02/2024", "bin": "Food & non-recyclable" },
+  { "date": "20/02/2024", "bin": "Food, garden, recycling & glass" },
+  { "date": "27/02/2024", "bin": "Food & non-recyclable" },
+  { "date": "05/03/2024", "bin": "Food, garden, recycling & glass" },
+  { "date": "12/03/2024", "bin": "Food & non-recyclable" },
+  { "date": "19/03/2024", "bin": "Food, garden, recycling & glass" },
+  { "date": "26/03/2024", "bin": "Food & non-recyclable" },
+  { "date": "02/04/2024", "bin": "Food, garden, recycling & glass" },
+  { "date": "09/04/2024", "bin": "Food & non-recyclable" },
+  { "date": "16/04/2024", "bin": "Food, garden, recycling & glass" },
+  { "date": "23/04/2024", "bin": "Food & non-recyclable" },
+  { "date": "30/04/2024", "bin": "Food, garden, recycling & glass" },
+  { "date": "07/05/2024", "bin": "Food & non-recyclable" },
+  { "date": "14/05/2024", "bin": "Food, garden, recycling & glass" },
+  { "date": "21/05/2024", "bin": "Food & non-recyclable" },
+  { "date": "28/05/2024", "bin": "Food, garden, recycling & glass" },
+  { "date": "04/06/2024", "bin": "Food & non-recyclable" },
+  { "date": "11/06/2024", "bin": "Food, garden, recycling & glass" },
+  { "date": "18/06/2024", "bin": "Food & non-recyclable" },
+  { "date": "25/06/2024", "bin": "Food, garden, recycling & glass" },
+  { "date": "02/07/2024", "bin": "Food & non-recyclable" },
+  { "date": "09/07/2024", "bin": "Food, garden, recycling & glass" },
+  { "date": "16/07/2024", "bin": "Food & non-recyclable" },
+  { "date": "23/07/2024", "bin": "Food, garden, recycling & glass" },
+  { "date": "30/07/2024", "bin": "Food & non-recyclable" },
+  { "date": "06/08/2024", "bin": "Food, garden, recycling & glass" },
+  { "date": "13/08/2024", "bin": "Food & non-recyclable" },
+  { "date": "20/08/2024", "bin": "Food, garden, recycling & glass" },
+  { "date": "27/08/2024", "bin": "Food & non-recyclable" },
+  { "date": "03/09/2024", "bin": "Food, garden, recycling & glass" },
+  { "date": "10/09/2024", "bin": "Food & non-recyclable" },
+  { "date": "17/09/2024", "bin": "Food, garden, recycling & glass" },
+  { "date": "24/09/2024", "bin": "Food & non-recyclable" },
+  { "date": "01/10/2024", "bin": "Food, garden, recycling & glass" },
+  { "date": "08/10/2024", "bin": "Food & non-recyclable" },
+  { "date": "15/10/2024", "bin": "Food, garden, recycling & glass" },
+  { "date": "22/10/2024", "bin": "Food & non-recyclable" },
+  { "date": "29/10/2024", "bin": "Food, garden, recycling & glass" },
+  { "date": "05/11/2024", "bin": "Food & non-recyclable" },
+  { "date": "12/11/2024", "bin": "Food, recycling & glass" },
+  { "date": "19/11/2024", "bin": "Food & non-recyclable" },
+  { "date": "26/11/2024", "bin": "Food, recycling & glass" },
+  { "date": "03/12/2024", "bin": "Food & non-recyclable" },
+  { "date": "10/12/2024", "bin": "Food, recycling & glass" },
+  { "date": "17/12/2024", "bin": "Food & non-recyclable" },
+  { "date": "24/12/2024", "bin": "Food, recycling & glass" },
+  { "date": "31/12/2024", "bin": "Food & non-recyclable" }
+ ];
+
+      const today = new Date();
+      const message = document.getElementById('message');
+
+      for (let i = 0; i < schedule.length; i++) {
+        const date = new Date(schedule[i].date.split("/").reverse().join("/"));
+        if (today <= date) {
+          const dayOfWeek = date.toLocaleString('default', { weekday: 'long' });
+          const dayOfMonth = date.getDate();
+          const month = date.toLocaleString('default', { month: 'long' });
+          const nthNumber = (number) => {
+            if (number > 3 && number < 21) return "th";
+            switch (number % 10) {
+              case 1:
+                return "st";
+              case 2:
+                return "nd";
+              case 3:
+                return "rd";
+              default:
+                return "th";
+            }
+          };
+          message.innerHTML = `${dayOfWeek} ${dayOfMonth}${nthNumber(dayOfMonth)} of ${month}: Put out the ${schedule[i].bin} bins.`;
+          break;
+        }
+      }
+    </script>
