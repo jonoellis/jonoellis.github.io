@@ -3,7 +3,7 @@ layout: post
 title: "In-document Calculator"
 author: Jono
 published: true
-date: 2024-03-27T08:00:00+0000
+date: 2024-03-26T08:00:00+0000
 categories:
 - code
 ---
