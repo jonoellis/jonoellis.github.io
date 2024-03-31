@@ -9,7 +9,7 @@ categories:
 ---
 In no particular order:
 
--   Vault City - [Fruits of the Forest Triple Stacked Breakfast Waffle](https://vaultcity.co.uk/products/fruits-of-the-forest-triple-stacked-breakfast-waffle-1) and [DDF Imperial Stout](https://vaultcity.co.uk/products/ddf-gingerbread-imperial-stout-vault-city-x-nerdbrewing)
+-   Vault City - [Fruits of the Forest Triple Stacked Breakfast Waffle](https://vaultcity.co.uk/products/fruits-of-the-forest-triple-stacked-breakfast-waffle-1), [DDF Imperial Stout](https://vaultcity.co.uk/products/ddf-gingerbread-imperial-stout-vault-city-x-nerdbrewing) and [Strawberry Banana Coconut Cream Stoopid Smoothie Sour](https://vaultcity.co.uk/collections/stoopid)
 
 -   [Jopen - Speculaas Biscuit Pastry Stout](https://www.jopenbier.nl/product/meesterstuk-2022/)
 
