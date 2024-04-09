@@ -9,11 +9,12 @@ categories:
 ---
 Ever want to track your mouse movement in a Favicon? Now you can! (Check out this browser tab's favicon above)
 
+
     <script>
         // Function to update the favicon with a red dot at the specified position
         function updateFavicon(xPercent, yPercent) {
             console.log("Updating favicon with red dot at position:", xPercent + "%", yPercent + "%");
-            
+
             // Calculate pixel values for the favicon
             var x = Math.floor((xPercent / 100) * 16);
             var y = Math.floor((yPercent / 100) * 16);
@@ -22,7 +23,7 @@ Ever want to track your mouse movement in a Favicon? Now you can! (Check out thi
             canvas.width = 16;
             canvas.height = 16;
             var context = canvas.getContext('2d');
-            // Draw white background
+            // Draw existing favicon (assuming it's a white square)
             context.fillStyle = '#ffffff';
             context.fillRect(0, 0, canvas.width, canvas.height);
             // Draw red dot
@@ -40,7 +41,6 @@ Ever want to track your mouse movement in a Favicon? Now you can! (Check out thi
         document.addEventListener('mousemove', function(e) {
             var xPercent = (e.pageX / window.innerWidth) * 100;
             var yPercent = (e.pageY / window.innerHeight) * 100;
-            console.log("Mouse moved to position:", xPercent + "%", yPercent + "%");
             updateFavicon(xPercent, yPercent);
         });
 
@@ -48,18 +48,14 @@ Ever want to track your mouse movement in a Favicon? Now you can! (Check out thi
         var link = document.createElement('link');
         link.rel = 'icon';
         link.type = 'image/png';
-        var canvas = document.createElement('canvas');
-        canvas.width = 16;
-        canvas.height = 16;
-        var context = canvas.getContext('2d');
-        context.fillStyle = '#ffffff';
-        context.fillRect(0, 0, canvas.width, canvas.height);
-        link.href = canvas.toDataURL('image/png');
+        link.href = 'original_favicon.png'; // Path to your original favicon
         document.head.appendChild(link);
     </script>
 
 
-```
+
+    <pre>
+        <code>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -72,7 +68,7 @@ Ever want to track your mouse movement in a Favicon? Now you can! (Check out thi
         // Function to update the favicon with a red dot at the specified position
         function updateFavicon(xPercent, yPercent) {
             console.log("Updating favicon with red dot at position:", xPercent + "%", yPercent + "%");
-            
+
             // Calculate pixel values for the favicon
             var x = Math.floor((xPercent / 100) * 16);
             var y = Math.floor((yPercent / 100) * 16);
@@ -81,7 +77,7 @@ Ever want to track your mouse movement in a Favicon? Now you can! (Check out thi
             canvas.width = 16;
             canvas.height = 16;
             var context = canvas.getContext('2d');
-            // Draw white background
+            // Draw existing favicon (assuming it's a white square)
             context.fillStyle = '#ffffff';
             context.fillRect(0, 0, canvas.width, canvas.height);
             // Draw red dot
@@ -99,7 +95,6 @@ Ever want to track your mouse movement in a Favicon? Now you can! (Check out thi
         document.addEventListener('mousemove', function(e) {
             var xPercent = (e.pageX / window.innerWidth) * 100;
             var yPercent = (e.pageY / window.innerHeight) * 100;
-            console.log("Mouse moved to position:", xPercent + "%", yPercent + "%");
             updateFavicon(xPercent, yPercent);
         });
 
@@ -107,15 +102,10 @@ Ever want to track your mouse movement in a Favicon? Now you can! (Check out thi
         var link = document.createElement('link');
         link.rel = 'icon';
         link.type = 'image/png';
-        var canvas = document.createElement('canvas');
-        canvas.width = 16;
-        canvas.height = 16;
-        var context = canvas.getContext('2d');
-        context.fillStyle = '#ffffff';
-        context.fillRect(0, 0, canvas.width, canvas.height);
-        link.href = canvas.toDataURL('image/png');
+        link.href = 'original_favicon.png'; // Path to your original favicon
         document.head.appendChild(link);
     </script>
 </body>
 </html>
-```
+        </code>
+    </pre>
