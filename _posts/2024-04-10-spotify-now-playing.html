@@ -57,7 +57,7 @@ categories:
     } else {
       // If access token is not present, redirect user to Spotify authorization page
       const clientId = 'bbb5c024b7b74a39b9967b74c53641c8';
-      const redirectUri = encodeURIComponent('https://ellis.scot/uploads/spotify.html');
+      const redirectUri = encodeURIComponent('https://ellis.scot/2024/04/spotify-now-playing/');
       const scopes = 'user-read-currently-playing';
       const authUrl = `https://accounts.spotify.com/authorize?client_id=${clientId}&response_type=token&redirect_uri=${redirectUri}&scope=${encodeURIComponent(scopes)}`;
       window.location.href = authUrl;
