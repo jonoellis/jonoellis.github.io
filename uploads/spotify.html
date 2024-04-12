@@ -11,7 +11,7 @@
         function exportPlaylistToCSV() {
             // Function to fetch playlist tracks
             function fetchPlaylistTracks(token) {
-                return fetch('https://api.spotify.com/v1/playlists/https://open.spotify.com/playlist/6dZZihWVjm05g2pek8XyiX?si=18d1c5d0d9f94b25/tracks', {
+                return fetch('https://api.spotify.com/v1/playlists/https://open.spotify.com/playlist/6dZZihWVjm05g2pek8XyiX/tracks', {
                     headers: {
                         'Authorization': `Bearer ${token}`
                     }
