@@ -6,49 +6,67 @@
     <title>Export Spotify Playlist to CSV</title>
 </head>
 <body>
-    <button onclick="exportPlaylistToCSV()">Export Playlist</button>
+    <h2>Step 1: Choose Playlist</h2>
+    <select id="playlistSelect">
+        <option value="" disabled selected>Select Playlist</option>
+    </select>
+    <button onclick="populateDropdown()">Load Playlists</button>
+    
+    <h2>Step 2: Export Playlist</h2>
+    <button onclick="exportPlaylistToCSV()">Export Selected Playlist</button>
+
     <script>
-        function exportPlaylistToCSV() {
-            // Function to fetch playlist tracks
-            function fetchPlaylistTracks(token) {
-                return fetch('https://api.spotify.com/v1/playlists/https://open.spotify.com/playlist/6dZZihWVjm05g2pek8XyiX/tracks', {
-                    headers: {
-                        'Authorization': `Bearer ${token}`
-                    }
-                })
-                .then(response => {
-                    if (!response.ok) {
-                        throw new Error('Failed to fetch playlist tracks');
-                    }
-                    return response.json();
-                })
-                .then(data => data.items);
-            }
+        // Function to fetch user's playlists
+        function fetchPlaylists(token) {
+            return fetch('https://api.spotify.com/v1/me/playlists', {
+                headers: {
+                    'Authorization': `Bearer ${token}`
+                }
+            })
+            .then(response => {
+                if (!response.ok) {
+                    throw new Error('Failed to fetch user playlists');
+                }
+                return response.json();
+            })
+            .then(data => data.items);
+        }
 
-            // Function to extract access token from URL hash
-            function getAccessToken() {
-                const hash = window.location.hash.substring(1);
-                const params = new URLSearchParams(hash);
-                const accessToken = params.get('access_token');
-
-                // Remove access token from URL
-                window.history.replaceState({}, document.title, window.location.pathname);
-
-                return accessToken;
-            }
-
-            // Function to convert JSON to CSV
-            function convertJSONToCSV(data) {
-                const headers = Object.keys(data[0]).join(',');
-                const rows = data.map(obj => Object.values(obj).join(','));
-                return `${headers}\n${rows.join('\n')}`;
-            }
-
-            // Check if access token is present in URL hash
+        // Function to populate dropdown with playlist names
+        function populateDropdown() {
             const accessToken = getAccessToken();
             if (accessToken) {
-                // If access token is present, fetch playlist tracks
-                fetchPlaylistTracks(accessToken)
+                fetchPlaylists(accessToken)
+                    .then(playlists => {
+                        const dropdown = document.getElementById('playlistSelect');
+                        playlists.forEach(playlist => {
+                            const option = document.createElement('option');
+                            option.value = playlist.id;
+                            option.text = playlist.name;
+                            dropdown.appendChild(option);
+                        });
+                    })
+                    .catch(error => {
+                        console.error(error);
+                        alert('Failed to load playlists. Please try again.');
+                    });
+            } else {
+                redirectToAuthorization();
+            }
+        }
+
+        // Function to export selected playlist to CSV
+        function exportPlaylistToCSV() {
+            const playlistId = document.getElementById('playlistSelect').value;
+            if (!playlistId) {
+                alert('Please select a playlist');
+                return;
+            }
+
+            const accessToken = getAccessToken();
+            if (accessToken) {
+                // Fetch playlist details and export to CSV
+                fetchPlaylistTracks(accessToken, playlistId)
                     .then(tracks => {
                         const formattedTracks = tracks.map(track => ({
                             'Track Name': track.track.name,
@@ -70,13 +88,47 @@
                         alert('Failed to export playlist. Please try again.');
                     });
             } else {
-                // If access token is not present, redirect user to Spotify authorization page
-                const clientId = 'd9391fc2d7b846eabdf949ccf48e2207';
-                const redirectUri = encodeURIComponent('https://ellis.scot/uploads/spotify.html');
-                const scopes = 'playlist-read-private'; // Add more scopes if needed
-                const authUrl = `https://accounts.spotify.com/authorize?client_id=${clientId}&response_type=token&redirect_uri=${redirectUri}&scope=${encodeURIComponent(scopes)}`;
-                window.location.href = authUrl;
+                redirectToAuthorization();
             }
+        }
+
+        // Function to fetch playlist tracks
+        function fetchPlaylistTracks(token, playlistId) {
+            return fetch(`https://api.spotify.com/v1/playlists/${playlistId}/tracks`, {
+                headers: {
+                    'Authorization': `Bearer ${token}`
+                }
+            })
+            .then(response => {
+                if (!response.ok) {
+                    throw new Error('Failed to fetch playlist tracks');
+                }
+                return response.json();
+            })
+            .then(data => data.items);
+        }
+
+        // Function to convert JSON to CSV
+        function convertJSONToCSV(data) {
+            const headers = Object.keys(data[0]).join(',');
+            const rows = data.map(obj => Object.values(obj).join(','));
+            return `${headers}\n${rows.join('\n')}`;
+        }
+
+        // Function to extract access token from URL hash
+        function getAccessToken() {
+            const hash = window.location.hash.substring(1);
+            const params = new URLSearchParams(hash);
+            return params.get('access_token');
+        }
+
+        // Function to redirect user to Spotify authorization page
+        function redirectToAuthorization() {
+            const clientId = 'd9391fc2d7b846eabdf949ccf48e2207';
+            const redirectUri = encodeURIComponent('https://ellis.scot/uploads/spotify.html');
+            const scopes = 'playlist-read-private'; // Add more scopes if needed
+            const authUrl = `https://accounts.spotify.com/authorize?client_id=${clientId}&response_type=token&redirect_uri=${redirectUri}&scope=${encodeURIComponent(scopes)}`;
+            window.location.href = authUrl;
         }
     </script>
 </body>
