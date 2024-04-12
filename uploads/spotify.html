@@ -56,7 +56,7 @@
         }
 
         // Function to export selected playlist to CSV
-        function exportPlaylistToCSV() {
+        async function exportPlaylistToCSV() {
             const playlistId = document.getElementById('playlistSelect').value;
             if (!playlistId) {
                 alert('Please select a playlist');
@@ -65,54 +65,60 @@
 
             const accessToken = getAccessToken();
             if (accessToken) {
-                // Fetch playlist details and export to CSV
-                fetchPlaylistTracks(accessToken, playlistId)
-                    .then(tracks => {
-                        const formattedTracks = tracks.map(track => ({
-                            'Track Name': track.track.name,
-                            'Artist Name(s)': track.track.artists.map(artist => artist.name).join(', '),
-                            'Album Name': track.track.album.name,
-                            // Add more fields as needed
-                        }));
-                        const csvData = convertJSONToCSV(formattedTracks);
-                        // Download CSV file
-                        const blob = new Blob([csvData], { type: 'text/csv' });
-                        const url = window.URL.createObjectURL(blob);
-                        const a = document.createElement('a');
-                        a.setAttribute('href', url);
-                        a.setAttribute('download', 'playlist.csv');
-                        a.click();
-                    })
-                    .catch(error => {
-                        console.error(error);
-                        alert('Failed to export playlist. Please try again.');
-                    });
+                // Fetch all playlist tracks
+                const tracks = await fetchAllPlaylistTracks(accessToken, playlistId);
+                
+                const formattedTracks = tracks.map(track => ({
+                    'Artist Name(s)': track.track.artists.map(artist => artist.name).join('; '), // Use semicolon as a delimiter
+                    'Track Name': escapeCSV(track.track.name),
+                    'Album Name': escapeCSV(track.track.album.name),
+                    // Add more fields as needed
+                }));
+                const csvData = convertJSONToCSV(formattedTracks);
+                // Download CSV file
+                const blob = new Blob([csvData], { type: 'text/csv' });
+                const url = window.URL.createObjectURL(blob);
+                const a = document.createElement('a');
+                a.setAttribute('href', url);
+                a.setAttribute('download', 'playlist.csv');
+                a.click();
             } else {
                 redirectToAuthorization();
             }
         }
 
-        // Function to fetch playlist tracks
-        function fetchPlaylistTracks(token, playlistId) {
-            return fetch(`https://api.spotify.com/v1/playlists/${playlistId}/tracks`, {
-                headers: {
-                    'Authorization': `Bearer ${token}`
-                }
-            })
-            .then(response => {
-                if (!response.ok) {
-                    throw new Error('Failed to fetch playlist tracks');
-                }
-                return response.json();
-            })
-            .then(data => data.items);
+        // Function to fetch all playlist tracks
+        async function fetchAllPlaylistTracks(token, playlistId) {
+            let offset = 0;
+            let allTracks = [];
+            const limit = 100; // Maximum number of tracks per request
+            let totalTracks = limit; // Initialize totalTracks with a value greater than limit
+            
+            // Continue fetching tracks until all tracks are retrieved
+            while (offset < totalTracks) {
+                const response = await fetch(`https://api.spotify.com/v1/playlists/${playlistId}/tracks?offset=${offset}&limit=${limit}`, {
+                    headers: {
+                        'Authorization': `Bearer ${token}`
+                    }
+                });
+                const data = await response.json();
+                allTracks = allTracks.concat(data.items);
+                totalTracks = data.total;
+                offset += limit;
+            }
+            return allTracks;
         }
 
         // Function to convert JSON to CSV
         function convertJSONToCSV(data) {
             const headers = Object.keys(data[0]).join(',');
-            const rows = data.map(obj => Object.values(obj).join(','));
+            const rows = data.map(obj => Object.values(obj).map(value => escapeCSV(value)).join(','));
             return `${headers}\n${rows.join('\n')}`;
+        }
+
+        // Function to escape CSV values
+        function escapeCSV(value) {
+            return `"${value.replace(/"/g, '""')}"`; // Escape double quotes by doubling them
         }
 
         // Function to extract access token from URL hash
