@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Export Spotify Playlist to CSV</title>
+</head>
+<body>
+    <button onclick="exportPlaylistToCSV()">Export Playlist</button>
+    <script>
+        function exportPlaylistToCSV() {
+            // Function to fetch playlist tracks
+            function fetchPlaylistTracks(token) {
+                return fetch('https://api.spotify.com/v1/playlists/https://open.spotify.com/playlist/6dZZihWVjm05g2pek8XyiX?si=18d1c5d0d9f94b25/tracks', {
+                    headers: {
+                        'Authorization': `Bearer ${token}`
+                    }
+                })
+                .then(response => {
+                    if (!response.ok) {
+                        throw new Error('Failed to fetch playlist tracks');
+                    }
+                    return response.json();
+                })
+                .then(data => data.items);
+            }
+
+            // Function to extract access token from URL hash
+            function getAccessToken() {
+                const hash = window.location.hash.substring(1);
+                const params = new URLSearchParams(hash);
+                const accessToken = params.get('access_token');
+
+                // Remove access token from URL
+                window.history.replaceState({}, document.title, window.location.pathname);
+
+                return accessToken;
+            }
+
+            // Function to convert JSON to CSV
+            function convertJSONToCSV(data) {
+                const headers = Object.keys(data[0]).join(',');
+                const rows = data.map(obj => Object.values(obj).join(','));
+                return `${headers}\n${rows.join('\n')}`;
+            }
+
+            // Check if access token is present in URL hash
+            const accessToken = getAccessToken();
+            if (accessToken) {
+                // If access token is present, fetch playlist tracks
+                fetchPlaylistTracks(accessToken)
+                    .then(tracks => {
+                        const formattedTracks = tracks.map(track => ({
+                            'Track Name': track.track.name,
+                            'Artist Name(s)': track.track.artists.map(artist => artist.name).join(', '),
+                            'Album Name': track.track.album.name,
+                            // Add more fields as needed
+                        }));
+                        const csvData = convertJSONToCSV(formattedTracks);
+                        // Download CSV file
+                        const blob = new Blob([csvData], { type: 'text/csv' });
+                        const url = window.URL.createObjectURL(blob);
+                        const a = document.createElement('a');
+                        a.setAttribute('href', url);
+                        a.setAttribute('download', 'playlist.csv');
+                        a.click();
+                    })
+                    .catch(error => {
+                        console.error(error);
+                        alert('Failed to export playlist. Please try again.');
+                    });
+            } else {
+                // If access token is not present, redirect user to Spotify authorization page
+                const clientId = 'd9391fc2d7b846eabdf949ccf48e2207';
+                const redirectUri = encodeURIComponent('https://ellis.scot/uploads/spotify.html');
+                const scopes = 'playlist-read-private'; // Add more scopes if needed
+                const authUrl = `https://accounts.spotify.com/authorize?client_id=${clientId}&response_type=token&redirect_uri=${redirectUri}&scope=${encodeURIComponent(scopes)}`;
+                window.location.href = authUrl;
+            }
+        }
+    </script>
+</body>
+</html>
