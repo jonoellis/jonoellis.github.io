@@ -3,9 +3,7 @@
   <div class="wrapper">
 
     <h2 class="footer-heading">Jono Ellis</h2>
-    <div id="aboutme">
-    Husband, father, <a href="https://www.linkedin.com/in/jonathanianellis/">analyst/civil servant</a>, <a href="https://ellis.scot/category/writing/">writer</a>, <a href="https://ellis.scot/category/cooking/">experimental cook</a>, <a href="https://ellis.scot/category/brewing/">homebrewer</a>, film buff, climber, whisky enjoyer, musician, traveller,  <a href="http://www.borders-exploration-group.org.uk/">outdoorsman</a> and <a href="http://www.last.fm/user/jonoellis/">music lover</a>. Send me an <a href="mailto:jono@ellis.scot">email</a> or find me on <a rel="me" href="https://mastodon.scot/@jonoellis">Mastodon</a>, <a href="https://www.facebook.com/jonoellis">Facebook</a> or <a href="https://twitter.com/jonoellis">Twitter</a>.
-    </div>
+
     <div class="footer-col-wrapper">
       <div class="footer-col footer-col-1">
         <ul class="contact-list">
@@ -13,17 +11,34 @@
             <li><a href="mailto:{{ site.email }}">{{ site.email }}</a></li>
             {% endif %}
             {% if site.github_username %}
-            <li>
-              {% include icon-github.html username=site.github_username %}
-            </li>
+            <li><a href="https://github.com/{{ site.github_username }}">github.com/{{ site.github_username }}</a></li>
             {% endif %}
 
-            {% if site.twitter_username %}
-            <li>
-              {% include icon-twitter.html username=site.twitter_username %}
-            </li>
+            {% if site.mastodon_username %}
+            <li><a rel="me" href="https://{{ site.mastodon_username }}">{{ site.mastodon_username }}</a></li>
             {% endif %}
-          <li><a href="/feed.xml" target=_blank>RSS</a></li>
+                      {% if site.instagram_username %}
+            <li><a href="https://www.instagram.com/{{ site.instagram_username }}/">instagram.com/{{ site.instagram_username }}</a></li>
+            {% endif %}
+
+
+                      {% if site.lastfm_username %}
+            <li><a href="http://www.last.fm/user/{{ site.lastfm_username }}/">last.fm/{{ site.lastfm_username }}</a></li>
+            {% endif %}
+
+
+                      {% if site.linkedin_username %}
+            <li><a href="https://www.linkedin.com/in/{{ site.linkedin_username }}/">linkedin.com/{{ site.linkedin_username }}</a></li>
+            {% endif %}
+
+          
+            {% if site.twitter_username %}
+            <li><del>https://twitter.com/{{ site.twitter_username }}</del></li>
+            {% endif %}
+                      {% if site.facebook_username %}
+            <li><del>https://www.facebook.com/{{ site.facebook_username }}</del></li>
+            {% endif %}
+          <li>Subscribe via <a href="/feed.xml" target=_blank>RSS</a></li>
         </ul>
       </div>
 
