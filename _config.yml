@@ -21,6 +21,13 @@ url: "https://ellis.scot" # the base hostname & protocol for your site, e.g. htt
 permalink: /:year/:month/:title/
 twitter_username: jonoellis
 github_username:  jonoellis
+mastodon_username:  mastodon.scot/@jonoellis
+instagram_username:  jono.ellis
+facebook_username:  jonoellis
+lastfm.username:  jonoellis
+linkedin.username:  jonathanianellis
+
+
 
 # Build settings
 markdown: kramdown
