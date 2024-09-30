@@ -42,8 +42,7 @@ are genius lyrics. And to have Lawrence on a live take is pretty awesome too.
 	 If you've read anything here then you'll know I'm weird. Weird enough to enjoy listening to radio from [Radio Garden](https://radio.garden/listen/radiorevolt/7vtU9axh) in languages that I don't speak whilst I work. (Use Opera with VPN on if you're in the UK. 🤬 Brexit.) This week's been all about [Radio Revolt](https://radiorevolt.no/) from Trondheim, Norway and has brought me Sløtface and Rektor. And Sløtface' new album Film Buff is fantastic. 
 
 
-* [Stolheisen (feat. Kaja Gunnufsen)
- - Rektor](https://www.youtube.com/watch?v=nUgWrnRh1hU)
+* [Stolheisen featuring Kaja Gunnufsen - Rektor](https://www.youtube.com/watch?v=nUgWrnRh1hU)
 
 	 DIY mountain-emo punk band from Norway. 
 
