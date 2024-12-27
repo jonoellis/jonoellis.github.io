@@ -21,6 +21,9 @@ categories:
 <h2>Formula for stating if this month has seen an increase or decrease in traffic:</h2>
 <code>=if(A2>A1,"increase","decrease")</code>
 
+<h2>Formula for finding non-Scottish postcodes:</h2>
+<code>=REGEXMATCH(C:C,"^(AL|B|B[ABDHLNRS]|C[ABHMORTVW]|D[AEHLNTY]|E|E[CNX]|FY|G[LUY]|H[ADGPUX]|I[GM‌​P]‌​|JE|KT|L|L[AENSU]|M|ME|N|N[EGNRW]|O[LX]|P[ELOR]|R[GHM]|S|S[EGKLMNOPRSTW]|T[AFNQ‌​‌​RSW]|UB|W|W[ACDFNRSV]|YO)\d{1,2}\s?(\d[\w]{2})?")</code>
+
 <p>Formula for showing the month-on-month change as a percentage (and only show this as a positive to tie in with the increase/decrease statement before):</h2>
 <code>=text(abs(((A2-A1)/A1)),"#%")</code>
 
