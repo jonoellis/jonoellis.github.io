@@ -25,6 +25,8 @@ In no particular order:
 
 -   [Siren Craft Brew - Caribbean Chocolate Cake](https://www.sirencraftbrew.com/beers/caribbean-chocolate-cake)
 
+-   Tegernseer Quirinus Dunkler Doppelbock
+
 -   [Orkney Brewery - Dark Island Reserve ](https://www.orkneybrewery.co.uk/beer/dark-island-reserve)
 
 -   [Midnight Sun Brewing Co. - Berserker Imperial Stout](https://midnightsunbrewing.com/beers/berserker-2022/)
