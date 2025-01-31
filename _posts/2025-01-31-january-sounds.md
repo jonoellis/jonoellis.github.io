@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "January"
+title: "January Sounds"
 author: Jono
 published: true
 date: 2025-01-31 07:52:44 -0000
