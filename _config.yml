@@ -30,6 +30,7 @@ linkedin_username:  jonathanianellis
 
 
 # Build settings
+plugins_dir: _plugins
 markdown: kramdown
 encoding: utf-8
 theme: minima
