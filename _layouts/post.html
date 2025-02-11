@@ -17,8 +17,8 @@ layout: default
     </p>
   </header>
 
-  <div class="post-content">
-    {{ content | hashtags }}
+  <div class="post-content" id="post-content">
+    {{ content }}
   </div>
 
   {% if page.next %}
@@ -59,3 +59,12 @@ layout: default
   {% endif %}
 
 </article>
+
+<script>
+document.addEventListener("DOMContentLoaded", function() {
+  var contentElement = document.getElementById("post-content");
+  if (contentElement) {
+    contentElement.innerHTML = contentElement.innerHTML.replace(/#(\w+)/g, '<a href="https://ellis.scot/discover.html?q=%23$1">#$1</a>');
+  }
+});
+</script>
