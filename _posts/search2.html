@@ -1,0 +1,61 @@
+---
+layout: search
+title: Search
+---
+
+<div class="wrapper">
+  <h2>Search</h2>
+  <input type="text" id="search-box" placeholder="Search...">
+  <ul id="search-results"></ul>
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/lunr.js/2.3.9/lunr.min.js"></script>
+<script>
+  {% raw %}
+  // Fetch the search index JSON file
+  fetch('{{ "/index.json" | relative_url }}')
+    .then(response => response.json())
+    .then(data => {
+      const searchIndex = lunr(function () {
+        this.ref('id')
+        this.field('title', { boost: 10 })
+        this.field('content')
+        
+        data.forEach(function (doc) {
+          this.add(doc)
+        }, this)
+      })
+
+      const resultsList = document.getElementById('search-results')
+      const searchBox = document.getElementById('search-box')
+
+      // Function to render search results
+      function renderResults(query) {
+        resultsList.innerHTML = ''
+        const results = searchIndex.search(query)
+        results.length === 0 && query === '' ? data.forEach(addResult) : results.forEach(result => addResult(data.find(item => item.id === result.ref)))
+      }
+
+      // Function to add a result item to the list
+      function addResult(item) {
+        const li = document.createElement('li')
+        const a = document.createElement('a')
+        a.href = item.url
+        a.textContent = item.title
+        li.appendChild(a)
+        resultsList.appendChild(li)
+      }
+
+      // Initial render to display all pages
+      renderResults('')
+
+      // Add event listener to search box
+      searchBox.addEventListener('input', (e) => {
+        renderResults(e.target.value)
+      })
+    })
+    .catch(error => {
+      console.error('Error fetching or processing JSON:', error)
+    })
+  {% endraw %}
+</script>
