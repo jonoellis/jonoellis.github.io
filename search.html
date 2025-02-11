@@ -8,11 +8,20 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/lunr.js/2.3.9/lunr.min.js"></script>
 <script>
     let searchIndex;
+    let data = []; // Initialize an empty array for the data
 
     // Fetch the index.json file and build the search index
     fetch('/index.json')
         .then(response => response.json())
-        .then(data => {
+        .then(jsonData => {
+            // Filter out invalid entries
+            data = jsonData.filter(entry => {
+                const content = entry.content || '';
+                // Check if content contains only valid characters
+                return /^[a-zA-Z0-9 .\'#]*$/.test(content);
+            });
+
+            // Build the search index
             searchIndex = lunr(function () {
                 this.ref('id');
                 this.field('title');
