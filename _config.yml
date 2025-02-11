@@ -20,24 +20,23 @@ baseurl: "" # the subpath of your site, e.g. /blog
 url: "https://ellis.scot" # the base hostname & protocol for your site, e.g. http://example.com
 permalink: /:year/:month/:title/
 twitter_username: jonoellis
-github_username:  jonoellis
-mastodon_username:  mastodon.scot/@jonoellis
-instagram_username:  jono.ellis
-facebook_username:  jonoellis
-lastfm_username:  jonoellis
-linkedin_username:  jonathanianellis
-
-
+github_username: jonoellis
+mastodon_username: mastodon.scot/@jonoellis
+instagram_username: jono.ellis
+facebook_username: jonoellis
+lastfm_username: jonoellis
+linkedin_username: jonathanianellis
 
 # Build settings
-verbose: true
 plugins_dir: _plugins
 markdown: kramdown
 encoding: utf-8
 theme: minima
-gems:
+plugins:
   - jekyll-feed
   - jekyll-sitemap
 exclude:
   - Gemfile
   - Gemfile.lock
+
+verbose: true
