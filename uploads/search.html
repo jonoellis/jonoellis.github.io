@@ -1,50 +1,57 @@
-<!doctype html>
-<html>
-<head>
-	<meta charset="UTF-8">
+---
+layout: default
+title: Search
+---
 
-	<script src="https://code.jquery.com/jquery-1.11.0.min.js"></script>
-	<script src="https://ellis.scot/jssearch.js"></script>
-	<script src="https://ellis.scot/index.json"></script>
+{% include head.html %}
 
-	<script type="text/javascript">
+<div class="search-container">
+    <h1>Search</h1>
+    <input type="text" id="search-input" placeholder="Search..." />
+    <button id="search-button">Search</button>
+    <div id="search-results"></div>
+</div>
 
-		$( document ).ready(function() {
-			$('#searchbox').on("keyup", function() {
-				var result = jssearch.search($(this).val());
+<script src="https://cdnjs.cloudflare.com/ajax/libs/lunr.js/2.3.9/lunr.min.js"></script>
+<script>
+    let searchIndex;
 
-				$('#query').html(jssearch.queryWords.join(' '));
+    // Fetch the index.json file and build the search index
+    fetch('/index.json')
+        .then(response => response.json())
+        .then(data => {
+            searchIndex = lunr(function () {
+                this.ref('id');
+                this.field('title');
+                this.field('content');
 
-				$('#results').html('');
-				var i = 0;
-				result.forEach(function(item) {
-					if (i++ > 20) {
-						return;
-					}
-					var div = $('#results');
-					div.html(div.html() + '<li>"' + item.file.title + '" ' + item.file.url + ' w:' + item.weight + '</li>');
-				});
-			});
-		});
-	</script>
+                data.forEach(function (doc) {
+                    this.add(doc);
+                }, this);
+            });
+        });
 
-	<title>Example</title>
-</head>
-<body>
+    // Function to perform the search
+    function performSearch() {
+        const query = document.getElementById('search-input').value;
+        const results = searchIndex.search(query);
+        const resultsContainer = document.getElementById('search-results');
+        resultsContainer.innerHTML = '';
 
-	<h1>Example</h1>
+        if (results.length > 0) {
+            results.forEach(result => {
+                const post = data.find(doc => doc.id === result.ref);
+                const resultItem = document.createElement('div');
+                resultItem.innerHTML = `<a href="${post.url}">${post.title}</a>`;
+                resultsContainer.appendChild(resultItem);
+            });
+        } else {
+            resultsContainer.innerHTML = '<p>No results found.</p>';
+        }
+    }
 
-	<label for="searchbox" style="display: inline-block; width: 160px;">Search: </label>
-	<input id="searchbox" type="text" value="">
+    // Add event listener to the search button
+    document.getElementById('search-button').addEventListener('click', performSearch);
+</script>
 
-	<br/>
-
-	<label for="query" style="display: inline-block; width: 160px;">Actual query: </label>
-	<span id="query"></span>
-
-	<ul id="results">
-		<li>No results</li>
-	</ul>
-
-</body>
-</html>
+{% include footer.html %}
