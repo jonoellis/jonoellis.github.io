@@ -12,7 +12,12 @@
 
     // Fetch the index.json file and build the search index
     fetch('/index.json')
-        .then(response => response.json())
+        .then(response => {
+            if (!response.ok) {
+                throw new Error('Network response was not ok');
+            }
+            return response.json();
+        })
         .then(jsonData => {
             // Filter out invalid entries
             data = jsonData.filter(entry => {
@@ -31,12 +36,15 @@
                     this.add(doc);
                 }, this);
             });
+        })
+        .catch(error => {
+            console.error('Error fetching or processing JSON:', error);
         });
 
     // Function to perform the search
     function performSearch() {
         const query = document.getElementById('search-input').value;
-        const results = searchIndex.search(query);
+        const results = searchIndex ? searchIndex.search(query) : [];
         const resultsContainer = document.getElementById('search-results');
         resultsContainer.innerHTML = '';
 
