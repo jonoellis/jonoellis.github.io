@@ -3,10 +3,11 @@ layout: null
 ---
 [
 {% for post in site.posts %}
+    {% assign content = post.content | strip_html | strip_newlines | replace: '&lt;', '<' | replace: '&gt;', '>' | replace: '&amp;', '&' | replace: '&nbsp;', ' ' | replace: '&#39;', '\'' | escape %}
     {
         "id": "{{ post.id }}",
         "title": "{{ post.title | escape }}",
-        "content": "{{ post.content | strip_html | strip_newlines | replace: '&lt;', '<' | replace: '&gt;', '>' | replace: '&amp;', '&' | replace: '&nbsp;', ' ' | replace: '&#39;', '\'' }}",
+        "content": {% if content contains '"' or content contains '\\' %}"UNINDEXED"{% else %}"{{ content }}"{% endif %},
         "url": "{{ post.url }}"
     }{% if forloop.last == false %},{% endif %}
 {% endfor %}
