@@ -10,13 +10,9 @@
     <header>
         <h1>Discover</h1>
         <p class="post-meta">
-            <time datetime="{{ page.date | date_to_xmlschema }}">{{ page.date | date: "%B %-d, %Y" }}</time>
-            {% if page.tags %}
-            • <span class="post-tags">{{ page.tags | array_to_sentence_string }}</span>
-            {% endif %}
-            {% if page.author %}
-            • <span class="post-author">{{ page.author }}</span>
-            {% endif %}
+            <time datetime="2025-02-11">February 11, 2025</time>
+            • <span class="post-tags">example, blog</span>
+            • <span class="post-author">Jono Ellis</span>
         </p>
     </header>
     <main>
@@ -25,36 +21,30 @@
     </main>
     <footer>
         <nav class="post-nav">
-            {% if page.next %}
-            <a href="{{ site.baseurl }}{{ page.next.url }}" class="post-nav-next">
-                <span class="post-nav-title">{{ page.next.title }}</span>
-                <span class="post-nav-meta">{{ page.next.date | date: "%B %-d, %Y" }}</span>
+            <a href="#" class="post-nav-next">
+                <span class="post-nav-title">Next Post Title</span>
+                <span class="post-nav-meta">February 12, 2025</span>
             </a>
-            {% endif %}
-            {% if page.previous %}
-            <a href="{{ site.baseurl }}{{ page.previous.url }}" class="post-nav-prev">
-                <span class="post-nav-title">{{ page.previous.title }}</span>
-                <span class="post-nav-meta">{{ page.previous.date | date: "%B %-d, %Y" }}</span>
+            <a href="#" class="post-nav-prev">
+                <span class="post-nav-title">Previous Post Title</span>
+                <span class="post-nav-meta">February 10, 2025</span>
             </a>
-            {% endif %}
         </nav>
-        {% if site.disqus.shortname %}
         <div id="disqus_thread"></div>
         <script>
             var disqus_config = function () {
-                this.page.url = '{{ page.url | absolute_url }}';
-                this.page.identifier = '{{ page.id }}';
+                this.page.url = 'https://ellis.scot/discover.html';
+                this.page.identifier = 'discover-page';
             };
             (function() {
                 var d = document, s = d.createElement('script');
-                s.src = 'https://{{ site.disqus.shortname }}.disqus.com/embed.js';
+                s.src = 'https://your-disqus-shortname.disqus.com/embed.js';
                 s.setAttribute('data-timestamp', +new Date());
                 (d.head || d.body).appendChild(s);
             })();
         </script>
         <noscript>Please enable JavaScript to view the
         <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
-        {% endif %}
     </footer>
     <script src="discover.js"></script>
 </body>
