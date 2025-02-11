@@ -4,7 +4,7 @@ layout: page
 <h2>Category: {{ page.title }}</h2>
 
 {% unless page.content == '' %}
-  <p>{{ page.content  | link_hashtags }}</p>
+  <p>{{ page.content }}</p>
 {% endunless %}
 
 {% unless site.categories.[page.category] | size > 0 %}
