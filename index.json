@@ -6,7 +6,7 @@ layout: null
     {
         "id": "{{ post.id }}",
         "title": "{{ post.title | escape }}",
-        "content": "{{ post.content | strip_html | strip_newlines | replace: '&lt;', '<' | replace: '&gt;', '>' | replace: '&amp;', '&' | replace: '&nbsp;', ' ' | replace: '&#39;', '\'' | replace: '&apos;', '\'' }}",
+        "content": "{{ post.content | strip_html | strip_newlines | replace: '&lt;', '<' | replace: '&gt;', '>' | replace: '&amp;', '&' | replace: '&nbsp;', ' ' | replace: '&#39;', '\'' }}",
         "url": "{{ post.url }}"
     }{% if forloop.last == false %},{% endif %}
 {% endfor %}
