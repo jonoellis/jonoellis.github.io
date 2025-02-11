@@ -8,12 +8,12 @@ document.addEventListener('DOMContentLoaded', () => {
         .then(response => response.json())
         .then(data => {
             const renderResults = (query) => {
-                const results = data.filter(item => item.title.toLowerCase().includes(query) || item.description.toLowerCase().includes(query));
+                const results = data.filter(item => item.title.toLowerCase().includes(query) || item.content.toLowerCase().includes(query));
                 searchResults.innerHTML = results.map(item => `
                     <li>
                         <a href="${item.url}">
                             <h2>${item.title}</h2>
-                            <p>${item.description}</p>
+                            <p>${item.content}</p>
                         </a>
                     </li>
                 `).join('');
