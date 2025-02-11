@@ -3,24 +3,26 @@ layout: null
 ---
 [
 {% for post in site.posts %}
-    {% assign content = post.content | strip_html | strip_newlines | replace: '&lt;', '<' | replace: '&gt;', '>' | replace: '&amp;', '&' | replace: '&nbsp;', ' ' | replace: '&#39;', '\'' %}
+    {% assign raw_content = post.content | strip_html | strip_newlines | replace: '&lt;', '<' | replace: '&gt;', '>' | replace: '&amp;', '&' | replace: '&nbsp;', ' ' | replace: '&#39;', '\'' %}
     
-    {% assign is_valid_json = true %}
+    {% assign filtered_content = "" %}
     
-    {% if content contains '\\' or content contains '"' %}
-        {% assign is_valid_json = false %}
-    {% endif %}
-
-    {% if is_valid_json %}
-        {% assign escaped_content = content | escape %}
-    {% else %}
-        {% assign escaped_content = "UNINDEXED" %}
+    {% for char in raw_content %}
+        {% if char matches "[a-zA-Z0-9 .\'#]" %}
+            {% assign filtered_content = filtered_content | append: char %}
+        {% else %}
+            {% break %}
+        {% endif %}
+    {% endfor %}
+    
+    {% if filtered_content == "" %}
+        {% assign filtered_content = "UNINDEXED" %}
     {% endif %}
 
     {
         "id": "{{ post.id }}",
         "title": "{{ post.title | escape }}",
-        "content": "{{ escaped_content }}",
+        "content": "{{ filtered_content | escape }}",
         "url": "{{ post.url }}"
     }{% if forloop.last == false %},{% endif %}
 {% endfor %}
