@@ -21,23 +21,17 @@ layout: default
     {{ content }}
   </div>
 
-  {% if page.next %}
-  <nav class="post-nav">
-    <a href="{{ site.baseurl }}{{ page.next.url }}" class="post-nav-next">
-      <span class="post-nav-title">{{ page.next.title }}</span>
-      <span class="post-nav-meta">{{ page.next.date | date: "%B %-d, %Y" }}</span>
-    </a>
-  </nav>
-  {% endif %}
 
   {% if page.previous %}
-  <nav class="post-nav">
-    <a href="{{ site.baseurl }}{{ page.previous.url }}" class="post-nav-prev">
-      <span class="post-nav-title">{{ page.previous.title }}</span>
-      <span class="post-nav-meta">{{ page.previous.date | date: "%B %-d, %Y" }}</span>
-    </a>
-  </nav>
+  <nav class="post-nav">Previous post: <a href="{{ site.baseurl }}{{ page.previous.url }}" class="post-nav-prev">{{ page.previous.title }}</a></nav>
   {% endif %}
+
+  
+  {% if page.next %}
+  <nav class="post-nav">Next post: <a href="{{ site.baseurl }}{{ page.next.url }}" class="post-nav-next">{{ page.next.title }}</a></nav>
+  {% endif %}
+
+
 
   {% if site.disqus.shortname %}
   <div id="disqus_thread"></div>
