@@ -1,0 +1,118 @@
+---
+layout: post
+title: "Colour Changing Panels"
+author: Jono
+published: true
+date: 2025-05-22T08:05:00+0000
+categories:
+- code
+- random
+---
+<div><a href="https://mastodon.scot/@jonoellis/114555562589179611">Unfortunately beloved Glitch.com is closing down so I'm rescuing little code projects of old</a>. This is just a series of scrolling divs that change colour as you scroll through them. Keeping it here as I think it looked nice on another little project that I made.</div>
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Inline Scrollable Color Panels</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+    <style>
+      .scroll-container {
+        height: 400px;
+        max-width: 100%;
+        overflow-y: scroll;
+        position: relative;
+        border: 1px solid #ccc;
+        transition: background-color 1s ease;
+        margin: 2em auto;
+        text-align: center;
+        font-size: 120%;
+        line-height: 1.618;
+        font-family: sans-serif;
+      }
+      .panel {
+        min-height: 400px;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        /* Optional: add padding or margin for spacing */
+      }
+      .scroll-container.color-violet { background-color: #ffd6a5; }
+      .scroll-container.color-indigo { background-color: #fdffb6; }
+      .scroll-container.color-blue   { background-color: #caffbf; }
+      .scroll-container.color-green  { background-color: #9bf6ff; }
+      .scroll-container.color-yellow { background-color: #a0c4ff; }
+      .scroll-container.color-orange { background-color: #bdb2ff; }
+      .scroll-container.color-red    { background-color: #ffc6ff; }
+      h1, h2 {
+        font-size: 2.2em;
+        letter-spacing: -0.05em;
+        line-height: 1.1;
+        margin: 0.5em 0;
+      }
+      p {
+        max-width: 30em;
+        margin: 0 auto 1.618em auto;
+      }
+      a {
+        color: #4332CF;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Inline scrollable widget starts here -->
+    <div class="scroll-container color-violet">
+      <div class="panel" data-color="violet">
+        <div>
+          <h1>Magic scrolling colours</h1>
+          <p>Scroll inside this box to see the background color change for each panel.</p>
+        </div>
+      </div>
+      <div class="panel" data-color="indigo">
+        <h2>First panel</h2>
+      </div>
+      <div class="panel" data-color="blue">
+        <h2>Second panel</h2>
+      </div>
+      <div class="panel" data-color="green">
+        <h2>Third panel</h2>
+      </div>
+      <div class="panel" data-color="yellow">
+        <h2>Fourth panel</h2>
+      </div>
+      <div class="panel" data-color="orange">
+        <h2>Fifth panel</h2>
+      </div>
+      <div class="panel" data-color="red">
+        <h2>Sixth panel</h2>
+      </div>
+    </div>
+    <!-- Inline scrollable widget ends here -->
+
+    <script>
+      $(function() {
+        var $container = $('.scroll-container');
+        var $panel = $container.find('.panel');
+
+        $container.on('scroll', function() {
+          var scroll = $container.scrollTop() + ($container.height() / 3);
+
+          $panel.each(function() {
+            var $this = $(this);
+            var panelTop = $this.position().top;
+            var panelBottom = panelTop + $this.outerHeight();
+
+            if (panelTop <= scroll && panelBottom > scroll) {
+              $container.removeClass(function(index, css) {
+                return (css.match(/color-\S+/g) || []).join(' ');
+              });
+              $container.addClass('color-' + $this.data('color'));
+            }
+          });
+        });
+
+        // Trigger once on load
+        $container.trigger('scroll');
+      });
+    </script>
+  </body>
+</html>
