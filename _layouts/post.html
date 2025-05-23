@@ -62,3 +62,50 @@ document.addEventListener("DOMContentLoaded", function() {
   }
 });
 </script> -->
+
+<script>
+function linkifyHashtags(node) {
+  if (node.nodeType === Node.ELEMENT_NODE && node.tagName === 'SCRIPT') {
+    return;
+  }
+  if (node.nodeType === Node.TEXT_NODE) {
+    node.parentNode.replaceChild(
+      linkifyTextNode(node),
+      node
+    );
+    return;
+  }
+  node.childNodes.forEach(linkifyHashtags);
+}
+
+function linkifyTextNode(textNode) {
+  const hashtagRegex = /#(\w+)/g;
+  const frag = document.createDocumentFragment();
+  let lastIndex = 0;
+  let match;
+  const text = textNode.textContent;
+
+  while ((match = hashtagRegex.exec(text)) !== null) {
+    if (match.index > lastIndex) {
+      frag.appendChild(document.createTextNode(text.slice(lastIndex, match.index)));
+    }
+    const a = document.createElement('a');
+    a.href = `https://ellis.scot/discover.html?q=%23${match[1]}`;
+    a.textContent = `#${match[1]}`;
+    frag.appendChild(a);
+    lastIndex = hashtagRegex.lastIndex;
+  }
+  if (lastIndex < text.length) {
+    frag.appendChild(document.createTextNode(text.slice(lastIndex)));
+  }
+  return frag;
+}
+
+document.addEventListener("DOMContentLoaded", function() {
+  const contentElement = document.getElementById("post-content");
+  if (contentElement) {
+    linkifyHashtags(contentElement);
+  }
+});
+</script>
+
