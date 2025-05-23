@@ -13,6 +13,184 @@ categories:
 
 
 
+
+    
+    <link href="https://unpkg.com/leaflet@1.6.0/dist/leaflet.css" rel="stylesheet">
+    
+<style>
+    body {
+  margin: 0;
+  padding: 0;
+}
+
+#map {
+  position: absolute;
+  height: 100vh;
+  width: 100%;
+}
+
+.header-on-map {
+  position: absolute;
+  top: 0;
+  right: 0;
+  z-index: 5000;
+  color: #00c2d9;
+  font-size: 50px;
+  font-family: 'Fredoka One', cursive;
+  text-shadow: -5px -5px #ff9797;
+  -webkit-text-stroke: 1px black; 
+  text-stroke: 1px black;
+}
+
+.content {
+  position: relative;
+}
+
+
+.leaflet-popup-content-wrapper {
+  background-color: #fff
+}
+
+.leaflet-popup-tip {
+    width: 0px;
+    height: 0px;
+  }
+
+
+/* Global values */
+-webkit-text-stroke: inherit;
+-webkit-text-stroke: initial;
+-webkit-text-stroke: unset;
+text-stroke: inherit; 
+text-stroke: initial; 
+text-stroke: unset;
+    </style>
+    
+    <script src="https://unpkg.com/leaflet@1.6.0/dist/leaflet.js"></script>
+    
+    <script src="https://cdn.jsdelivr.net/npm/promise-polyfill@8/dist/polyfill.min.js"></script>
+    
+    <script src="https://cdn.jsdelivr.net/npm/whatwg-fetch@2.0.4/fetch.js"></script>
+    
+    <link href="https://fonts.googleapis.com/css2?family=Fredoka+One&display=swap" rel="stylesheet">
+<script>
+document.addEventListener("DOMContentLoaded", function() {
+
+  // This isn't necessary but it keeps the editor from thinking L is a typo
+/* global L */
+
+var map = L.map('map').setView([55.953251,-3.188267],13);
+
+
+
+
+
+// Add base layer
+L.tileLayer('https://tiles.stadiamaps.com/tiles/stamen_toner/{z}/{x}/{y}{r}.png', {attribution: 'Icons by <a href="https://www.flaticon.com/authors/freepik">Freepik</a> at <a href="https://www.flaticon.com/">Flaticon</a>. &copy; <a href="https://www.stadiamaps.com/" target="_blank">Stadia Maps</a> &copy; <a href="https://www.stamen.com/" target="_blank">Stamen Design</a> &copy; <a href="https://openmaptiles.org/" target="_blank">OpenMapTiles</a> &copy; <a href="https://www.openstreetmap.org/about/" target="_blank">OpenStreetMap contributors</a>',maxZoom: 18}).addTo(map);
+
+
+
+
+
+// Create base icon
+var icon = L.Icon.extend({
+    options: {
+     iconSize: [64, 64],
+  popupAnchor: [100, 30]
+    }
+});
+
+
+
+
+
+// Create kawaii icons
+var bbq = new icon({iconUrl: 'https://cdn.glitch.com/3eedef59-1daf-4b75-ac7c-27bba2aaefdc%2Fbbq.png'});
+var bubbletea = new icon({iconUrl: 'https://cdn.glitch.com/3eedef59-1daf-4b75-ac7c-27bba2aaefdc%2Fbubble_tea.png'});
+var burger = new icon({iconUrl: 'https://cdn.glitch.com/3eedef59-1daf-4b75-ac7c-27bba2aaefdc%2Fburger.png'});
+var burrito = new icon({iconUrl: 'https://cdn.glitch.com/3eedef59-1daf-4b75-ac7c-27bba2aaefdc%2Fburrito.png'});
+var cheesecake = new icon({iconUrl: 'https://cdn.glitch.com/3eedef59-1daf-4b75-ac7c-27bba2aaefdc%2Fcheesecake.png'});
+var chickenwings = new icon({iconUrl: 'https://cdn.glitch.com/3eedef59-1daf-4b75-ac7c-27bba2aaefdc%2Fchicken_wings.png'});
+var chinesefood = new icon({iconUrl: 'https://cdn.glitch.com/3eedef59-1daf-4b75-ac7c-27bba2aaefdc%2Fchinese_food.png'});
+var churro = new icon({iconUrl: 'https://cdn.glitch.com/3eedef59-1daf-4b75-ac7c-27bba2aaefdc%2Fchurro.png'});
+var cinnamonroll = new icon({iconUrl: 'https://cdn.glitch.com/3eedef59-1daf-4b75-ac7c-27bba2aaefdc%2Fcinnamon_roll.png'});
+var corndog = new icon({iconUrl: 'https://cdn.glitch.com/3eedef59-1daf-4b75-ac7c-27bba2aaefdc%2Fcorn_dog.png'});
+var crepe = new icon({iconUrl: 'https://cdn.glitch.com/3eedef59-1daf-4b75-ac7c-27bba2aaefdc%2Fcrepe.png'});
+var donut = new icon({iconUrl: 'https://cdn.glitch.com/3eedef59-1daf-4b75-ac7c-27bba2aaefdc%2Fdonut.png'});
+var dumplings = new icon({iconUrl: 'https://cdn.glitch.com/3eedef59-1daf-4b75-ac7c-27bba2aaefdc%2Fdumplings.png'});
+var fishandchips = new icon({iconUrl: 'https://cdn.glitch.com/3eedef59-1daf-4b75-ac7c-27bba2aaefdc%2Ffish_and_chips.png'});
+var frappe = new icon({iconUrl: 'https://cdn.glitch.com/3eedef59-1daf-4b75-ac7c-27bba2aaefdc%2Ffrappe.png'});
+var frenchfries = new icon({iconUrl: 'https://cdn.glitch.com/3eedef59-1daf-4b75-ac7c-27bba2aaefdc%2Ffrench_fries.png'});
+var friedchicken = new icon({iconUrl: 'https://cdn.glitch.com/3eedef59-1daf-4b75-ac7c-27bba2aaefdc%2Ffried_chicken.png'});
+var hotdog = new icon({iconUrl: 'https://cdn.glitch.com/3eedef59-1daf-4b75-ac7c-27bba2aaefdc%2Fhot_dog.png'});
+var icecream = new icon({iconUrl: 'https://cdn.glitch.com/3eedef59-1daf-4b75-ac7c-27bba2aaefdc%2Fice_cream.png'});
+var latte = new icon({iconUrl: 'https://cdn.glitch.com/3eedef59-1daf-4b75-ac7c-27bba2aaefdc%2Flatte.png'});
+var mac = new icon({iconUrl: 'https://cdn.glitch.com/3eedef59-1daf-4b75-ac7c-27bba2aaefdc%2Fmac.png'});
+var milkshake = new icon({iconUrl: 'https://cdn.glitch.com/3eedef59-1daf-4b75-ac7c-27bba2aaefdc%2Fmilkshake.png'});
+var muffin = new icon({iconUrl: 'https://cdn.glitch.com/3eedef59-1daf-4b75-ac7c-27bba2aaefdc%2Fmuffin.png'});
+var nachos = new icon({iconUrl: 'https://cdn.glitch.com/3eedef59-1daf-4b75-ac7c-27bba2aaefdc%2Fnachos.png'});
+var nuggets = new icon({iconUrl: 'https://cdn.glitch.com/3eedef59-1daf-4b75-ac7c-27bba2aaefdc%2Fnuggets.png'});
+var onigiri = new icon({iconUrl: 'https://cdn.glitch.com/3eedef59-1daf-4b75-ac7c-27bba2aaefdc%2Fonigiri.png'});
+var onionrings = new icon({iconUrl: 'https://cdn.glitch.com/3eedef59-1daf-4b75-ac7c-27bba2aaefdc%2Fonion_rings.png'});
+var pancakes = new icon({iconUrl: 'https://cdn.glitch.com/3eedef59-1daf-4b75-ac7c-27bba2aaefdc%2Fpancakes.png'});
+var pastry = new icon({iconUrl: 'https://cdn.glitch.com/3eedef59-1daf-4b75-ac7c-27bba2aaefdc%2Fpastry.png'});
+var pie = new icon({iconUrl: 'https://cdn.glitch.com/3eedef59-1daf-4b75-ac7c-27bba2aaefdc%2Fpie.png'});
+var pizza = new icon({iconUrl: 'https://cdn.glitch.com/3eedef59-1daf-4b75-ac7c-27bba2aaefdc%2Fpizza.png'});
+var ramen = new icon({iconUrl: 'https://cdn.glitch.com/3eedef59-1daf-4b75-ac7c-27bba2aaefdc%2Framen.png'});
+var sandwich = new icon({iconUrl: 'https://cdn.glitch.com/3eedef59-1daf-4b75-ac7c-27bba2aaefdc%2Fsandwich.png'});
+var sausage = new icon({iconUrl: 'https://cdn.glitch.com/3eedef59-1daf-4b75-ac7c-27bba2aaefdc%2Fsausage.png'});
+var shishkebab = new icon({iconUrl: 'https://cdn.glitch.com/3eedef59-1daf-4b75-ac7c-27bba2aaefdc%2Fshish_kebab.png'});
+var skewer = new icon({iconUrl: 'https://cdn.glitch.com/3eedef59-1daf-4b75-ac7c-27bba2aaefdc%2Fskewer.png'});
+var sodacan = new icon({iconUrl: 'https://cdn.glitch.com/3eedef59-1daf-4b75-ac7c-27bba2aaefdc%2Fsoda_can.png'});
+var soda = new icon({iconUrl: 'https://cdn.glitch.com/3eedef59-1daf-4b75-ac7c-27bba2aaefdc%2Fsoda.png'});
+var sushi = new icon({iconUrl: 'https://cdn.glitch.com/3eedef59-1daf-4b75-ac7c-27bba2aaefdc%2Fsushi.png'});
+var taco = new icon({iconUrl: 'https://cdn.glitch.com/3eedef59-1daf-4b75-ac7c-27bba2aaefdc%2Ftaco.png'});
+var takoyaki = new icon({iconUrl: 'https://cdn.glitch.com/3eedef59-1daf-4b75-ac7c-27bba2aaefdc%2Ftakoyaki.png'});
+var tapa = new icon({iconUrl: 'https://cdn.glitch.com/3eedef59-1daf-4b75-ac7c-27bba2aaefdc%2Ftapa.png'});
+var temaki = new icon({iconUrl: 'https://cdn.glitch.com/3eedef59-1daf-4b75-ac7c-27bba2aaefdc%2Ftemaki.png'});
+var waffle = new icon({iconUrl: 'https://cdn.glitch.com/3eedef59-1daf-4b75-ac7c-27bba2aaefdc%2Fwaffle.png'});
+
+
+
+
+// Add markers from https://docs.google.com/spreadsheets/d/192hMkIxS33WNnZAqm28Kau4Ilyz8sOXQd1vLvsPGEBI/edit#gid=539756913
+var akva = L.marker([55.9503,-3.21053],{icon: pancakes}).addTo(map).bindPopup("<H2>Akva</h2> dose all food for all ages delicops a great kids menu with standerd food  so good for family so older peeps can have more sofustocated food ( or not~) while yongons can have mac n chesse  meat / veggie balls ect. the Pankacke icon because it was first things I had there :0<br><a href='https://www.bodabar.com/akva'>bodabar.com</a>");
+var tapa = L.marker([55.97484,-3.17076],{icon: skewer}).addTo(map).bindPopup("<H2>Tapa</h2> I went to tapa with my dads work  (you can see his bolg here ellis.scot) I had perawns (king) chorizo a duber yumy traditanol espanyol cured meat AKA sausage.<br><a href='https://www.tapaedinburgh.co.uk/menu/'>tapaedinburgh.co.uk</a>");
+var pizza = L.marker([55.95125,-3.20959],{icon: pizza}).addTo(map).bindPopup("<H2>@pizza</h2>@ pizza is a pick your oun path pizza place so it has agrate veriopty for all and has GF DF  bases DF cheese varisou sauces eg tom spice tom BBQ  Plus base variaton eg sourgdough normal and lots lots more varations<br><a href='https://www.atpizza.com/'>atpizza.com</a>");
+var affogato = L.marker([55.95106,-3.20979],{icon: icecream}).addTo(map).bindPopup("<H2>Affogato</h2>_<br><a href='https://www.affogatogelato.co.uk/'>affogatogelato.co.uk</a>");
+var yosushi = L.marker([55.95201,-3.19816],{icon: onigiri}).addTo(map).bindPopup("<H2>YoSushi</h2>_<br><a href='https://yosushi.com/restaurants/edinburgh-princes-st'>yosushi.com</a>");
+var harajukukitchen = L.marker([55.94085,-3.20392],{icon: pastry}).addTo(map).bindPopup("<H2>HarajukuKitchen</h2>_<br><a href='https://harajukukitchen.co.uk/'>harajukukitchen.co.uk</a>");
+var newhavenfishmarket = L.marker([55.98064,-3.19563],{icon: fishandchips}).addTo(map).bindPopup("<H2>NewhavenFishMarket</h2>_<br><a href='https://www.thefishmarketnewhaven.co.uk/'>thefishmarketnewhaven.co.uk</a>");
+var sugardaddy = L.marker([55.95019,-3.18755],{icon: muffin}).addTo(map).bindPopup("<H2>SugarDaddy</h2>_<br><a href='https://www.sugardaddysedinburgh.com/'>sugardaddysedinburgh.com</a>");
+var chatime = L.marker([55.949848,-3.192976],{icon: bubbletea}).addTo(map).bindPopup("<H2>Chatime</h2>_<br><a href='http://www.chatimeuk.com/'>chatimeuk.com</a>");
+
+var place_name = L.marker([LOCATION],{icon: bubbletea}).addTo(map).bindPopup("<H2>PLACE NAME</h2>DESCRIPTION<br><a href='WEBSITE'>WEBSITE</a>");
+//var place_name = L.marker([LOCATION],{icon: bubbletea}).addTo(map).bindPopup("<H2>PLACE NAME</h2>DESCRIPTION<br><a href='WEBSITE'>WEBSITE</a>");
+//var place_name = L.marker([LOCATION],{icon: bubbletea}).addTo(map).bindPopup("<H2>PLACE NAME</h2>DESCRIPTION<br><a href='WEBSITE'>WEBSITE</a>");
+//var place_name = L.marker([LOCATION],{icon: bubbletea}).addTo(map).bindPopup("<H2>PLACE NAME</h2>DESCRIPTION<br><a href='WEBSITE'>WEBSITE</a>");
+
+
+var considerit = L.marker([55.939589,-3.182918],{icon: donut}).addTo(map).bindPopup("<H2>ConsiderIt</h2>_<br><a href='https://www.consideritchocolate.com/'>consideritchocolate.com</a>");
+  
+});
+  
+  
+  
+  
+</script>
+
+
+    <div class="content">
+      <h1 class="header-on-map">#EdinburghDoughnuts</h1>
+      <div id="map"></div>
+    </div>
+
+
+
+
+
+
+
 <div id="exclusive-pink-box">
   <h1>JONO</h1>
 </div>
