@@ -1,0 +1,196 @@
+---
+layout: post
+title: "Holiday Weather"
+author: Jono
+published: true
+date: 2025-05-22T08:02:00+0000
+categories:
+- code
+- random
+---
+<div><a href="https://mastodon.scot/@jonoellis/114555562589179611">Unfortunately beloved Glitch.com is closing down so I'm rescuing little code projects of old</a>. Here's a little thing to show what text looks like in different Google Fonts.</div>
+
+<!-- Google Fonts link remains in <head> -->
+<link href="https://fonts.googleapis.com/css?family=Permanent+Marker|Fira+Code|Comfortaa|Press+Start+2P|Indie+Flower|Abril+Fatface|Rubik+Bubbles|Dancing+Script|Cinzel|Roboto|Open+Sans|Lato|Montserrat|Oswald|Raleway|Merriweather|Poppins|Bebas+Neue|Pacifico|Nunito|Quicksand|Playfair+Display|Bangers|Lobster|Anton|Josefin+Sans|Caveat|Arvo|Exo+2|Orbitron|Muli|Titillium+Web|Satisfy|Archivo+Black|Teko|Baloo+2|Fredoka+One|Varela+Round|Fjalla+One|Amatic+SC|Bitter|Patua+One|Righteous|Shadows+Into+Light|Acme" rel="stylesheet">
+
+<style>
+#font-demo-widget {
+    margin: 0;
+    background: #ffff00;
+    min-height: 60vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    position: relative;
+    border-radius: 18px;
+    box-shadow: 0 2px 12px rgba(0,0,0,0.07);
+}
+#font-demo-widget #textDisplay {
+    color: #000;
+    font-size: 6vw;
+    text-align: center;
+    max-width: 90vw;
+    line-height: 1.2;
+    white-space: pre-line;
+    word-break: break-word;
+}
+#font-demo-widget #hiddenInput {
+    opacity: 0;
+    position: absolute;
+    height: 0;
+    width: 0;
+    overflow: hidden;
+}
+#font-demo-widget .char-tooltip {
+    position: absolute;
+    background: #222;
+    color: #fff;
+    padding: 4px 10px;
+    border-radius: 6px;
+    font-size: 1.1vw;
+    pointer-events: none;
+    opacity: 0;
+    transition: opacity 0.15s;
+    z-index: 9999;
+    white-space: nowrap;
+}
+</style>
+
+<div id="font-demo-widget">
+    <div id="textDisplay"></div>
+    <textarea id="hiddenInput" spellcheck="false"></textarea>
+</div>
+
+<script>
+(function() {
+    // 39 Google Fonts (9 original + 30 more random)
+    const fontList = [
+        'Permanent Marker', 'Fira Code', 'Comfortaa',
+        'Press Start 2P', 'Indie Flower', 'Abril Fatface',
+        'Rubik Bubbles', 'Dancing Script', 'Cinzel',
+        'Roboto', 'Open Sans', 'Lato', 'Montserrat', 'Oswald',
+        'Raleway', 'Merriweather', 'Poppins', 'Bebas Neue',
+        'Pacifico', 'Nunito', 'Quicksand', 'Playfair Display',
+        'Bangers', 'Lobster', 'Anton', 'Josefin Sans', 'Caveat',
+        'Arvo', 'Exo 2', 'Orbitron', 'Muli', 'Titillium Web',
+        'Satisfy', 'Archivo Black', 'Teko', 'Baloo 2', 'Fredoka One',
+        'Varela Round', 'Fjalla One', 'Amatic SC', 'Bitter',
+        'Patua One', 'Righteous', 'Shadows Into Light', 'Acme'
+    ];
+
+    const widget = document.getElementById('font-demo-widget');
+    const inputField = widget.querySelector('#hiddenInput');
+    const display = widget.querySelector('#textDisplay');
+    let currentFontIndex = 0;
+
+    // Tooltip element
+    const tooltip = document.createElement('div');
+    tooltip.className = 'char-tooltip';
+    widget.appendChild(tooltip);
+
+    let hoverTimer = null;
+
+    // Initialize default text with random fonts
+    function initDefaultText() {
+        display.innerHTML = defaultText.split('').map((char, index) => {
+            const fontIndex = index % fontList.length;
+            return `<span onclick="window.changeCharacterFont && window.changeCharacterFont(this)" 
+                         style="font-family: '${fontList[fontIndex]}'"
+                         data-original-font="${fontList[fontIndex]}">${char === '\n' ? '<br>' : char}</span>`;
+        }).join('');
+    }
+
+    // Font loading function
+    function loadFont(fontName) {
+        const fontUrl = `https://fonts.googleapis.com/css?family=${fontName.replace(/ /g, '+')}`;
+        if (!document.querySelector(`link[href="${fontUrl}"]`)) {
+            const link = document.createElement('link');
+            link.rel = 'stylesheet';
+            link.href = fontUrl;
+            document.head.appendChild(link);
+        }
+    }
+
+    // Font change function
+    window.changeCharacterFont = function(element) {
+        currentFontIndex = (currentFontIndex + 1) % fontList.length;
+        const newFont = fontList[currentFontIndex];
+        element.style.fontFamily = `'${newFont}'`;
+        element.dataset.originalFont = newFont;
+        loadFont(newFont);
+    };
+
+    // Tooltip show/hide logic
+    function showTooltip(target) {
+        const font = target.dataset.originalFont || target.style.fontFamily.replace(/['"]/g, '');
+        tooltip.textContent = `Font: ${font}`;
+        const rect = target.getBoundingClientRect();
+        const widgetRect = widget.getBoundingClientRect();
+        tooltip.style.left = `${rect.left - widgetRect.left}px`;
+        tooltip.style.top = `${rect.top - widgetRect.top - tooltip.offsetHeight - 8}px`;
+        tooltip.style.opacity = '1';
+    }
+
+    function hideTooltip() {
+        tooltip.style.opacity = '0';
+    }
+
+    // Attach hover listeners to all character spans
+    function attachHoverListeners() {
+        const spans = display.querySelectorAll('span');
+        spans.forEach(span => {
+            span.onmouseenter = function(e) {
+                hoverTimer = setTimeout(() => {
+                    showTooltip(e.target);
+                }, 1000);
+            };
+            span.onmouseleave = function() {
+                clearTimeout(hoverTimer);
+                hideTooltip();
+            };
+        });
+    }
+
+    // Call this after updating #textDisplay
+    function updateDisplayWithListeners() {
+        attachHoverListeners();
+    }
+
+    // Input handling
+    inputField.addEventListener('input', (e) => {
+        if (e.target.value === '') {
+            initDefaultText();
+            updateDisplayWithListeners();
+        } else {
+            display.innerHTML = e.target.value.split('').map((char, index) => {
+                const fontIndex = index % fontList.length;
+                return `<span onclick="window.changeCharacterFont && window.changeCharacterFont(this)" 
+                            style="font-family: '${fontList[fontIndex]}'"
+                            data-original-font="${fontList[fontIndex]}">${char === '\n' ? '<br>' : char}</span>`;
+            }).join('');
+            updateDisplayWithListeners();
+        }
+    });
+
+    // Shift+Enter handling
+    inputField.addEventListener('keydown', (e) => {
+        if (e.key === 'Enter' && !e.shiftKey) {
+            e.preventDefault();
+            inputField.value += '\n';
+            inputField.dispatchEvent(new Event('input'));
+        }
+    });
+
+    // Focus management
+    inputField.focus();
+    widget.addEventListener('click', () => inputField.focus());
+
+    // Load initial fonts and initialize default text
+    fontList.forEach(font => loadFont(font));
+    const defaultText = "Type here.\nClick characters to change fonts.\nEnjoy.";
+    initDefaultText();
+    updateDisplayWithListeners();
+})();
+</script>
