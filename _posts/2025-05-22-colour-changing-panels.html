@@ -117,16 +117,16 @@ categories:
 
 <div>Full page version:
 <pre><code>
-  <!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+  &#60;!DOCTYPE html&#62;
+&#60;html lang="en"&#62;
+  &#60;head&#62;
+    &#60;meta charset="utf-8"&#62;
+    &#60;meta http-equiv="X-UA-Compatible" content="IE=edge"&#62;
+    &#60;meta name="viewport" content="width=device-width, initial-scale=1"&#62;
 
-    <title>Hello!</title>
-     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>    
-<style>/* Setting fade transition and default settings */
+    &#60;title&#62;Hello!&#60;/title&#62;
+     &#60;script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"&#62;&#60;/script&#62;    
+&#60;style&#62;/* Setting fade transition and default settings */
 body {
   color: #000;
   background-color: #ffadad;
@@ -185,36 +185,36 @@ p {
 }
 a {
   color: #4332CF;
-}</style>  </head>  
-  <body>
-<div class="panel" data-color="white">
-    <div>
-      <h1>Magic scrolling colours</h1>
-      <p></p>
-  </div>
-</div>
-<div class="panel" data-color="violet">
-  <h2>First panel</h2>
-</div>
-<div class="panel" data-color="indigo">
-  <h2>Second panel</h2>
-</div>
-<div class="panel" data-color="blue">
-  <h2>Third panel</h2>
-</div>
-<div class="panel" data-color="green">
-  <h2>Fourth panel</h2>
-</div>
-<div class="panel" data-color="yellow">
-  <h2>Fifth panel</h2>
-</div>
-<div class="panel" data-color="orange">
-  <h2>Sixth panel</h2>
-</div>
-<div class="panel" data-color="red">
-  <h2>Seventh panel</h2>
-</div>
-    <script>$(window).scroll(function() {
+}&#60;/style&#62;  &#60;/head&#62;  
+  &#60;body&#62;
+&#60;div class="panel" data-color="white"&#62;
+    &#60;div&#62;
+      &#60;h1&#62;Magic scrolling colours&#60;/h1&#62;
+      &#60;p&#62;&#60;/p&#62;
+  &#60;/div&#62;
+&#60;/div&#62;
+&#60;div class="panel" data-color="violet"&#62;
+  &#60;h2&#62;First panel&#60;/h2&#62;
+&#60;/div&#62;
+&#60;div class="panel" data-color="indigo"&#62;
+  &#60;h2&#62;Second panel&#60;/h2&#62;
+&#60;/div&#62;
+&#60;div class="panel" data-color="blue"&#62;
+  &#60;h2&#62;Third panel&#60;/h2&#62;
+&#60;/div&#62;
+&#60;div class="panel" data-color="green"&#62;
+  &#60;h2&#62;Fourth panel&#60;/h2&#62;
+&#60;/div&#62;
+&#60;div class="panel" data-color="yellow"&#62;
+  &#60;h2&#62;Fifth panel&#60;/h2&#62;
+&#60;/div&#62;
+&#60;div class="panel" data-color="orange"&#62;
+  &#60;h2&#62;Sixth panel&#60;/h2&#62;
+&#60;/div&#62;
+&#60;div class="panel" data-color="red"&#62;
+  &#60;h2&#62;Seventh panel&#60;/h2&#62;
+&#60;/div&#62;
+    &#60;script&#62;$(window).scroll(function() {
   
   // selectors
   var $window = $(window),
@@ -228,9 +228,9 @@ a {
     var $this = $(this);
     
     // if position is within range of this panel.
-    // So position of (position of top of div <= scroll position) && (position of bottom of div > scroll position).
+    // So position of (position of top of div &#60;= scroll position) &#38;&#38; (position of bottom of div &#62; scroll position).
     // Remember we set the scroll to 33% earlier in scroll var.
-    if ($this.position().top <= scroll && $this.position().top + $this.height() > scroll) {
+    if ($this.position().top &#60;= scroll &#38;&#38; $this.position().top + $this.height() &#62; scroll) {
           
       // Remove all classes on body with color-
       $body.removeClass(function (index, css) {
@@ -242,9 +242,9 @@ a {
     }
   });    
   
-}).scroll();</script>
-  </body>
-</html>
+}).scroll();&#60;/script&#62;
+  &#60;/body&#62;
+&#60;/html&#62;
 
 </code></pre></div>
     
