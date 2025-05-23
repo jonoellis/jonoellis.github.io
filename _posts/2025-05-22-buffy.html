@@ -1,0 +1,70 @@
+---
+layout: post
+title: "Buffy the Vampire Slayer Episode Progress"
+author: Jono
+published: true
+date: 2025-05-22T07:00:00+0000
+categories:
+- random
+- code
+---
+A few friends have been watching through Buffy the Vampire Slayer.
+    <style>
+        body { font-family: Arial, sans-serif; max-width: 600px; margin: 0 auto; padding: 20px; }
+        label, input, output { display: block; margin-bottom: 10px; }
+        input { width: 100%; padding: 5px; }
+    </style>
+
+    <form id="buffyForm">
+        <label for="episode">Enter Season.Episode (e.g., Season 3 Episode 4 would be 3.4):</label>
+        <input type="text" id="episode" name="episode" pattern="\d+\.\d+" required>
+        <button type="submit">Calculate</button>
+    </form>
+    <output id="result"></output>
+
+    <script>
+    function remainingDaysHoursAndMinutes(minutes) {
+        const days = Math.floor(minutes / (24 * 60));
+        const hours = Math.floor((minutes % (24 * 60)) / 60);
+        const remainingMinutes = minutes % 60;
+        return `${days} days, ${hours} hours, and ${remainingMinutes} minutes`;
+    }
+
+    function calculateProgress(event) {
+        event.preventDefault(); // Prevent form submission
+        const input = document.getElementById('episode').value;
+        const [season, episode] = input.split('.').map(Number);
+        const result = document.getElementById('result');
+
+        const totalMinutes = 6342;
+        const episodesPerSeason = [12, 22, 22, 22, 22, 22, 22];
+        const episodeLength = 44;
+
+        let watchedEpisodes = 0;
+        for (let i = 0; i < season - 1; i++) {
+            watchedEpisodes += episodesPerSeason[i];
+        }
+        watchedEpisodes += episode - 1;
+
+        let watchedMinutes = watchedEpisodes * episodeLength;
+        if (season === 6 && episode === 7) {
+            watchedMinutes += 50;
+        } else {
+            watchedMinutes += episodeLength;
+        }
+
+        const remainingMinutes = totalMinutes - watchedMinutes;
+        const percentageComplete = (watchedMinutes / totalMinutes * 100).toFixed(2);
+        const remainingTime = remainingDaysHoursAndMinutes(remainingMinutes);
+
+        result.innerHTML = `
+            <p>Minutes remaining: ${remainingMinutes}</p>
+            <p>Time remaining: ${remainingTime}</p>
+            <p>Percentage complete: ${percentageComplete}%</p>
+        `;
+    }
+
+    // Add event listener to the form
+    document.getElementById('buffyForm').addEventListener('submit', calculateProgress);
+    </script>
+  <img src="https://cdn.glitch.global/d061a559-54d4-4d73-8058-825c31a90459/ratings.svg?v=1736721400701" width="100%" />
