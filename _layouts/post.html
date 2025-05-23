@@ -65,7 +65,16 @@ document.addEventListener("DOMContentLoaded", function() {
 
 <script>
 function linkifyHashtags(node) {
-  if (node.nodeType === Node.ELEMENT_NODE && node.tagName === 'SCRIPT') {
+if (
+
+    node.nodeType === Node.ELEMENT_NODE &&
+
+    (node.tagName === 'SCRIPT' || node.tagName === 'STYLE')
+
+  ) {
+
+
+    
     return;
   }
   if (node.nodeType === Node.TEXT_NODE) {
