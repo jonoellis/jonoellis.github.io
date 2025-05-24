@@ -1,0 +1,67 @@
+---
+layout: post
+title: "Twine Interactive Fiction Reformatter Tool"
+author: Jono
+published: true
+date: 2023-08-26 08:00:00 -0000
+categories: 
+- code
+- writing
+---
+<p>I use <a href="https://twinery.org/">Twine</a> to write Interactive Fiction/Choose Your Own Adventures. The ones I write I like to format so that they could be a book... and we all know that CYOAs have chapter 1 at the start, then the chapters are ordered in number order but the chapter that you need to read at the end of chapter one might be 17 or it could be 49. Twine doesn’t let you format stories for print like that so I’ve put together <a href="https://colab.research.google.com/drive/1TLAgxwaO_4R2nqUI9i0F0u9L3fEIICaB?usp=sharing">some scripts to do that</a>.</p>
+<p>Before you export your file from Twine, make sure that all of your chapters are named simply with a number. Your linking will look like “For X, go to chapter [[2]]”. You need to randomise the chapters yourself. The script will then take your HTML file and split each chapter out as &quot;1.txt&quot;, &quot;2.txt&quot;, etc. The next step then puts all of those numbered chapters into a single file in order. Then it all gets cleaned up, reformatted for print (so no links), and is then saved as a .html file at the end. All you need to do is download and copy the text into your word processor of choice and you&#39;re good to go. </p>
+<p>Let me know if you use the script.</p>
+
+<div><strong>Updated 2025-05-24: </strong><p><a href="https://mastodon.scot/@jonoellis/114555562589179611">Unfortunately beloved Glitch.com is closing down so I'm rescuing little code projects of old</a>. As well as the Twine reformatter I built a more simple paragraph randomiser for a story idea that I'd had. Embedded below.</p></div>
+
+
+
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script>
+var storyData = [
+  { "paragraph": "Para 0" },
+  { "paragraph": "Para 1" },
+  { "paragraph": "Para 2" },
+  { "paragraph": "Para 3" },
+  { "paragraph": "Para 4" },
+  { "paragraph": "Para 5" },
+  { "paragraph": "Para 6" },
+  { "paragraph": "Para 7" },
+  { "paragraph": "Para 8" },
+  { "paragraph": "Para 9" },
+  { "paragraph": "Para 10" }
+];
+
+function shuffle(array) {
+  let currentIndex = array.length,
+    randomIndex;
+  while (currentIndex != 0) {
+    randomIndex = Math.floor(Math.random() * currentIndex);
+    currentIndex--;
+    [array[currentIndex], array[randomIndex]] = [
+      array[randomIndex], array[currentIndex]
+    ];
+  }
+  return array;
+}
+
+$(function () {
+  var arr = Array.from(Array(storyData.length).keys());
+  shuffle(arr);
+  for (let i = 0; i < arr.length; i++) {
+    var counter = arr[i];
+    var entry = storyData[counter];
+    var html = '<div id="#' + i + '"><p>' + entry["paragraph"] + "</p></div>";
+    $("#story").append(html).fadeIn();
+  }
+});
+</script>
+<div id="introduction">
+<p>This piece explores the confusing context-switching that a refugee has to do when seeking safety whilst their friends, family and culture remain in danger at home. To a refugee the ordering of events makes little difference - to them so many events and thoughts are happening simultaneously and whilst one part of their soul is at risk they cannot rest easy.</p>  
+</div>
+<hr>
+<div id="story"></div>
+<div id="extroduction">
+<p></p>
+</div>
