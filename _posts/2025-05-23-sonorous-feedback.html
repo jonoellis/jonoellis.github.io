@@ -1,0 +1,158 @@
+---
+layout: post
+title: "Sonorous Feedback"
+author: Jono
+published: true
+date: 2025-05-23T08:02:00+0000
+categories:
+- code
+- random
+---
+<div><a href="https://mastodon.scot/@jonoellis/114555562589179611">Unfortunately beloved Glitch.com is closing down so I'm rescuing little code projects of old</a>. This was a very basic draft of an expandable feedback form which collects feedback to FormSpree from your webpage. Try it out by clicking the feedback button below to pop up the form. The starting point was that it should just be a single JavaScript file. This was set up as a demo - to use with <a href="https://formspree.io/">Formspree</a> as per the example you'll need to change the destination of the form on line 2 of the code by signing up for your own Formspree account. 
+<h2 id="to-do">Next steps</h2>
+<ul>
+<li>Ideally gathered feedback would be able to be pulled through to the page e.g. text in the feedback module saying &quot;This page has a score of X% from the past 100 feedback submissions.&quot; or &quot;This page has had X feedback sumissions in the past 30 days.&quot; This would require calculation (unique page paths filter then average from all sumbitted) and caching.</li>
+<li>Date isn&#39;t explicitly gathered, it&#39;s provided ny FormSpree</li>
+<li>Form submits would ideally show success text on page rather than offsite</li>
+<li>Rate limiting/<a href="https://friendlycaptcha.com/">https://friendlycaptcha.com/</a></li>
+<li>Redact sensitive/offenisive/email/number strings</li>
+<li>Login section to review feedback</li>
+<li>No IP address logging</li>
+<li>Ability to export feedback to sheets or email daily from a filter view</li>
+<li>Handle URL fragments</li>
+</ul>
+</div>
+
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+  // Embedded CSS
+  var css = `
+#sonorousFeedback {
+  -webkit-font-smoothing: antialiased;
+  font-feature-settings: "kern", "liga", "pnum";
+  box-sizing: inherit;
+  appearance: none;
+  background: 0 0;
+  cursor: pointer;
+  text-decoration: none;
+  user-select: none;
+  transition: background-color, 0.1s, color, 0.1s, border-color, 0.1s;
+  display: inline-block;
+  font-family: karla, sans-serif;
+  font-size: 1.4rem;
+  line-height: 1;
+  padding: 8px 2rem;
+  text-align: left;
+  vertical-align: middle;
+  color: #631010;
+  bottom: 0;
+  border-radius: 2px 2px 0 0;
+  position: fixed;
+  z-index: 90000000;
+  background-color: #f88c5a;
+  right: 1rem;
+}
+#feedbackButton {
+  -webkit-font-smoothing: antialiased;
+  font-feature-settings: "kern", "liga", "pnum";
+  appearance: none;
+  cursor: pointer;
+  text-decoration: none;
+  user-select: none;
+  transition: background-color, 0.1s, color, 0.1s, border-color, 0.1s;
+  border: none;
+  font-family: karla, sans-serif;
+  font-size: 1.4rem;
+  line-height: 2;
+  padding: 0px;
+  text-align: left;
+  vertical-align: middle;
+  color: #631010;
+  background-color: #f88c5a;
+}
+#feedbackForm {
+  -webkit-font-smoothing: antialiased;
+  font-feature-settings: "kern", "liga", "pnum";
+  box-sizing: inherit;
+  appearance: none;
+  background: 0 0;
+  cursor: pointer;
+  text-decoration: none;
+  user-select: none;
+  transition: background-color, 0.1s, color, 0.1s, border-color, 0.1s;
+  font-family: karla, sans-serif;
+  font-size: 1.4rem;
+  line-height: 1;
+  padding-top: 10px;
+  text-align: left;
+  vertical-align: middle;
+  color: #631010;
+  z-index: 90000000;
+  background-color: #f88c5a;
+}
+/* RADIO HIDE */
+[type="radio"] {
+  position: absolute;
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+/* RADIO IMAGE STYLES */
+[type="radio"] + img {
+  cursor: pointer;
+  opacity: 0.4;
+  padding-left: 6px;
+  padding-top:12px;
+}
+/* RADIO CHECKED STYLES */
+[type="radio"]:checked + img {
+  opacity: 0.9;
+  padding-left: 6px;
+  padding-top:12px;
+}
+textarea {
+    padding-top:12px;
+}
+#pagepath {
+  position: absolute;
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+  `;
+  var style = document.createElement('style');
+  style.type = 'text/css';
+  style.appendChild(document.createTextNode(css));
+  document.head.appendChild(style);
+
+  // Feedback widget logic
+  var formspree = "https://formspree.io/f/xdobjgjj";
+
+  var sonorousFeedback = document.createElement('div');
+  sonorousFeedback.setAttribute("id", "sonorousFeedback");
+  document.body.appendChild(sonorousFeedback);
+
+  var feedbackButton = document.createElement('button');
+  feedbackButton.setAttribute("id", "feedbackButton");
+  feedbackButton.innerHTML = "Feedback";
+  feedbackButton.onclick = expand;
+  document.getElementById("sonorousFeedback").appendChild(feedbackButton);
+
+  var feedbackForm = document.createElement('div');
+  feedbackForm.setAttribute("id", "feedbackForm");
+  feedbackForm.setAttribute("style", "display: none;");
+  feedbackForm.innerHTML = "<form action='" + formspree + "' method='POST'><label><input type='text' id='pagepath' name='pagepath'></label><p><label>Did you find what you were looking for?:<br><input type='radio' id='thumbs-up' name='rate' value='thumbs-up'><img src='https://cdn.glitch.global/68034564-f01f-4e58-af1d-9f1698631cd2/thumb-up.svg?v=1654766533391'></label><label><input type='radio' id='thumbs-down' name='rate' value='thumbs-down'><img src='https://cdn.glitch.global/68034564-f01f-4e58-af1d-9f1698631cd2/thumb-down.svg?v=1654766533391'></label></p><p>How could this content be improved?: </p><textarea name='find' rows='5' cols='40'></textarea><p><input type='submit' value='Submit'></p></form>";
+  document.getElementById("sonorousFeedback").appendChild(feedbackForm);
+  document.getElementsByName('pagepath')[0].value = window.location.pathname;
+
+  function expand() {
+    var feedbackForm = document.getElementById("feedbackForm");
+    if (feedbackForm.style.display === "none") {
+      feedbackForm.style.display = "inline";
+    } else {
+      feedbackForm.style.display = "none";
+    }
+  }
+});
+</script>
