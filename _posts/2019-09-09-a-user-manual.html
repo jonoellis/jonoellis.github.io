@@ -19,6 +19,48 @@ categories:
   </iframe>
 </div>
 
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+  const params = new URLSearchParams(window.location.search);
+  if (params.get('setting') === 'linktree') {
+    // Hide <header> inside <body>
+    const bodyHeader = document.body.querySelector('header');
+    if (bodyHeader) bodyHeader.style.display = 'none';
+
+    // Hide <header> inside <article>
+    document.querySelectorAll('article header').forEach(header => {
+      header.style.display = 'none';
+    });
+
+    // Hide all <footer> elements
+    document.querySelectorAll('footer').forEach(footer => {
+      footer.style.display = 'none';
+    });
+
+    // Hide all <nav> elements
+    document.querySelectorAll('nav').forEach(nav => {
+      nav.style.display = 'none';
+    });
+
+    // Create and insert the "Show Full View" button
+    const button = document.createElement('button');
+    button.textContent = 'Show Full View';
+    button.style.position = 'fixed';
+    button.style.top = '20px';
+    button.style.right = '20px';
+    button.style.zIndex = '1000';
+
+    button.addEventListener('click', function() {
+      params.set('setting', 'full');
+      window.location.search = params.toString();
+    });
+
+    document.body.appendChild(button);
+  }
+});
+
+</script>
+
 <p>Here's a user manual of me - based on the many versions that are out there but especially the one shared by <a href="https://medium.com/@cassierobinson/a-user-manual-for-me-d3a851fbc694">Cassie Robinson</a>. I've got no expectations from this, I just thought that it was a nice exercise to do.</p>
 <h2>Conditions I like to work in:</h2>
 
@@ -155,22 +197,4 @@ categories:
 </ul>
 
 
-<script>document.addEventListener('DOMContentLoaded', function() {
-  const params = new URLSearchParams(window.location.search);
-  if (params.get('setting') === 'linktree') {
-    // Hide <header> inside <body>
-    const bodyHeader = document.body.querySelector('header');
-    if (bodyHeader) bodyHeader.style.display = 'none';
 
-    // Hide <header> inside <article>
-    document.querySelectorAll('article header').forEach(header => {
-      header.style.display = 'none';
-    });
-
-    // Hide all <footer> elements
-    document.querySelectorAll('footer').forEach(footer => {
-      footer.style.display = 'none';
-    });
-  }
-});
-</script>
