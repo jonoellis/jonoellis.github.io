@@ -142,7 +142,7 @@ textarea {
   var feedbackForm = document.createElement('div');
   feedbackForm.setAttribute("id", "feedbackForm");
   feedbackForm.setAttribute("style", "display: none;");
-  feedbackForm.innerHTML = "<form action='" + formspree + "' method='POST'><label><input type='text' id='pagepath' name='pagepath'></label><p><label>Did you find what you were looking for?:<br><input type='radio' id='thumbs-up' name='rate' value='thumbs-up'><img src='https://cdn.glitch.global/68034564-f01f-4e58-af1d-9f1698631cd2/thumb-up.svg?v=1654766533391'></label><label><input type='radio' id='thumbs-down' name='rate' value='thumbs-down'><img src='https://cdn.glitch.global/68034564-f01f-4e58-af1d-9f1698631cd2/thumb-down.svg?v=1654766533391'></label></p><p>How could this content be improved?: </p><textarea name='find' rows='5' cols='40'></textarea><p><input type='submit' value='Submit'></p></form>";
+  feedbackForm.innerHTML = "<form action='" + formspree + "' method='POST'><label><input type='text' id='pagepath' name='pagepath'></label><p><label>Did you find what you were looking for?:<br><input type='radio' id='thumbs-up' name='rate' value='thumbs-up'><img src='https://ellis.scot/uploads/thumb-up.svg'></label><label><input type='radio' id='thumbs-down' name='rate' value='thumbs-down'><img src='https://ellis.scot/uploads/thumb-down.svg'></label></p><p>How could this content be improved?: </p><textarea name='find' rows='5' cols='40'></textarea><p><input type='submit' value='Submit'></p></form>";
   document.getElementById("sonorousFeedback").appendChild(feedbackForm);
   document.getElementsByName('pagepath')[0].value = window.location.pathname;
 
