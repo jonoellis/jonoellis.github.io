@@ -11,14 +11,13 @@ categories:
 <div><a href="https://mastodon.scot/@jonoellis/114555562589179611">Unfortunately beloved Glitch.com is closing down so I'm rescuing little code projects of old</a>. This was a very basic draft of an expandable feedback form which collects feedback to FormSpree from your webpage. Try it out by clicking the feedback button below to pop up the form. The starting point was that it should just be a single JavaScript file. This was set up as a demo - to use with <a href="https://formspree.io/">Formspree</a> as per the example you'll need to change the destination of the form on line 2 of the code by signing up for your own Formspree account. The form submits along with the pagepath on the page that it was on.
 <h2 id="to-do">Next steps</h2>
 <ul>
-<li>Ideally gathered feedback would be able to be pulled through to the page e.g. text in the feedback module saying &quot;This page has a score of X% from the past 100 feedback submissions.&quot; or &quot;This page has had X feedback sumissions in the past 30 days.&quot; This would require calculation (unique page paths filter then average from all sumbitted) and caching.</li>
-<li>Date isn&#39;t explicitly gathered, it&#39;s provided ny FormSpree</li>
-<li>Form submits would ideally show success text on page rather than offsite</li>
-<li>Rate limiting/<a href="https://friendlycaptcha.com/">https://friendlycaptcha.com/</a></li>
-<li>Redact sensitive/offenisive/email/number strings</li>
-<li>Login section to review feedback</li>
-<li>No IP address logging</li>
-<li>Ability to export feedback to sheets or email daily from a filter view</li>
+<li>Ideally gathered feedback would be able to be pulled through to the page e.g. text in the feedback module saying &quot;This page has a score of X% from the past 100 feedback submissions.&quot; or &quot;This page has had X feedback sumissions in the past 30 days.&quot; This would require calculation (unique page paths filter then average from all sumbitted) and caching. This can be done in part via Formspree's API.</li>
+<li>Date isn&#39;t explicitly gathered, it&#39;s provided by FormSpree - it might be worth adding that in.</li>
+<li>Form submits would ideally show success text on page rather than offsite.</li>
+<li>Set up Formspree's captcha.</li>
+<li>Redact sensitive/offenisive/email/number strings - I think this can be done via <a href="https://github.com/philterd/philter">Philter</a>.</li>
+<li>Build a front-end with login section to review feedback and filter and export to sheets.</li>
+<li>Formspree prevents any access to their IP address logging so all submissions are anonymous.</li>
 </ul>
 </div>
 
