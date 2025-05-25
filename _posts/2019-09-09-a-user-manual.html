@@ -153,3 +153,24 @@ categories:
 
 <li>Adjectives: tall and keen (if I'm allowed just two!)</li>
 </ul>
+
+
+<script>document.addEventListener('DOMContentLoaded', function() {
+  const params = new URLSearchParams(window.location.search);
+  if (params.get('setting') === 'linktree') {
+    // Hide <header> inside <body>
+    const bodyHeader = document.body.querySelector('header');
+    if (bodyHeader) bodyHeader.style.display = 'none';
+
+    // Hide <header> inside <article>
+    document.querySelectorAll('article header').forEach(header => {
+      header.style.display = 'none';
+    });
+
+    // Hide all <footer> elements
+    document.querySelectorAll('footer').forEach(footer => {
+      footer.style.display = 'none';
+    });
+  }
+});
+</script>
