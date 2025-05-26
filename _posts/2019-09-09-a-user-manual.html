@@ -68,12 +68,55 @@ categories:
       padding-left: 0;
     }
 
-    .glitch-embed-wrap ul.link-list li {
-      font-family: Menlo, Consolas, Monaco, "Lucida Console", monospace;
-      font-weight: 100;
-      list-style: none;
-      width: 100%;
-    }
+
+
+
+
+ .glitch-embed-wrap ul.link-list li {
+  font-family: Menlo, Consolas, Monaco, "Lucida Console", monospace;
+  font-weight: 100;
+  list-style: none;
+  width: 100%;
+  min-width: 100%;
+  text-align: center;
+  margin: 1rem auto;
+  font-size: clamp(0.7rem, 0.3250rem + 1.6667vw, 1.2rem);
+}
+
+ .glitch-embed-wrap ul.link-list li a {
+  min-height: 5.5em;
+  min-width: 100%;
+  display: flex;
+  align-content: center;
+  align-items: center;
+  border-radius: 3px;
+  background: rgba(193,202,242,0.3);
+  border: 4px solid #AFECE0;
+  justify-content: space-around;
+  text-align: center;
+  padding: 1.5rem;
+  position: relative;
+}
+
+ .glitch-embed-wrap ul.link-list li a:hover,
+ .glitch-embed-wrap ul.link-list li a:focus {
+  border: 4px solid #FFFFFF;
+  background: #AFECE0;
+}
+
+ .glitch-embed-wrap ul.link-list li a img {
+  display: none;
+}
+
+ .glitch-embed-wrap ul.link-list li a span {
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+
+
+
+
+    
 
     .social-icons {
   justify-content: center;
