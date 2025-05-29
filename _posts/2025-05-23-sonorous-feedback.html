@@ -14,8 +14,11 @@ categories:
 <li>Ideally gathered feedback would be able to be pulled through to the page e.g. text in the feedback module saying &quot;This page has a score of X% from the past 100 feedback submissions.&quot; or &quot;This page has had X feedback sumissions in the past 30 days.&quot; This would require calculation (unique page paths filter then average from all sumbitted) and caching. This can be done in part via Formspree's API.</li>
 <li>Date isn&#39;t explicitly gathered, it&#39;s provided by FormSpree - it might be worth adding that in.</li>
 <li>Form submits would ideally show success text on page rather than offsite.</li>
+<li>Add warning text about required field.</li>
+<li>Make the scrollbar visible always.</li>
+<li>Make it nicer on mobile.</li>
 <li>Set up Formspree's captcha.</li>
-<li>Redact sensitive/offenisive/email/number strings - I think this can be done via <a href="https://github.com/philterd/philter">Philter</a>.</li>
+<li><strong>2025-05-29:</strong>lunchtime update - tweaked to check for UK postcodes, strings of numbers and an external list of swear words</li>
 <li>Build a front-end with login section to review feedback and filter and export to sheets.</li>
 <li>Formspree prevents any access to their IP address logging so all submissions are anonymous.</li>
 </ul>
@@ -50,6 +53,9 @@ document.addEventListener('DOMContentLoaded', function() {
   z-index: 90000000;
   background-color: #f88c5a;
   right: 1rem;
+  max-height: 350px;
+  overflow-y: auto;
+
 }
 #feedbackButton {
   -webkit-font-smoothing: antialiased;
@@ -68,11 +74,12 @@ document.addEventListener('DOMContentLoaded', function() {
   vertical-align: middle;
   color: #631010;
   background-color: #f88c5a;
+   overflow-y: scroll;
 }
 #feedbackForm {
   -webkit-font-smoothing: antialiased;
   font-feature-settings: "kern", "liga", "pnum";
-  box-sizing: inherit;
+  box-sizing: border-box;
   appearance: none;
   background: 0 0;
   cursor: pointer;
@@ -88,6 +95,10 @@ document.addEventListener('DOMContentLoaded', function() {
   color: #631010;
   z-index: 90000000;
   background-color: #f88c5a;
+  display: block;
+  width: 350px;
+  max-width: 90vw;
+  overflow-y: scroll;
 }
 /* RADIO HIDE */
 [type="radio"] {
@@ -140,7 +151,7 @@ textarea {
   var feedbackForm = document.createElement('div');
   feedbackForm.setAttribute("id", "feedbackForm");
   feedbackForm.setAttribute("style", "display: none;");
-  feedbackForm.innerHTML = "<form action='" + formspree + "' method='POST'><label><input type='text' id='pagepath' name='pagepath'></label><p><label>Did you find what you were looking for?:<br><input type='radio' id='thumbs-up' name='rate' value='thumbs-up'><img src='https://ellis.scot/uploads/thumb-up.svg'></label><label><input type='radio' id='thumbs-down' name='rate' value='thumbs-down'><img src='https://ellis.scot/uploads/thumb-down.svg'></label></p><p>How could this content be improved?: </p><textarea name='find' rows='5' cols='40'></textarea><p><input type='submit' value='Submit'></p></form>";
+feedbackForm.innerHTML = "<form action='" + formspree + "' method='POST'><label><input type='text' id='pagepath' name='pagepath'></label><p><label>Did you find what you were looking for?:<br><input type='radio' id='thumbs-up' name='rate' value='thumbs-up' required><img src='https://ellis.scot/uploads/thumb-up.svg'></label><label><input type='radio' id='thumbs-down' name='rate' value='thumbs-down'><img src='https://ellis.scot/uploads/thumb-down.svg'></label></p><p>How could this content be improved?: </p><textarea id='feedbackText' name='feedbackText' rows='5' cols='40'></textarea><div id='feedbackWarning' style='display:none'></div><p><input type='submit' value='Submit'></p></form>";
   document.getElementById("sonorousFeedback").appendChild(feedbackForm);
   document.getElementsByName('pagepath')[0].value = window.location.pathname + window.location.search;
 
@@ -148,10 +159,151 @@ textarea {
   function expand() {
     var feedbackForm = document.getElementById("feedbackForm");
     if (feedbackForm.style.display === "none") {
-      feedbackForm.style.display = "inline";
+      feedbackForm.style.display = "block";
     } else {
       feedbackForm.style.display = "none";
     }
   }
 });
+
+
+// --- Regex Rules ---
+const feedbackRules = [
+  {
+    name: "postcode",
+    regex: /([Gg][Ii][Rr] 0[Aa]{2})|((([A-Za-z][0-9]{1,2})|(([A-Za-z][A-Ha-hJ-Yj-y][0-9]{1,2})|(([A-Za-z][0-9][A-Za-z])|([A-Za-z][A-Ha-hJ-Yj-y][0-9][A-Za-z]?))))\s?[0-9][A-Za-z]{2})/g
+  },
+  {
+    name: "phone number",
+    regex: /\b(?:\d\s*){6,}\b/g
+  }
+];
+
+const feedbackPluralMap = {
+  "postcode": "postcodes",
+  "phone number": "phone numbers",
+  "profanity": "profanities"
+};
+
+function feedbackEscapeHtml(str) {
+  return str.replace(/[&<>"']/g, function (m) {
+    return ({
+      '&': '&amp;',
+      '<': '&lt;',
+      '>': '&gt;',
+      '"': '&quot;',
+      "'": '&#39;'
+    })[m];
+  });
+}
+
+function feedbackGetMatches(text, rule) {
+  let matches = [];
+  let regex = rule.regex;
+  regex.lastIndex = 0;
+  let match;
+  while ((match = regex.exec(text)) !== null) {
+    matches.push(match[0]);
+    if (match.index === regex.lastIndex) regex.lastIndex++;
+  }
+  return matches;
+}
+
+// Profanity detection for feedback
+let feedbackProfanityLoaded = false;
+let feedbackProfanityRegex = null;
+let feedbackProfanityWords = [];
+
+function fetchFeedbackProfanityList() {
+  fetch('https://raw.githubusercontent.com/dsojevic/profanity-list/refs/heads/main/en.txt')
+    .then(response => response.text())
+    .then(text => {
+      feedbackProfanityWords = text.split('\n').map(w => w.trim()).filter(w => w && !w.startsWith('#'));
+      const escapedWords = feedbackProfanityWords.map(w => w.replace(/[.*+?^${}()|[\]\\]/g, '\\$&'));
+      if (escapedWords.length > 0) {
+        feedbackProfanityRegex = new RegExp(`\\b(${escapedWords.join('|')})\\b`, 'gi');
+        feedbackProfanityLoaded = true;
+      }
+    });
+}
+
+function feedbackGetProfanityMatches(text) {
+  if (!feedbackProfanityLoaded || !feedbackProfanityRegex) return [];
+  let matches = [];
+  let regex = feedbackProfanityRegex;
+  regex.lastIndex = 0;
+  let match;
+  while ((match = regex.exec(text)) !== null) {
+    matches.push(match[0]);
+    if (match.index === regex.lastIndex) regex.lastIndex++;
+  }
+  return matches;
+}
+
+function feedbackUpdateWarning() {
+  const textarea = document.getElementById('feedbackText');
+  const warning = document.getElementById('feedbackWarning');
+  if (!textarea || !warning) return;
+
+  const text = textarea.value;
+  let found = [];
+  let foundMatches = {};
+
+  // Check postcodes and phone numbers
+  feedbackRules.forEach(rule => {
+    const matches = feedbackGetMatches(text, rule);
+    if (matches.length > 0) {
+      found.push(rule.name);
+      foundMatches[rule.name] = matches;
+    }
+  });
+
+  // Check profanity if loaded
+  let profanityMatches = [];
+  if (feedbackProfanityLoaded && feedbackProfanityRegex) {
+    profanityMatches = feedbackGetProfanityMatches(text);
+    if (profanityMatches.length > 0) {
+      found.push("profanity");
+      foundMatches["profanity"] = profanityMatches;
+    }
+  }
+
+  // Show warning if any detected
+  if (found.length > 0) {
+    let warningParts = [];
+    found.forEach(type => {
+      const label = feedbackPluralMap[type];
+      const values = foundMatches[type]
+        .map(val => `<span style="white-space:nowrap; color: #fff; padding: 0 2px; border-radius: 2px;">
+            ${feedbackEscapeHtml(val)}</span>`);
+      let part = `${label} (${values.join(", ")})`;
+      warningParts.push(part);
+    });
+
+    let warningText = "Please remove any personal information from your feedback before submitting. The text above may contain ";
+    if (warningParts.length === 1) {
+      warningText += warningParts[0] + ".";
+    } else if (warningParts.length === 2) {
+      warningText += warningParts[0] + " or " + warningParts[1] + ".";
+    } else {
+      warningText += warningParts.slice(0, -1).join(", ") + ", or " + warningParts[warningParts.length - 1] + ".";
+    }
+
+    warning.innerHTML = warningText;
+    warning.style.display = "";
+  } else {
+    warning.style.display = "none";
+    warning.innerHTML = "";
+  }
+}
+
+// Attach event listener after DOM is ready and fetch profanity list
+document.addEventListener('DOMContentLoaded', function() {
+  fetchFeedbackProfanityList();
+  const textarea = document.getElementById('feedbackText');
+  if (textarea) {
+    textarea.addEventListener('input', feedbackUpdateWarning);
+  }
+});
+
 </script>
