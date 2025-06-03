@@ -3,7 +3,7 @@ layout: post
 title: "The sad life of a Scottish lifeguard"
 author: Jono
 published: true
-date: 2025-06-03 16:32:17 -0000
+date: 2025-06-03 16:32:17
 categories:
 - random
 ---
