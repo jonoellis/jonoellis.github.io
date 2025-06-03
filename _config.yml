@@ -28,6 +28,7 @@ lastfm_username: jonoellis
 linkedin_username: jonathanianellis
 
 # Build settings
+timezone: Europe/London 
 plugins_dir: _plugins
 markdown: kramdown
 encoding: utf-8
