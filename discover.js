@@ -17,25 +17,49 @@ function escapeRegExp(string) {
   return string.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
 }
 
-// Highlight all matches of 'term' (case-insensitive) in 'html' string
-function highlightTerm(html, term) {
-  if (!term.trim()) return html;
+// Highlight all matches of 'term' (case-insensitive) in a DOM element
+function highlightInElement(element, term) {
+  if (!term.trim()) return;
   const regex = new RegExp(escapeRegExp(term), 'gi');
-  // Replace only text nodes, not inside HTML tags
-  // Use a temporary element to safely handle HTML
-  const temp = document.createElement('div');
-  temp.innerHTML = html;
+  // Walk the DOM and replace matching text nodes
   function walk(node) {
     if (node.nodeType === 3) { // Text node
-      node.nodeValue = node.nodeValue.replace(regex, match => `<mark class="highlighted-search">${match}</mark>`);
+      const frag = document.createDocumentFragment();
+      let lastIndex = 0;
+      let match;
+      const text = node.nodeValue;
+      regex.lastIndex = 0;
+      while ((match = regex.exec(text)) !== null) {
+        if (match.index > lastIndex) {
+          frag.appendChild(document.createTextNode(text.slice(lastIndex, match.index)));
+        }
+        const mark = document.createElement('mark');
+        mark.className = 'highlighted-search';
+        mark.textContent = match[0];
+        frag.appendChild(mark);
+        lastIndex = match.index + match[0].length;
+      }
+      if (lastIndex < text.length) {
+        frag.appendChild(document.createTextNode(text.slice(lastIndex)));
+      }
+      if (frag.childNodes.length) {
+        node.parentNode.replaceChild(frag, node);
+      }
     } else if (node.nodeType === 1 && node.childNodes && !['SCRIPT', 'STYLE', 'MARK'].includes(node.tagName)) {
       for (let i = 0; i < node.childNodes.length; i++) {
         walk(node.childNodes[i]);
       }
     }
   }
-  walk(temp);
-  return temp.innerHTML;
+  walk(element);
+}
+
+// Remove previous highlights
+function removeHighlights(element) {
+  const marks = element.querySelectorAll('mark.highlighted-search');
+  marks.forEach(mark => {
+    mark.replaceWith(document.createTextNode(mark.textContent));
+  });
 }
 
 document.addEventListener('DOMContentLoaded', () => {
@@ -59,11 +83,28 @@ document.addEventListener('DOMContentLoaded', () => {
         }
         searchResults.innerHTML = results.map(item => `
           <div class="search-result">
-            <h2>${highlightTerm(item.title, query)}</h2>
-            <p>${highlightTerm(item.content, query)}</p>
+            <h2 class="search-title"></h2>
+            <p class="search-content"></p>
             <a href="${item.url}">Read more</a>
           </div>
         `).join('');
+
+        // Insert plain text, then highlight
+        const resultDivs = searchResults.querySelectorAll('.search-result');
+        results.forEach((item, idx) => {
+          const div = resultDivs[idx];
+          const titleEl = div.querySelector('.search-title');
+          const contentEl = div.querySelector('.search-content');
+          // Remove old highlights if any
+          removeHighlights(titleEl);
+          removeHighlights(contentEl);
+          // Set text content (safe, no HTML injection)
+          titleEl.textContent = item.title;
+          contentEl.textContent = item.content;
+          // Highlight matches
+          highlightInElement(titleEl, query);
+          highlightInElement(contentEl, query);
+        });
       };
 
       // Initial render if query param present
