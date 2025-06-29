@@ -21,7 +21,6 @@ function escapeRegExp(string) {
 function highlightInElement(element, term) {
   if (!term.trim()) return;
   const regex = new RegExp(escapeRegExp(term), 'gi');
-  // Walk the DOM and replace matching text nodes
   function walk(node) {
     if (node.nodeType === 3) { // Text node
       const frag = document.createDocumentFragment();
@@ -72,29 +71,25 @@ document.addEventListener('DOMContentLoaded', () => {
     .then(response => response.json())
     .then(data => {
       const renderResults = (query) => {
-        const lowerQuery = query.toLowerCase();
         const results = data.filter(item =>
-          item.title.toLowerCase().includes(lowerQuery) ||
-          item.content.toLowerCase().includes(lowerQuery)
+          item.title.toLowerCase().includes(query) ||
+          item.content.toLowerCase().includes(query)
         );
-        if (!query.trim()) {
-          searchResults.innerHTML = '';
-          return;
-        }
         searchResults.innerHTML = results.map(item => `
-          <div class="search-result">
-            <h2 class="search-title"></h2>
-            <p class="search-content"></p>
-            <a href="${item.url}">Read more</a>
-          </div>
+          <li>
+            <a href="${item.url}">
+              <h2 class="search-title"></h2>
+              <p class="search-content"></p>
+            </a>
+          </li>
         `).join('');
 
         // Insert plain text, then highlight
-        const resultDivs = searchResults.querySelectorAll('.search-result');
+        const liNodes = searchResults.querySelectorAll('li');
         results.forEach((item, idx) => {
-          const div = resultDivs[idx];
-          const titleEl = div.querySelector('.search-title');
-          const contentEl = div.querySelector('.search-content');
+          const li = liNodes[idx];
+          const titleEl = li.querySelector('.search-title');
+          const contentEl = li.querySelector('.search-content');
           // Remove old highlights if any
           removeHighlights(titleEl);
           removeHighlights(contentEl);
@@ -107,15 +102,13 @@ document.addEventListener('DOMContentLoaded', () => {
         });
       };
 
-      // Initial render if query param present
-      if (initialQuery) {
-        searchInput.value = initialQuery;
-        renderResults(initialQuery);
-      }
+      searchInput.value = initialQuery;
+      renderResults(initialQuery.toLowerCase());
 
-      // Live search as user types
-      searchInput.addEventListener('input', (e) => {
-        renderResults(e.target.value);
+      searchInput.addEventListener('input', () => {
+        const query = searchInput.value.toLowerCase();
+        renderResults(query);
       });
-    });
+    })
+    .catch(error => console.error('Error fetching index.json:', error));
 });
