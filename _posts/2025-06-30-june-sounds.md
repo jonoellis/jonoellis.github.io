@@ -11,8 +11,7 @@ categories:
 School show, school London trip, lots of life admin, a fun murder mystery party, lots of board games, social walks, litterpicking volunteer day, first time in Glasgow for ages (and it didn't rain), quizzing, making some music and the constant background horror of what's going on in the world. 
 
 
-* [Technoslavery / Vandalism
- - BRUIT ≤](https://www.youtube.com/watch?v=HOe4k1V5uCY)
+* [Technoslavery / Vandalism - BRUIT ≤](https://www.youtube.com/watch?v=HOe4k1V5uCY)
 
 	 [The Age Of Ephemerality](https://bruitofficial.bandcamp.com/album/the-age-of-ephemerality-2) is great, the live set looks like an awesome experience. 
 
