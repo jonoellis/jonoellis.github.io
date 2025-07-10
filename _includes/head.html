@@ -12,39 +12,5 @@
   <link rel="canonical" href="{{ page.url | replace:'index.html','' | absolute_url }}">
   <link rel="alternate" type="application/rss+xml" title="{{ site.title | escape }}" href="{{ "/feed.xml" | relative_url }}">
   <meta name="google-site-verification" content="vD9eS1S7Y5df1u4mLSNhlsi6k-J-A9fmCemey257QW0" />
-  <script>
-    const hash = window.location.hash;
-if (hash.includes(':~:text=')) {
-  let entries = decodeURIComponent(hash.match(/:~:text=(.*)/)[1]);
-  let frag = entries.replace(/, /g, '*').replace(/,/g, '...').replace(/\*/g, ', ');
-  let splitArray = frag.split('...');
-  let startFragment = splitArray[0] || '';
-  let endFragment = splitArray.slice(1).join('...') || '';
-
-  const maxPartLength = 48;
-  const divider = '...';
-
-  let startOutput = startFragment.length > maxPartLength ? startFragment.slice(0, maxPartLength) : startFragment;
-  let endOutput = endFragment.length > maxPartLength ? endFragment.slice(-maxPartLength) : endFragment;
-
-  const pageText = document.body.textContent;
-
-  const sanitise = str => str.replace(/[&<>"']/g, c => ({
-    '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;'
-  }[c]));
-
-  if (
-    startOutput && pageText.includes(startOutput) &&
-    (!endOutput || pageText.includes(endOutput))
-  ) {
-    window.dataLayer = window.dataLayer || [];
-    window.dataLayer.push({
-      event: 'textFragment',
-      textFragment: sanitise(startOutput) + divider + sanitise(endOutput)
-    });
-  }
-}
-
-  </script>
 
 </head>
