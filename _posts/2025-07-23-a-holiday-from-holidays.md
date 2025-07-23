@@ -3,7 +3,7 @@ layout: post
 title: "A holiday from holidays"
 author: Jono
 published: true
-date: 2025-07-23 18:50:07 -0000
+date: 2025-07-23 18:54:14 -0000
 categories:
 - random
 ---
