@@ -41,4 +41,7 @@ In no particular order:
 
 -   [Elixir - Sugar Lumps](https://www.cellarmonk.com/american-porter-stout/imperial-stout/elixir-sugar-lumps/)
 
+-   [Brouwerij 't Verzet - Oud Bruin (2023-2024)](https://brouwerijtverzet.be/en/brouwsel#oud)
+
+
 -   and shout out to [Mikkeller](https://shop.mikkeller.com/), [Omnipollo](https://www.instagram.com/omnipollo/?hl=en), [To Øl](https://toolbeer.dk/) whose beers have always been stunning (and [Beavertown](https://beavertownbrewery.co.uk/) for their consistency and artwork).
