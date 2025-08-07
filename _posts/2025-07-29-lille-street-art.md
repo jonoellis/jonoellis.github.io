@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Lille street art"
+title: "Lille"
 author: Jono
 published: true
 date: 2025-07-29 07:43:03 -0000
