@@ -13,4 +13,6 @@ categories:
 
 ![T-shirt mockup](https://ellis.scot/uploads/werewolftee3.png)
 
-I sometimes design t-shirts for fun. I tested out Canva’s print service with a recent Halloween-core design. (“Werewolf-core” is surely a thing, right?) Needless to say Canva’s print quality was fine. Not amazing, not shit. But the t-shirt is is shit. Certainly not £25 worth... probably barely £10 worth including the print. The inks are okay but the colours hardly pop. Overall it’ll do but I shan't be using Canva again for printing. Still, it's been a while since I had a t-shirt that I designed on my back and I'm proud of that. 
+I sometimes design t-shirts for fun. I tested out Canva’s print service with a recent Halloween-core design. (“Werewolf-core” is surely a thing, right?) Needless to say Canva’s print quality was fine. Not amazing, but fine. The inks are okay but the colours hardly pop. But the t-shirt is shit. Certainly not £25 worth... probably barely £10 worth including the print. Not Spreadshirt quality. Overall it’ll do for a goofy one-off but I shan't be using Canva again for printing. Still, it's been a while since I had a t-shirt that I designed on my back and I like that. 
+
+**Update 2025-09-20:** Canva gave me a full refund when I complained about the quality of their t-shirt. 
