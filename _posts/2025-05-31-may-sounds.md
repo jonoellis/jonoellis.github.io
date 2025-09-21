@@ -8,7 +8,7 @@ categories:
 - music
 ---
 
-So many excirting things for the kid - France trip, DofE, drama shows, musical... and some fun beer festival, Arkham and socialising for me (mixed in with some crap work stuff).
+So many exciting things for the kid - France trip, DofE, drama shows, musical... and some fun beer festival, Arkham and socialising for me (mixed in with some crap work stuff).
 
 
 * [Melora - Low Tide](https://www.youtube.com/watch?v=nSGvy_oyPHg)
