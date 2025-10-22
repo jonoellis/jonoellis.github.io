@@ -1,0 +1,95 @@
+---
+layout: post
+title: "Edinburgh Council Bin Days 2026"
+author: Jono
+published: true
+date: 2025-10-21T10:00:00+0000
+categories:
+  - random
+  - code
+---
+    <p style="color:blue;font-size:46px;" id="message"></p>
+    <script>
+      const schedule = [
+  { "date": "31/12/2024", "bin": "food & non-recyclable" },
+  { "date": "07/01/2025", "bin": "food, recycling & glass" },        
+  { "date": "14/01/2025", "bin": "food & landfill" },        
+  { "date": "21/01/2025", "bin": "garden, food, recycling & glass" },        
+  { "date": "28/01/2025", "bin": "food & landfill" },
+  { "date": "04/02/2025", "bin": "garden, food, recycling & glass" },        
+  { "date": "11/02/2025", "bin": "food & landfill" },
+  { "date": "18/02/2025", "bin": "garden, food, recycling & glass" },        
+  { "date": "25/02/2025", "bin": "food & landfill" },
+  { "date": "04/03/2025", "bin": "garden, food, recycling & glass" },
+  { "date": "11/03/2025", "bin": "food & landfill" },
+  { "date": "18/03/2025", "bin": "garden, food, recycling & glass" },
+  { "date": "25/03/2025", "bin": "food & landfill" },
+  { "date": "01/04/2025", "bin": "garden, food, recycling & glass" },
+  { "date": "08/04/2025", "bin": "food & landfill" },
+  { "date": "15/04/2025", "bin": "garden, food, recycling & glass" },
+  { "date": "22/04/2025", "bin": "food & landfill" },
+  { "date": "29/04/2025", "bin": "garden, food, recycling & glass" },
+  { "date": "06/05/2025", "bin": "food & landfill" },
+  { "date": "13/05/2025", "bin": "garden, food, recycling & glass" },
+  { "date": "20/05/2025", "bin": "food & landfill" },
+  { "date": "27/05/2025", "bin": "garden, food, recycling & glass" },
+  { "date": "03/06/2025", "bin": "food & landfill" },
+  { "date": "10/06/2025", "bin": "garden, food, recycling & glass" },
+  { "date": "17/06/2025", "bin": "food & landfill" },
+  { "date": "24/06/2025", "bin": "garden, food, recycling & glass" },
+  { "date": "01/07/2025", "bin": "food & landfill" },
+  { "date": "08/07/2025", "bin": "garden, food, recycling & glass" },
+  { "date": "15/07/2025", "bin": "food & landfill" },
+  { "date": "22/07/2025", "bin": "garden, food, recycling & glass" },
+  { "date": "29/07/2025", "bin": "food & landfill" },
+  { "date": "05/08/2025", "bin": "garden, food, recycling & glass" },
+  { "date": "12/08/2025", "bin": "food & landfill" },
+  { "date": "19/08/2025", "bin": "garden, food, recycling & glass" },
+  { "date": "26/08/2025", "bin": "food & landfill" },
+  { "date": "02/09/2025", "bin": "garden, food, recycling & glass" },
+  { "date": "09/09/2025", "bin": "food & landfill" },
+  { "date": "16/09/2025", "bin": "garden, food, recycling & glass" },
+  { "date": "23/09/2025", "bin": "food & landfill" },
+  { "date": "30/09/2025", "bin": "garden, food, recycling & glass" },
+  { "date": "07/10/2025", "bin": "food & landfill" },
+  { "date": "14/10/2025", "bin": "garden, food, recycling & glass" },
+  { "date": "21/10/2025", "bin": "food & landfill" },
+  { "date": "28/10/2025", "bin": "garden, food, recycling & glass" },
+  { "date": "04/11/2025", "bin": "food & landfill" },
+  { "date": "11/11/2025", "bin": "food, recycling & glass" },
+  { "date": "18/11/2025", "bin": "food & landfill" },
+  { "date": "25/11/2025", "bin": "food, recycling & glass" },
+  { "date": "02/12/2025", "bin": "food & landfill" },
+  { "date": "09/12/2025", "bin": "food, recycling & glass" },
+  { "date": "16/12/2025", "bin": "food & landfill" },
+  { "date": "23/12/2025", "bin": "food, recycling & glass" },
+  { "date": "30/12/2025", "bin": "food & landfill" },
+ ];
+
+      const today = new Date();
+      const message = document.getElementById('message');
+
+      for (let i = 0; i < schedule.length; i++) {
+        const date = new Date(schedule[i].date.split("/").reverse().join("/"));
+        if (today <= date) {
+          const dayOfWeek = date.toLocaleString('default', { weekday: 'long' });
+          const dayOfMonth = date.getDate();
+          const month = date.toLocaleString('default', { month: 'long' });
+          const nthNumber = (number) => {
+            if (number > 3 && number < 21) return "th";
+            switch (number % 10) {
+              case 1:
+                return "st";
+              case 2:
+                return "nd";
+              case 3:
+                return "rd";
+              default:
+                return "th";
+            }
+          };
+          message.innerHTML = `${dayOfWeek} ${dayOfMonth}${nthNumber(dayOfMonth)} of ${month}: Put out the ${schedule[i].bin} bins.`;
+          break;
+        }
+      }
+    </script>
