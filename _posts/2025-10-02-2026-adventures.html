@@ -1,0 +1,94 @@
+---
+layout: post
+title: "2026 Adventures"
+author: Jono
+published: true
+date: 2025-10-02T07:00:00+0000
+categories:
+- code
+- maps
+---
+
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+         
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+         
+    <style>
+        #map { 
+            height: 100vh; 
+            width: 100%; 
+        }
+        body {
+            padding: 0;
+            margin: 0;
+        }
+    </style>
+</head>
+<body>
+
+    <div id="map"></div>
+
+    <script>
+        //Initialize the map (centered on Europe)
+        var map = L.map('map').setView([55, 15], 4);
+
+        // Add a tile layer (OpenStreetMap)
+        L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+            attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+        }).addTo(map);
+
+        const locations = [
+            { name: "Day 0: Edinburgh", lat: 55.9533, lon: -3.1883 },
+            { name: "Day 1: London", lat: 51.53152995517071, lon: -0.12387675257499983 },
+            { name: "Day 1: Bruxelles", lat: 50.836, lon: 4.335 },
+            { name: "Day 1: Koln", lat: 50.9375, lon: 6.9603 },
+            { name: "Day 2: Essen", lat: 51.45157, lon: 7.01515 },
+            { name: "Day 2: Hamburg (Board Sleeper)", lat: 53.5511, lon: 9.9937 },
+            { name: "Day 3-4: Lund", lat: 55.7047, lon: 13.1910 },
+            { name: "Day 4: Almhult", lat: 56.55229183809641, lon: 14.13435953988308 },
+            { name: "Day 4: Lund", lat: 55.7047, lon: 13.1910 },
+            { name: "Day 5: Gothenburg", lat: 57.7089, lon: 11.9746 },
+            { name: "Day 6: Stockholm (Board Ferry)", lat: 59.3293, lon: 18.0686 },
+            { name: "Day 7-14: Helsinki", lat: 60.1699, lon: 24.9384 },
+            { name: "Day 15: Tallinn", lat: 59.4372, lon: 24.7536 },
+            { name: "Day 15: Valga", lat: 57.7742, lon: 26.0322 },
+            { name: "Day 15: Valmiera", lat: 57.5393, lon: 25.4243 },
+            { name: "Day 16: Riga Pasazieru", lat: 56.94690246910793, lon: 24.120799966169983 },
+            { name: "Day 16: Kedainiai", lat: 55.2863, lon: 23.9734 },
+            { name: "Day 17: Vilnius", lat: 54.6872, lon: 25.2797 },
+            { name: "Day 18: Mockava", lat: 54.31227122960827, lon: 23.300772101514355 },
+            { name: "Day 18-19: Warsaw", lat: 52.2297, lon: 21.0122 },
+            { name: "Day 20: Berlin Hbf", lat: 52.5255, lon: 13.3695 },
+            { name: "Day 20: Hannover", lat: 52.3759, lon: 9.7320 },
+            { name: "Day 21: Dusseldorf", lat: 51.2277, lon: 6.7735 },
+            { name: "Day 22: Utrecht", lat: 52.0907, lon: 5.1214 },
+            { name: "Day 22: Rotterdam", lat: 51.9244, lon: 4.4777 },
+            { name: "Day 23: Bruxelles", lat: 50.836, lon: 4.335 },
+            { name: "Day 23: London", lat: 51.53152995517071, lon: -0.12387675257499983 },
+            { name: "Day 23: Edinburgh (Return)", lat: 55.9533, lon: -3.1883 }
+        ];
+
+        var latLngs = [];
+
+        // Loop through locations to create markers and polyline path
+        locations.forEach(function(location, index) {
+            var latLng = [location.lat, location.lon];
+            latLngs.push(latLng);
+
+            // Add a marker with a popup
+            L.marker(latLng)
+                .addTo(map)
+                .bindPopup("<b>" + location.name + "</b>");
+        });
+
+        // Draw the polyline for the route
+        var polyline = L.polyline(latLngs, {
+            color: 'blue',
+            weight: 3,
+            opacity: 0.7
+        }).addTo(map);
+
+        // Zoom the map to fit the entire route
+        map.fitBounds(polyline.getBounds());
+
+    </script>
