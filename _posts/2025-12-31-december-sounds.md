@@ -16,10 +16,9 @@ The year definitely went out with a hectic bang! Some great stuff including doub
 	 Listen of the month - the pedals working on the brass sounds so lush! Pre-saved the album for 2nd Jan but honestly the videos showing the performance add to it.
 
 
-* [A Charlie Brown Christmas: Live at The Jazz Estate
- - The Commercialists](https://www.youtube.com/watch?v=p3m3mcGnq3A&t=609s)
+* [A Charlie Brown Christmas Live at The Jazz Estate - The Commercialists](https://www.youtube.com/watch?v=p3m3mcGnq3A&t=609s)
 
-	 This has so much heart - a lovely thing to have been able to listen to. Made my Christmas listening. (Thanks https://kottke.org/25/12/a-charlie-brown-christmas-live)
+	 This has so much heart - a lovely thing to have been able to listen to. Made my Christmas listening. [Thanks](https://kottke.org/25/12/a-charlie-brown-christmas-live)
 
 
 * [THUM - Violet Grohl](https://violetgrohl.bandcamp.com/album/thum-b-w-applefish)
