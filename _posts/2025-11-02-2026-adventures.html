@@ -113,7 +113,7 @@ categories:
 
 <script>
     // Data for all your locations
-    const locations = [
+    const locationz = [
         { name: "Edinburgh, Scotland", url: "https://forecast7.com/en/55d95n3d19/edinburgh/" },
         { name: "London, England", url: "https://forecast7.com/en/51d51n0d13/london/" },
         { name: "Bruxelles, Belgium", url: "https://forecast7.com/en/50d854d35/brussels/" },
@@ -167,7 +167,7 @@ categories:
     }
 
     // Generate the list
-    locations.forEach(loc => {
+    locationz.forEach(loc => {
         const li = document.createElement('li');
         li.innerHTML = `<button style="width: 100%; text-align: left; padding: 8px; margin-bottom: 5px; cursor: pointer; border: 1px solid #ddd; background: white; border-radius: 4px;">${loc.name}</button>`;
         li.onclick = () => loadWeather(loc.url, loc.name);
