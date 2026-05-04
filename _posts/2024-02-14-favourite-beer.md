@@ -21,7 +21,7 @@ In no particular order:
 
 -   [Brouwerij Lindemans - Pêcheresse](https://www.lindemans.be/)
 
--   [Holy Goat - Holy Mountain](https://holygoat.beer/product/holy-mountain-23/) kriek with sour mash cherries, and also their Night Ash Black Smoked Rye Sour
+-   [Holy Goat - Holy Mountain](https://holygoat.beer/product/holy-mountain-23/) kriek with sour mash cherries, and also their Night Ash Black Smoked Rye Sour and their Riddle Of Oak III Calvados Barrel-Aged Flanders Red
 
 
 -   [Siren Craft Brew - Caribbean Chocolate Cake](https://www.sirencraftbrew.com/beers/caribbean-chocolate-cake)
