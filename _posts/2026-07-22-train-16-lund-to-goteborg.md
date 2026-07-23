@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Train 16: Lund to Goteborg"
+title: "Train 17: Lund to Goteborg"
 author: Jono
 published: true
 date: 2026-07-22 17:48:08 -0000
