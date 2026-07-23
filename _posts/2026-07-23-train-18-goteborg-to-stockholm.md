@@ -1,0 +1,13 @@
+---
+layout: post
+title: "Train 18: Goteborg to Stockholm"
+author: Jono
+published: true
+date: 2026-07-23 16:18:58 -0000
+categories:
+- random
+---
+![Luggage tag for train 18](https://ellis.scot/uploads/2026/2026-07-23-train-18.png)
+
+
+Sunshine. Slick departure. Another fab SJ. 2 in a forward-facing double seats, me in a rear-facing single... at a wall. Swedish train rules broken until next station. High trust society; tickets only checked for incorrectly occupied seats. Chocolate, and coffee with milk tetrahedrons. Total 5G coverage. Houses of yellows, pinks, reds, pale blues, deep blues, light greys, whites, sages. Rarely unkempt. Level crossing waves.  Carriage near silent. One man groaned quietly in Boras at delay announcement. Doors unclosing, "it happens all the time with these trains". We depart. 40 mins delay, more than that in angst. Direction reversed. Zigzag wooden walkway bridge just outside Boras. Direction reversed again. Further announcement, an entire region with an electrical fault, new route will be taken. Some stops will not be. So many vintage tractors, so many small fields. Vintage convertible day on the roads too - at least 10 spotted. The Vimes' Boots theory flipside - a country with enough money to buy quality and maintain things. SJ "Trainy McTrainface" also stopped in Katerinaholm. That joke traveled. Detour took us through a cargo train depot in Hallsberg complete with water tower and overgrown turntable. Excellent use of "couple of minutes" by conductor announcing another delay, this time getting platform space. 13:40, original arrival time, passes with just over half the distance covered. The delayed train gets delayed. Passed a siding with the track layer's yard, huge crains to move steel tracks onto specialist wagons. The prettiness and delays continue. A mine with its own rail line joins ours. [I read an interesting article about the evolution of American restaurant dining](https://pudding.cool/2026/06/menu-story/). A red signal. I stop planning our lunch stop incase we actually need to just run to ABBA. More time stationary. That's the thing about trains, you're being railroaded, you've given up control, you are a other people's cargo. Refreshing Google Maps doesn't change our location or pace. The guards begin to look frazzled, and we are all informed it will be a quick turnaround for them before leaving Stockholm too, their shift end also delayed by several hours with their return journey still to go. We arrived, missing ABBA museum and our afternoon exploring. End delay 2 hours 40. Regret not taking the originally booked early morning train. Hopefully we can get back on track after popping to the hostel to drop bags.
