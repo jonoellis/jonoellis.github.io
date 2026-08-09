@@ -3,7 +3,7 @@ layout: post
 title: "July Audio"
 author: Jono
 published: true
-date: 2026-08-09 19:23:36 -0000
+date: 2026-07-31 19:23:36 -0000
 categories: 
 - music
 ---
@@ -33,7 +33,7 @@ A family brunch, many walks, a warm week, proper introduction of the walking des
 
 * [Destroying The Dam - Mark Mothersbaugh](https://www.youtube.com/watch?v=Um580sudJTI)
 
-	 This track soundtracked a pretty triumpant moment in Hoppers!
+	 This track soundtracked a pretty triumphant moment in Hoppers!
 
 
 * [Young Blood (White Sea Remix) - The Naked And Famous & White Sea](https://www.youtube.com/watch?v=HnolazJ-1GQ)
