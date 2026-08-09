@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Train 22: Oslo Central to Oslo Airport"
+title: "Train 26: Oslo Central to Oslo Airport"
 author: Jono
 published: true
 date: 2026-08-08 07:38:09 -0000
