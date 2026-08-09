@@ -1,0 +1,29 @@
+name: Organize Posts into Year Folders
+
+on:
+  workflow_dispatch:
+
+jobs:
+  organize:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Organize posts by year
+        run: |
+          cd _posts
+          for file in [0-9][0-9][0-9][0-9]-*; do
+            if [ -f "$file" ]; then
+              year="${file:0:4}"
+              mkdir -p "$year"
+              git mv "$file" "$year/"
+            fi
+          done
+
+      - name: Commit and push changes
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git commit -m "Organize posts into year folders" || echo "No changes to commit"
+          git push
