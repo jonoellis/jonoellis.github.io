@@ -182,3 +182,73 @@ My brief highlights are here: 
 -   [Köln](https://ellis.scot/2025/08/kln/)
 
 -   [Brussels](https://ellis.scot/2025/08/brussels/)
+
+
+
+
+2026-08-10: A brief 2026 trip gear update
+
+
+
+The duration: 21 nights
+
+The travel: train, ferry and, not in the original plan, plane
+
+The environment: European and Scandinavian cities and towns 
+
+The accommodation: 10 hostel-ish places plus overnight ferries and trains
+
+The climate: pretty Scottish!
+
+I washed: 4 laundry washes, no handwashing
+
+I took too many: Nothing - all good
+
+I had to buy: I snapped a USB cable whilst charging from a powerbank in my bag so needed to replace that, also bought swim shorts (see below)
+
+I forgot: Nothing
+
+I left behind: Nothing - everything that went returned. 
+
+I regretted: bag size (see below)
+
+
+Plans evolved, the gear held up. Here's an update on what was different from last year's trip kit:
+
+-   Rucksack: Firstly I took a bag that was marginally bigger than last year but it wasn't big enough to carry the additional stuff I was carrying AND have space to accommodate my day bag. Given the train-y-ness of it all I suspect there wasn't really a way around this as the bag still needed to fit in overhead racks but on several occasions I wished I had a single bag big enough to also fit the day sack (which had day essentials like passports, notebook, plugs/cables, power pack, headphones, coat, hat and sun cream) and the food tote bag. The daysack was my tiny AlpKit Atom 10litre sack and boy did it have to work hard some days when my main bag was in left luggage or at a hostel. The goal for next trip is to take less and have about 40% free bag space when I set off.
+
+-   My Panta sandals are still going strong and have once again proved themselves on city streets. (I'm strongly considering a pair of [Pantoflas](https://pantasandals.com/products/pantoflas)!)
+
+-   Foreign currency - virtually unused. I'd probably still carry some for emergencies but the nature of the world is cashless now.
+
+-   Uniqlo light wool jumper - I think it's shrunk slightly as the sleeves are a smidge shorter than I like - but it was cosy enough when needed.
+
+-   Casio watch - an extravagance needed for that one ferry crossing early morning start where our alarm needed to go off before I could be sure which timezone my phone would be in.
+
+-   The small Cotopaxi bag for tech - did fine and I was glad tech things were in a slightly more robust bag than just a thin drybag.
+
+-   My notebook, pen and [notebook sleeve](https://ellis.scot/2026/05/sewing/) - not 100% sure on the pen but notebook was a nice way to journal as ever.
+
+-   Paramo Fuera Windproof Smock coat - a step up from last year - its waterproofness was tested and it was fine. 
+
+-   BEG Buff - took, didn't use, always good to have on hand.
+
+-   Cap  - KAVU Drift Creek Cap in black - favourite cap ever.
+
+-   I took one more shirt/tshirt than last year with a long-sleeved £4-off-Vinted shirt - wore it loads, did the job.
+
+-   Error on the shorts - took my 2021 Finisterre Walker Hybrid Shorts that I thought would be fine for wearing in saunas, pools, and out and about BUT they dried much more slowly than anticipated so I needed to buy a €4 pair of swim shorts too to wear in saunas. 
+
+-   Trainers - Adidas Runfalcon 5 Tr running shoes - way better than last year's Vans but honestly so disappointed that the newer iterations of the Runfalcon are so much of a lower quality product than the originals.
+
+-   Trousers - Passenger Kimmer Ripstop cotton trousers in "Dusty Olive" - the first pair of trousers I've ever needed to add a turn-up to (so that's a turn-up for the books!) but that was easy sewing. Pockets could have been about 20% deeper, other than that great trousers.
+
+-   My Pixel 8A is an overheater whenever Bluetooth is on. Google have kindly confirmed that there's an issue by telling me to turn on extreme battery saver whenever it start overheating rather than, you know, fixing the issue.
+
+-   Nothing CMF Buds Pro 2 headphones - I had such a farce of a customer support experience but they did eventually admit that my old pair had broken within warranty and sent me a replacement. I do love these headphones!
+
+-   Plug converters and power packs - how long until every plug is just USB-C and I don't need to travel with the USB charging block of a converter? How long until my phone can have 3 days of charge and I don't need to travel with the Belkin BRICK powerpack?
+
+-   We didn't take towels - we rented towels at a couple of saunas, everywhere else provided apart from 1 hostel where we had to pay. If there's space I think taking a towel would be wise still for those cheeky dips. 
+
+-   Titanium sporks - much used, travel essential.
