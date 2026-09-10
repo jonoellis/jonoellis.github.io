@@ -26,3 +26,9 @@ So, now that that's out of the way...
 -  My legs are feeling it - a pace of 2mph seems to be where I'm settling (although sometimes I can do up to 3.5) and that means around 14 miles a day and, even discounting days in the office, if I can keep it up that would be well over 1,000 miles in a year.
 
 The desk setup needs some tweaking - it was kinda flung together with the cheapest Decathlon walking pad, a table for £10 from Gumtree, and a hanging rig made of ply, wire and brackets. If I use it consistently until the end of the year then I'll permit myself an upgrade allowance. I think the only reason that I can do this is that I can touch-type and I've got relatively consistent gait and balance. I've so far mostly been barefooting it but I suspect since the setup is in my shed then it's not going to be Scottish-winter friendly. We'll see though - I'm certainly generating heat! I'll report back soon.
+
+2026-09-10 Update:
+- I'm now regularly at 2.5kmph when on a call and 4 when not on video. The increase in speed has upped the shed temperature too - bonus. My current prediction is that it will get too cold to work in the shed without heating when it reaches 7 degrees outside but I’ll keep you posted!
+- I’ve raised the desk part of the setup by 10cms and added a second monitor courtesy of a Gumtree monitor stand attached to the rafters. I’ve gone for the unorthodox setup of vertical secondary monitor with a horizontal split so that Outlook's at the top and Teams is at the bottom, both roughly square.
+- A fair few people have commented, some have had **opinions**, but also one other secret walking desk user has come to light, which is a wonderful thing. 
+
