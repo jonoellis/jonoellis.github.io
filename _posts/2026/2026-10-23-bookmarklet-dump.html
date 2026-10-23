@@ -1,0 +1,75 @@
+---
+layout: post
+title: "Bookmarklet Dump"
+author: Jono
+published: true
+date: 2026-10-23 16:00:00 -0000
+categories: 
+- code
+---
+
+
+    <h1>Bookmarklet Dump</h1>
+
+    <p>Deleting an old repo and found these Bookmarklet gems. Drag to your bookmark bars and have fun! I can't remember where I copied any of them from, sorry.</p>
+
+    <h2>Kill Sticky</h2>
+<p>Kills sticky popups</p>
+    <p>
+        <a class="bookmarklet-link" href="javascript:(function(){(function()%20{var%20i,%20elements%20=%20document.querySelectorAll('body%20*');for%20(i%20=%200;%20i%20<%20elements.length;%20i++)%20{if%20(getComputedStyle(elements[i]).position%20===%20'fixed')%20{elements[i].parentNode.removeChild(elements[i]);}}})()})()">Kill Sticky</a>
+    </p>
+    <pre><code>javascript:(function(){(function()%20{var%20i,%20elements%20=%20document.querySelectorAll('body%20*');for%20(i%20=%200;%20i%20&lt;%20elements.length;%20i++)%20{if%20(getComputedStyle(elements[i]).position%20===%20'fixed')%20{elements[i].parentNode.removeChild(elements[i]);}}})()})()</code></pre>
+
+    <h2>Wikipedia lookup</h2>
+    <p>
+        <a class="bookmarklet-link" href="javascript:(function()%20{%20function%20se(d)%20{%20return%20d.selection%20?%20d.selection.createRange().text%20:%20d.getSelection()%20}%20s%20=%20se(document);%20for%20(i=0;%20i<frames.length%20&&%20!s;%20i++)%20s%20=%20se(frames[i].document);%20if%20(!s%20||%20s=='')%20s%20=%20prompt('Enter%20search%20terms%20for%20Wikipedia','');%20open('http://en.wikipedia.org'%20+%20(s%20?%20'/w/index.php?title=Special:Search&search='%20+%20encodeURIComponent(s)%20:%20'')).focus();%20})();">Wikipedia lookup</a>
+    </p>
+    <pre><code>javascript:(function()%20{%20function%20se(d)%20{%20return%20d.selection%20?%20d.selection.createRange().text%20:%20d.getSelection()%20}%20s%20=%20se(document);%20for%20(i=0;%20i&lt;frames.length%20&amp;&amp;%20!s;%20i++)%20s%20=%20se(frames[i].document);%20if%20(!s%20||%20s=='')%20s%20=%20prompt('Enter%20search%20terms%20for%20Wikipedia','');%20open('http://en.wikipedia.org'%20+%20(s%20?%20'/w/index.php?title=Special:Search&amp;search='%20+%20encodeURIComponent(s)%20:%20'')).focus();%20})();</code></pre>
+
+    <h2>Delete Google Sheet</h2>
+    <p>
+        <a class="bookmarklet-link" href="javascript:(function()%20{%20%20%20%20var%20eltMove%20=%20document.querySelector('#\\:b2>div>span');%20%20%20%20fireMouseEvent(document.querySelector('#docs-file-menu'),%20'mousedown');%20%20%20%20fireMouseEvent(eltMove,%20'mousedown');%20%20%20%20fireMouseEvent(eltMove,%20'mouseup');%20%20%20%20fireMouseEvent(eltMove,%20'mouseup');%20%20%20%20function%20fireMouseEvent(eltTarget,%20myEvent)%20{%20%20%20%20%20%20%20%20var%20screenX,%20screenY,%20clientX,%20clientY;%20%20%20%20%20%20%20%20var%20event%20=%20document.createEvent('MouseEvents');%20%20%20%20%20%20%20%20event.initMouseEvent(myEvent,%20true,%20true,%20window,%201,%20screenX,%20screenY,%20clientX,%20clientY,%20false,%20false,%20false,%20false,%200,%20null);%20%20%20%20%20%20%20%20eltTarget.dispatchEvent(event);%20%20%20%20}})();">Delete Google Sheet</a>
+    </p>
+    <pre><code>javascript:(function()%20{%20%20%20%20var%20eltMove%20=%20document.querySelector('#\\:b2&gt;div&gt;span');%20%20%20%20fireMouseEvent(document.querySelector('#docs-file-menu'),%20'mousedown');%20%20%20%20fireMouseEvent(eltMove,%20'mousedown');%20%20%20%20fireMouseEvent(eltMove,%20'mouseup');%20%20%20%20fireMouseEvent(eltMove,%20'mouseup');%20%20%20%20function%20fireMouseEvent(eltTarget,%20myEvent)%20{%20%20%20%20%20%20%20%20var%20screenX,%20screenY,%20clientX,%20clientY;%20%20%20%20%20%20%20%20var%20event%20=%20document.createEvent('MouseEvents');%20%20%20%20%20%20%20%20event.initMouseEvent(myEvent,%20true,%20true,%20window,%201,%20screenX,%20screenY,%20clientX,%20clientY,%20false,%20false,%20false,%20false,%200,%20null);%20%20%20%20%20%20%20%20eltTarget.dispatchEvent(event);%20%20%20%20}})();</code></pre>
+
+    <h2>Copy and Alert the components of a URL</h2>
+    <p>
+        <a class="bookmarklet-link" href="javascript:(function(){u=(window.location.protocol);v=(window.location.href);w=(window.location.hostname);x=(window.location.pathname);y=(window.location.search);z=(window.location.hash);a=(%22Protocol:%20%22+u+%22\nHref:%20%22+v+%22\nHostname:%20%22+w+%22\nPathname:%20%22+x+%22\nSearch:%20%22+y+%22\nHash:%20%22+z);navigator.clipboard.writeText(a);alert(a);})()">Copy and Alert the components of a URL</a>
+    </p>
+    <pre><code>javascript:(function(){u=(window.location.protocol);v=(window.location.href);w=(window.location.hostname);x=(window.location.pathname);y=(window.location.search);z=(window.location.hash);a=("Protocol: "+u+"\nHref: "+v+"\nHostname: "+w+"\nPathname: "+x+"\nSearch: "+y+"\nHash: "+z);navigator.clipboard.writeText(a);alert(a);})()</code></pre>
+
+    <h2>Edit in Rubric</h2>
+    <p>
+        <a class="bookmarklet-link" href="javascript:(function(){%20var%20lp%20=%20'https://publishing.mygov.scot/#/contents/',%20b%20=%20document.getElementsByTagName('body'),%20id,%20lnk,%20error%20=%20'Sorry,%20the%20ID%20of%20this%20content%20item%20could%20not%20be%20found.';%20if%20(b.length)%20{%20id%20=%20b[0].getAttribute('data-uuid');%20if%20(id)%20{%20lnk%20=%20lp%20+%20id;%20window.location%20=%20lnk;%20return%20true;%20}%20}%20alert(error);%20})();">Edit in Rubric</a>
+    </p>
+    <pre><code>javascript:(function(){%20var%20lp%20=%20'https://publishing.mygov.scot/#/contents/',%20b%20=%20document.getElementsByTagName('body'),%20id,%20lnk,%20error%20=%20'Sorry,%20the%20ID%20of%20this%20content%20item%20could%20not%20be%20found.';%20if%20(b.length)%20{%20id%20=%20b[0].getAttribute('data-uuid');%20if%20(id)%20{%20lnk%20=%20lp%20+%20id;%20window.location%20=%20lnk;%20return%20true;%20}%20}%20alert(error);%20})();</code></pre>
+
+    <h2>www=stage</h2>
+    <p>
+        <a class="bookmarklet-link" href="javascript:(function(){var%20loc=location.href;if(loc.indexOf(%22www%22)>=0){loc=loc.replace('www','stage');}else{loc=loc.replace('stage','www');}location.replace(loc)})()">www=stage</a>
+    </p>
+    <pre><code>javascript:(function(){var%20loc=location.href;if(loc.indexOf(%22www%22)&gt;=0){loc=loc.replace('www','stage');}else{loc=loc.replace('stage','www');}location.replace(loc)})()</code></pre>
+
+    <h2>View JSON</h2>
+    <p>
+        <a class="bookmarklet-link" href="javascript:window.location.href=window.location.href+'index.json';">View JSON</a>
+    </p>
+    <pre><code>javascript:window.location.href=window.location.href+'index.json';</code></pre>
+
+    <h2>Edit gov.scot in Rubric</h2>
+    <p>
+        <a class="bookmarklet-link" href="javascript:(function(){%20var%20lp%20=%20'https://beta.publishing.gov.scot/#/contents/',%20b%20=%20document.getElementsByTagName('body'),%20id,%20lnk,%20error%20=%20'Sorry,%20the%20ID%20of%20this%20content%20item%20could%20not%20be%20found.';%20if%20(b.length)%20{%20id%20=%20b[0].getAttribute('data-uuid');%20if%20(id)%20{%20lnk%20=%20lp%20+%20id;%20window.location%20=%20lnk;%20return%20true;%20}%20}%20alert(error);%20})();">Edit gov.scot in Rubric</a>
+    </p>
+    <pre><code>javascript:(function(){%20var%20lp%20=%20'https://beta.publishing.gov.scot/#/contents/',%20b%20=%20document.getElementsByTagName('body'),%20id,%20lnk,%20error%20=%20'Sorry,%20the%20ID%20of%20this%20content%20item%20could%20not%20be%20found.';%20if%20(b.length)%20{%20id%20=%20b[0].getAttribute('data-uuid');%20if%20(id)%20{%20lnk%20=%20lp%20+%20id;%20window.location%20=%20lnk;%20return%20true;%20}%20}%20alert(error);%20})();</code></pre>
+
+    <h2>View Data Layer - ALERT</h2>
+    <p>
+        <a class="bookmarklet-link" href="javascript:(function(){%20alert(JSON.stringify(dataLayer,%20function(key,value)%20{if(key%20==%20'gtm.element'){%20return%20'format';}%20return%20value;},%204))%20})();">View Data Layer - ALERT</a>
+    </p>
+    <pre><code>javascript:(function(){%20alert(JSON.stringify(dataLayer,%20function(key,value)%20{if(key%20==%20'gtm.element'){%20return%20'format';}%20return%20value;},%204))%20})();</code></pre>
+
+    <h2>View Data Layer - DIV</h2>
+    <p>
+        <a class="bookmarklet-link" href="javascript:(function(a){a=document.createElement('div');a.style.position=%20'fixed';a.style.left='80%';a.style.right='0%';a.style.top='0%';a.style.zIndex='100000';a.style.background='white';a.innerHTML=%20JSON.stringify(dataLayer,%20function(key,value)%20{if(key%20==%20'gtm.element'){return%20'some%20element%20here';}%20return%20value;},%204);document.body.appendChild(a);})();">View Data Layer - DIV</a>
+    </p>
+    <pre><code>javascript:(function(a){a=document.createElement('div');a.style.position=%20'fixed';a.style.left='80%';a.style.right='0%';a.style.top='0%';a.style.zIndex='100000';a.style.background='white';a.innerHTML=%20JSON.stringify(dataLayer,%20function(key,value)%20{if(key%20==%20'gtm.element'){return%20'some%20element%20here';}%20return%20value;},%204);document.body.appendChild(a);})();</code></pre>
