@@ -8,7 +8,7 @@ categories:
 - code
 ---
 
-
+{% raw %}
     <h1>Bookmarklet Dump</h1>
 
     <p>Deleting an old repo and found these Bookmarklet gems. Drag to your bookmark bars and have fun! I can't remember where I copied any of them from, sorry.</p>
@@ -73,3 +73,4 @@ categories:
         <a class="bookmarklet-link" href="javascript:(function(a){a=document.createElement('div');a.style.position=%20'fixed';a.style.left='80%';a.style.right='0%';a.style.top='0%';a.style.zIndex='100000';a.style.background='white';a.innerHTML=%20JSON.stringify(dataLayer,%20function(key,value)%20{if(key%20==%20'gtm.element'){return%20'some%20element%20here';}%20return%20value;},%204);document.body.appendChild(a);})();">View Data Layer - DIV</a>
     </p>
     <pre><code>javascript:(function(a){a=document.createElement('div');a.style.position=%20'fixed';a.style.left='80%';a.style.right='0%';a.style.top='0%';a.style.zIndex='100000';a.style.background='white';a.innerHTML=%20JSON.stringify(dataLayer,%20function(key,value)%20{if(key%20==%20'gtm.element'){return%20'some%20element%20here';}%20return%20value;},%204);document.body.appendChild(a);})();</code></pre>
+{% endraw %}
