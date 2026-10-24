@@ -17,7 +17,4 @@ To make the "room", I took a copy of the original track and ran it through tape,
 
 I then got exceptionally frustrated with OpenDAW's interface and documentation (there's some kind of automation tool in there to control the output mix somewhere but it sure ain't in the interface that I'm seeing). Thankfully there was an alternate way to control the mix using the Werkstatt code tool. A little help from Gemini to translate my desire to bring the room effects in from bar 35 and the beeps a bit after that got me there.
 
-With thanks and adoration to Phamie Gow and the makers of OpenDAW, here's the track:
-<audio controls>
-  <source src="https://ellis.scot/uploads/2026/rackwick-bay-remix.mp3" type="audio/mpeg">
-</audio>
+With thanks and adoration to Phamie Gow and the makers of OpenDAW.
