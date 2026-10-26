@@ -8,8 +8,11 @@ categories:
 - random
 ---
 > We've got so many tchotchkes
+> 
 > We've practically emptied the Louvre
+> 
 > In most of our palaces
+> 
 > There's hardly room to manoeuvre
 >
 >  - Zebra by The Magnetic Fields
@@ -62,8 +65,13 @@ Working rules:
 -   "[Oh, I'll just have my kids deal with it.](https://www.metafilter.com/206065/You-Cant-Take-It-With-You)" is not an option
 
 So I've worked with Gemini on this little questionnaire to help me think about downsizing hobbies in particular:
+
+
 &lt;AI assisted content&gt;
-## All hobbies
+## Questionnaire 
+
+
+### All hobbies
 
 -   We are shaped by our experiences and passions, not the objects we accumulate to pursue them. Looking back, what are the hobbies you've put your time into over your life so far?
 
@@ -71,9 +79,9 @@ So I've worked with Gemini on this little questionnaire to help me think about d
 
 -   Looking strictly at the last year, which activities and hobbies have you actively spent time doing?
 
-## Exploring one hobby at a time
+### Exploring one hobby at a time
 
-### Memories 
+#### Memories 
 
 -   What is your favorite memory associated with this hobby?
 
@@ -81,7 +89,7 @@ So I've worked with Gemini on this little questionnaire to help me think about d
 
 -   If you were to shade in a calendar, how many hours a week do you currently spend on this? 
 
-### Tools
+#### Tools
 
 -   What is the core, essential equipment you actually need to enjoy this hobby right now?
 
@@ -89,7 +97,7 @@ So I've worked with Gemini on this little questionnaire to help me think about d
 
 -   Looking at that space, how much time and energy is required just to maintain or store the equipment, even when it isn't being used?
 
-### Evolution
+#### Evolution
 
 -   How has your relationship with this hobby changed recently?
 
@@ -97,11 +105,16 @@ So I've worked with Gemini on this little questionnaire to help me think about d
 
 -   If your physical space or mobility were to change, how could your involvement with this hobby adapt? 
 
-### Legacy 
+#### Legacy 
 
 -   Are there duplicate items, or "just in case" equipment, that could be shared, sold, or passed on to someone just starting out?
 
 -   If you were to pass the baton, what individual or community group would you want to inherit your equipment/tools?
 
 -   For the things you've collected or created with this hobby, how would you like them handled to ensure they remain a happy legacy for your family, rather than an overwhelming puzzle to solve?
+
+  
 &lt;/AI assisted content&gt;
+
+
+
