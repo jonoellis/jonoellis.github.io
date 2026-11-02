@@ -46,7 +46,7 @@ Celeb Traitors, Dutch visitors, beer bottling, school concert + refreshments vol
 	 Bloopy. 
 
 
-* [Bump - Anna Meridith](https://www.youtube.com/watch?v=Tz_a9cUnUd0)
+* [Bump - Anna Meredith](https://www.youtube.com/watch?v=Tz_a9cUnUd0)
 
 	 It would be fun to see [this live](https://www.instagram.com/p/DerpFs6tMIw/).
 
@@ -63,7 +63,7 @@ Celeb Traitors, Dutch visitors, beer bottling, school concert + refreshments vol
 
 * [The End - Star Moles](https://www.youtube.com/watch?v=8FSJ71-hJEM)
 
-	 Leaving in the little gltch at the one minute mark is fabulous.
+	 Leaving in the little glitch at the one minute mark is fabulous.
 
 
 * [Overgrowth - Joe C.S.](https://www.youtube.com/watch?v=BSVX4i2TeOg)
@@ -78,7 +78,7 @@ Celeb Traitors, Dutch visitors, beer bottling, school concert + refreshments vol
 
 * [Peasant Rising - Netherwilds]()
 
-	 This album is a masterclass in storytelling. Dungeon Song. Return The Goat. Helm Yeah. Seige Proof Hovel. The Fall. And their [Wiki](https://wiki.netherwilds.com/index.php/Main_Page)!
+	 This album is a masterclass in storytelling. Dungeon Song. Return The Goat. Helm Yeah. Siege Proof Hovel. The Fall. And their [Wiki](https://wiki.netherwilds.com/index.php/Main_Page)!
 
 
 * [Songs of the Smile's Fig: II. Salts - Sarah Davachi](https://www.youtube.com/watch?v=-wluDKdcaLw)
